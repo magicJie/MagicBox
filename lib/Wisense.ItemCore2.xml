@@ -1,0 +1,3760 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisense.ItemCore2</name>
+    </assembly>
+    <members>
+        <member name="T:Wisense.ItemCore.MainMenuNavigation">
+            <summary>
+            导航主菜单项 
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MainMenuItem">
+            <summary>
+            主菜单项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuItem.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuItem.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuItem.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuItem.ShowMode">
+            <summary>
+            显示方式
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuNavigation.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuNavigation.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuNavigation.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuNavigation.Url">
+            <summary>
+            导航地址
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuNavigation.IsWithinThePlatform">
+            <summary>
+            平台内导航
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuNavigation.OpenedMode">
+            <summary>
+            打开方式
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemReport">
+            <summary>
+            报表 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemReport.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemReport.#ctor(System.String)">
+            <summary>
+            Wisense.ItemCore
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemReport.#ctor(System.String,System.String)">
+            <summary>
+            Wisense.ItemCore
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.Label">
+            <summary>
+            报表文件名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.Description">
+            <summary>
+            报表描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.ShowToolbar">
+            <summary>
+            显示工具栏
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.Url">
+            <summary>
+            报表服务器报表相对路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.CurrentState">
+            <summary>
+            当前状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemReport.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.EventListener">
+            <summary>
+            事件监听器
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ClientExtensionPoint">
+            <summary>
+            表示层扩展点
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ClientExtensionPoint.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ClientExtensionPoint.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ClientExtensionPoint.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtensionPoint.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtensionPoint.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtensionPoint.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.EventListener.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.EventListener.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.EventListener.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DimensionsforUnitofMeasure.Dimension">
+            <summary>
+            计量单位组编号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DimensionsforUnitofMeasure.DimensionText">
+            <summary>
+            计量单位组名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DimensionsforUnitofMeasure.SIUnit">
+            <summary>
+            基准计量单位
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Activity">
+            <summary>
+            活动
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Activity.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Activity.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Activity.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.Name">
+            <summary>
+            活动名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.Title">
+            <summary>
+            活动标题
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.ChildActivityCategory">
+            <summary>
+            活动子目录（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.ClassPath">
+            <summary>
+            类路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.DesignerClassPath">
+            <summary>
+            设计器类路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.No">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Activity.bitmap">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UserExtension">
+            <summary>
+            对User的扩展
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UserExtension.ResetPwd(Wisense.Common.Item.IUser)">
+            <summary>
+            重置当前用户的密码
+            </summary>
+            <param name="user">当前用户</param>
+        </member>
+        <member name="M:Wisense.ItemCore.UserExtension.IncreaseLoginErrorTimes(Wisense.Common.Item.IUser)">
+            <summary>
+            根据用户名增加这位用户上次成功登录以来登录连续失败的次数，如果找不到这位用户则不做任何操作
+            副作用：对创建该用户以来该用户的登录失败总次数加一
+            </summary>
+            <returns>上次登录成功以来连续失败的总次数</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.UserExtension.ClearLoginError(Wisense.Common.Item.IUser)">
+            <summary>
+            根据用户名清空这位用户登录失败的错误记录，总错误次数记录不会被清除
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UserExtension.GetUserByUserName(System.String)">
+            <summary>
+            根据username找到一个用户
+            </summary>
+            <param name="username">用户名</param>
+            <returns>用户</returns>
+        </member>
+        <member name="T:Wisense.ItemCore.JumpWorkflowTempTable">
+            <summary>
+            工作流跳转临时表 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.JumpWorkflowTempTable.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.JumpWorkflowTempTable.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.JumpWorkflowTempTable.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.JumpWorkflowTempTable.ObjectId">
+            <summary>
+            流转对象ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.JumpWorkflowTempTable.ObjectItemtypeId">
+            <summary>
+            流转对象类ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.JumpWorkflowTempTable.WorkflowTaskTodolist">
+            <summary>
+            跳转工作流任务关联对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.JumpWorkflowTempTable.WfTaskTodolistKey">
+            <summary>
+            跳转工作流任务关联key
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.JumpWorkflowTempTable.ReturnValue">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ImageAndIcon">
+            <summary>
+            图片(图标)
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ImageAndIcon.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ImageAndIcon.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ImageAndIcon.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ImageAndIcon.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ImageAndIcon.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ImageAndIcon.Suffix">
+            <summary>
+            扩展名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.IconLibFiles">
+            <summary>
+            包含文件
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.IconLibFiles.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.IconLibFiles.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.IconLibFiles.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.IconLibFiles.File">
+            <summary>
+            文件（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.IconLibFiles.IconLibrary">
+            <summary>
+            图标库（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.AnyAvailableItemType">
+            <summary>
+            可用的对象类型
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.AnyAvailableItemType.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.AnyAvailableItemType.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.AnyAvailableItemType.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.AnyAvailableItemType.ItemType">
+            <summary>
+            对象类型(被关联对象)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.AnyAvailableItemType.Property">
+            <summary>
+            属性（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.WebReport">
+            <summary>
+            Web报表 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.WebReport.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.WebReport.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.WebReport.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.WebReport.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WebReport.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WebReport.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UnitofMeasureFamily">
+            <summary>
+            计量单位家族 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasureFamily.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasureFamily.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasureFamily.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureFamily.FamilyID">
+            <summary>
+            计量维度家族ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureFamily.FamilyName">
+            <summary>
+            计量维度家族名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureFamily.SourceId">
+            <summary>
+            计量维度
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureFamily.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MultViewContent">
+            <summary>
+            多对象视图内容 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MultViewContent.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MultViewContent.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MultViewContent.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.MultViewContent.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MultViewContent.PropertyPath">
+            <summary>
+            属性路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MultViewContent.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MultViewContent.Readonly">
+            <summary>
+            是否只读
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MultViewContent.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MultViewContent.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemPropertyDirectoryLibrary">
+            <summary>
+            可选择的目录库
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemPropertyDirectoryLibrary.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemPropertyDirectoryLibrary.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemPropertyDirectoryLibrary.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemPropertyDirectoryLibrary.DirectoryLibrary">
+            <summary>
+            目录库(被关联对象)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemPropertyDirectoryLibrary.Property">
+            <summary>
+            属性（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemListPersonalization">
+            <summary>
+            对象列表显示个性化 
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Personalization">
+            <summary>
+            个性化
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Personalization.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Personalization.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Personalization.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Personalization.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Personalization.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPersonalization.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPersonalization.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPersonalization.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.IdentityPersonalization">
+            <summary>
+            用户标识个性化
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.IdentityPersonalization.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.IdentityPersonalization.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.IdentityPersonalization.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.IdentityPersonalization.Identity">
+            <summary>
+            用户标识（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.IdentityPersonalization.Personalization">
+            <summary>
+            个性化（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.IdentityPersonalization.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.FileSuffix">
+            <summary>
+             文件扩展名
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.FileSuffix.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileSuffix.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileSuffix.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.FileSuffix.FileType">
+            <summary>
+            文件类型（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FileSuffix.Name">
+            <summary>
+            扩展名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UnitofMeasureISOCode">
+            <summary>
+            计量单位ISO代码 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasureISOCode.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasureISOCode.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasureISOCode.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureISOCode.ISOCode">
+            <summary>
+            ISO代码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureISOCode.ISOCodeText">
+            <summary>
+            ISO代码说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasureISOCode.ISOCodeTextEN">
+            <summary>
+            ISO代码说明英文
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PortalLayoutWebPart">
+            <summary>
+            门户布局部件
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalLayoutWebPart.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalLayoutWebPart.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalLayoutWebPart.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalLayoutWebPart.ColumnIndex">
+            <summary>
+            列号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalLayoutWebPart.PortalLayout">
+            <summary>
+            门户布局（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalLayoutWebPart.RowIndex">
+            <summary>
+            行号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalLayoutWebPart.Widget">
+            <summary>
+            主页部件（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MainMenuItemTypeItem">
+            <summary>
+            对象类型子菜单
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuItemTypeItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuItemTypeItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuItemTypeItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuItemTypeItem.RefItemTypeId">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemWorkflow">
+            <summary>
+            对象工作流
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemWorkflow.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemWorkflow.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemWorkflow.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemWorkflow.SourceItemType">
+            <summary>
+            对象类型(源对象)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemWorkflow.WorkflowTemplate">
+            <summary>
+            工作流模板（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemWorkflow.ClassPath">
+            <summary>
+            类路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemWorkflow.Identity">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemMainMenuItem">
+            <summary>
+            对象主菜单项 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemMainMenuItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemMainMenuItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemMainMenuItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemMainMenuItem.RefItem">
+            <summary>
+            对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemMainMenuItem.NewItemByItemType">
+            <summary>
+            创建对象（以当前类型）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UserGroupUser">
+            <summary>
+            用户组用户
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UserGroupUser.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UserGroupUser.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UserGroupUser.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.UserGroupUser.User">
+            <summary>
+            用户（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UserGroupUser.UserGroup">
+            <summary>
+            用户组（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MainMenuCustomItem">
+            <summary>
+            自定义主菜单项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuCustomItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuCustomItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuCustomItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.MainMenuCustomItem.MenuItemKey">
+            <summary>
+            菜单键名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.IconLibrary">
+            <summary>
+            图标库
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.IconLibrary.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.IconLibrary.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.IconLibrary.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.IconLibrary.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.IconLibrary.Name">
+            <summary>
+            库名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.FileType">
+            <summary>
+             文件类型
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.FileType.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileType.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileType.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileType.IsImage">
+            <summary>
+            gif, jpg, jpeg, bmp, png
+            </summary>
+            <returns>该文件是否是系统识别图片文件</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileType.IsAudio">
+            <summary>
+            mp3, wav
+            </summary>
+            <returns>该文件是否是系统识别的音频文件</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileType.GetFileTypeByExtension(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="extension"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.ItemCore.FileType.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FileType.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FileType.Compression">
+            <summary>
+            压缩
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FileType.ExtensionName">
+            <summary>
+            扩展名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DirectoryLibrary">
+            <summary>
+            目录库
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryLibrary.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryLibrary.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryLibrary.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryLibrary.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryLibrary.ItemIntroductionTypeDefine">
+            <summary>
+            对象引入类型定义关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryLibrary.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryLibrary.RootDirector">
+            <summary>
+            根目录
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Widget">
+            <summary>
+            主页部件
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Widget.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Widget.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Widget.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Widget.Assembly">
+            <summary>
+            装配件名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Widget.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Widget.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Widget.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Widget.WebPartIdentity">
+            <summary>
+            主页部件适用的用户关联集合
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ServerExtensionPoint">
+            <summary>
+            服务层扩展点
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ServerExtensionPoint.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ServerExtensionPoint.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ServerExtensionPoint.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ServerExtensionPoint.Code">
+            <summary>
+            编码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ServerExtensionPoint.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PermissionIdentity">
+            <summary>
+            对象权限用户标识
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionIdentity.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionIdentity.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionIdentity.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentity.Identity">
+            <summary>
+            用户标识（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentity.Permission">
+            <summary>
+            对象权限（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentity.PermissionIdentityDetail">
+            <summary>
+            对象权限明细关联集合
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Permission2IdentityDetail">
+            <summary>
+            对象权限明细 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2IdentityDetail.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2IdentityDetail.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2IdentityDetail.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Permission2IdentityDetail.Allow">
+            <summary>
+            允许
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Permission2IdentityDetail.Deny">
+            <summary>
+            拒绝
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Permission2IdentityDetail.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Permission2IdentityDetail.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Permission2">
+            <summary>
+            对象权限 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.ClientExtension">
+            <summary>
+            客户端扩展
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ClientExtension.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ClientExtension.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ClientExtension.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtension.Assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtension.ClassName">
+            <summary>
+            类(带命名空间，区分大小写）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtension.ExtensionPoint">
+            <summary>
+            扩展点
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ClientExtension.URI">
+            <summary>
+            URI
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SubMainMenuDirectory">
+            <summary>
+            子主菜单目录 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SubMainMenuDirectory.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SubMainMenuDirectory.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SubMainMenuDirectory.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.SubMainMenuDirectory.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SubMainMenuDirectory.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UnitofMeasure">
+            <summary>
+            计量单位
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasure.IsSameDimensionTo(Wisense.Common.Item.IUnitofMeasure)">
+            <summary>
+            判断两个单位是否同计量维度(无计量维度的单位彼此维度不同)。
+            </summary>
+            <param name="another"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasure.GetConversionFactorTo(Wisense.Common.Item.IUnitofMeasure)">
+            <summary>
+            获取和同计量维度的另一个单位间的转换因子，计量维度不同的单位间不能转换。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasure.GetUnitofMeasureFromISOCode(System.String)">
+            <summary>
+            根据ISOCode获取计量单位
+            </summary>
+            <param name="ISOCode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.UnitofMeasure.GetUnitofMeasureFromUnitText(System.String)">
+            <summary>
+            根据单位名称获取计量单位
+            </summary>
+            <param name="unitText"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.UnitofMeasureID">
+            <summary>
+            单位编码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.MeasurementUnitText">
+            <summary>
+            单位名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Commercial">
+            <summary>
+            商业名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Industry">
+            <summary>
+            工业名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Dimension">
+            <summary>
+            计量维度
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Numerator">
+            <summary>
+            分子
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Denominator">
+            <summary>
+            分母
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Exponent">
+            <summary>
+            指数
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.AdditiveConstant">
+            <summary>
+            附加常量
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.Factor">
+            <summary>
+            和基准计量单位间的转换因子
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UnitofMeasure.DecimalPlaces">
+            <summary>
+            小数位数
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SubUserGroup">
+            <summary>
+            子用户组
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SubUserGroup.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SubUserGroup.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SubUserGroup.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.SubUserGroup.ParentUserGroup">
+            <summary>
+            父用户组（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SubUserGroup.NextUserGroup">
+            <summary>
+            子用户组（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SubOrganization">
+            <summary>
+            子组织
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SubOrganization.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SubOrganization.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SubOrganization.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.SubOrganization.ParentOrganization">
+            <summary>
+            父组织（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SubOrganization.NextOrganization">
+            <summary>
+            子组织（被关联对象）
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SingleView.DeepClone">
+            <summary>
+            深拷贝
+            </summary>
+            <returns>拷贝的副本</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.SortOrder">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.Name">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.Standard">
+            <summary>
+            标准
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.DisplayDevice">
+            <summary>
+            显示设备
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.SourceItemType">
+            <summary>
+            对象类型（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.SingleViewContent">
+            <summary>
+            单对象视图内容
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleView.SingleViewVisualElements">
+            <summary>
+            单对象视图里的元素
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.VisualElements.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.VisualElements.Label">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyGroup.Column">
+            <summary>
+            分列（如果为空则返回1）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyGroup.PropertyGroupContent">
+            <summary>
+            属性组内容
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyGroup.PropertyGroupElements">
+            <summary>
+            属性组里的元素
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PermissionIdentityDetail">
+            <summary>
+            对象权限明细
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionIdentityDetail.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionIdentityDetail.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionIdentityDetail.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentityDetail.Allow">
+            <summary>
+            允许
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentityDetail.Deny">
+            <summary>
+            拒绝
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentityDetail.PermissionIdentity">
+            <summary>
+            对象权限用户标识(源对象)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionIdentityDetail.PermissionItem">
+            <summary>
+            权限项（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.OrganizationUser">
+            <summary>
+            组织用户
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.OrganizationUser.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.OrganizationUser.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.OrganizationUser.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.OrganizationUser.IsMain">
+            <summary>
+            是否主组织
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.OrganizationUser.Organization">
+            <summary>
+            组织（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.OrganizationUser.User">
+            <summary>
+            用户（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemPermission">
+            <summary>
+            类型权限
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemPermission.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemPermission.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemPermission.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemPermission.Identity">
+            <summary>
+            用户标识（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemPermission.ItemType">
+            <summary>
+            对象类型（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemPermission.PermissionDetail">
+            <summary>
+            类型权限明细关联集合
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ChildActivityCategory">
+            <summary>
+            活动子目录
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ChildActivityCategory.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ChildActivityCategory.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ChildActivityCategory.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ChildActivityCategory.Name">
+            <summary>
+            目录名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ChildActivityCategory.Title">
+            <summary>
+            目录标题
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ChildActivityCategory.Activity">
+            <summary>
+            活动关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ChildActivityCategory.ActivityCategory">
+            <summary>
+            活动目录（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ChildActivityCategory.No">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemListPZationFilter">
+            <summary>
+            对象列表显示个性化过滤 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPZationFilter.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPZationFilter.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPZationFilter.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemListPZationFilter.ItemType">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemListPZationFilter.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemListPZationFilter.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ViewStyle">
+            <summary>
+            视图样式
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ViewStyle.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ViewStyle.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ViewStyle.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.ReportServer">
+            <summary>
+            报表服务器 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ReportServer.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ReportServer.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ReportServer.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ReportServer.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ReportServer.Url">
+            <summary>
+            URL地址
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ReportServer.LoginName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ReportServer.LoginPassword">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ReportServer.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ReportServer.CurrentState">
+            <summary>
+            当前状态
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Organization.GetRootOrganization">
+            <summary>
+            获取根组织
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Organization.CutTo(Wisense.Common.Item.IOrganization,Wisense.Common.Item.IOrganization)">
+            <summary>
+            剪切组织到
+            </summary>
+            <param name="previousParent">原父组织</param>
+            <param name="currentParent">新父组织</param>
+        </member>
+        <member name="M:Wisense.ItemCore.Organization.DeleteSubOrganization(Wisense.Common.Item.IOrganization)">
+            <summary>
+            删除自己的某个子组织
+            </summary>
+            <param name="organization">要删除的子组织</param>
+        </member>
+        <member name="M:Wisense.ItemCore.Organization.CopyTo(Wisense.Common.Item.IOrganization)">
+            <summary>
+            复制组织到
+            </summary>
+            <param name="organization">目标</param>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemIntroductionTypeDefine">
+            <summary>
+             对象引入类型定义
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemIntroductionTypeDefine.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemIntroductionTypeDefine.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemIntroductionTypeDefine.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemIntroductionTypeDefine.DirectoryLibrary">
+            <summary>
+            目录库（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemIntroductionTypeDefine.FileType">
+            <summary>
+            文件类型（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.File2">
+            <summary>
+            文件
+            </summary>
+        </member>
+        <member name="F:Wisense.ItemCore.File2.FileSystemCacheDirectory">
+            <summary>
+            缓存文件存放的目录
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.WriteFileContent(System.IO.Stream)">
+            <summary>
+            将流写入文件内容，该函数内部处理压缩，属性维护
+            </summary>
+            <param name="stream"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.GetValidFileName">
+            <summary>
+            获得一个有效的文件名，解决没有扩展名和文件名的扩展名与文件类型不匹配的问题
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.Upload(System.String)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="filePathName">服务器文件路径名</param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.Upload(System.IO.Stream)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="fileStream">文件名</param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.Upload(System.Uri)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="fileUri">文件URI</param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.UrlUpload(System.String)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="url">文件URL</param>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.Download(System.String)">
+            <summary>
+            将文件下载到指定路径
+            </summary>
+            <param name="filePath">路径</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.Download">
+            <summary>
+            文件下载到默认目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.UrlDownload">
+            <summary>
+            文件下载到默认URL
+            </summary>
+            <returns>文件URL</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.UriDownload">
+            <summary>
+            文件下载到默认URI
+            </summary>
+            <returns>文件URI</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.File2.ClearFileSystemFiles">
+            <summary>
+            删除文件系统中对应的文件，包括缓存文件，缩略图文件
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.File2.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.File2.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.File2.FileModifiedOn">
+            <summary>
+            文件内容修改时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.File2.FileType">
+            <summary>
+            文件类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.File2.Compression">
+            <summary>
+            是否压缩
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.File2.FileSystemName">
+            <summary>
+            保存在文件系统中的文件名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DirectoryFiles">
+            <summary>
+            目录关联文件
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryFiles.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryFiles.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryFiles.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryFiles.Directory">
+            <summary>
+            目录（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryFiles.File">
+            <summary>
+            文件（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ActivityCategory">
+            <summary>
+            活动目录
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ActivityCategory.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ActivityCategory.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ActivityCategory.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ActivityCategory.ChildActivityCategory">
+            <summary>
+            活动子目录关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ActivityCategory.Name">
+            <summary>
+            目录名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ActivityCategory.Title">
+            <summary>
+            目录标题
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ViewModel">
+            <summary>
+            视图模型
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ViewModel.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ViewModel.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ViewModel.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.TouchTerminalPortalFun">
+            <summary>
+            触摸屏终端门户功能项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.TouchTerminalPortalFun.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.TouchTerminalPortalFun.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.TouchTerminalPortalFun.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchTerminalPortalFun.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchTerminalPortalFun.Icon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchTerminalPortalFun.Index">
+            <summary>
+            序号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchTerminalPortalFun.Key">
+            <summary>
+            键
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchTerminalPortalFun.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchTerminalPortalFun.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SystemMessageSettings">
+            <summary>
+            系统短信平台设置
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemMessageSettings.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemMessageSettings.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemMessageSettings.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMessageSettings.Core">
+            <summary>
+            核心
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMessageSettings.Description">
+            <summary>
+            账号说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMessageSettings.IsDefaultNumber">
+            <summary>
+            默认账号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMessageSettings.Name">
+            <summary>
+            账号名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMessageSettings.PhoneNumber">
+            <summary>
+            手机号码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleViewContent.SingleView">
+            <summary>
+            视图（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SingleViewContent.VisualElements">
+            <summary>
+            可视化元素（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PermissionItem">
+            <summary>
+            权限项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionItem.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionItem.Label">
+            <summary>
+            显示名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionItem.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Notice">
+            <summary>
+            公告 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Notice.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Notice.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Notice.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Notice.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Notice.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Notice.ExpirationTime">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Notice.Publisher">
+            <summary>
+            发布人
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemLog">
+            <summary>
+            对象日志
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemLog.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemLog.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemLog.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.ActedOn">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.Action">
+            <summary>
+            操作
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.ActionLoginname">
+            <summary>
+            操作内容
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.ActionName">
+            <summary>
+            操作者名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.Content">
+            <summary>
+            操作内容
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.ItemID">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLog.ItemTypeID">
+            <summary>
+            对象类型ID
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PortalIdentity">
+            <summary>
+            门户自定义适用的用户
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalIdentity.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalIdentity.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalIdentity.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalIdentity.Identity">
+            <summary>
+            用户标识（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalIdentity.Portal">
+            <summary>
+            门户自定义（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalIdentity.priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MonitorTemplates">
+            <summary>
+             监控展示模板
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MonitorTemplates.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MonitorTemplates.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MonitorTemplates.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.MonitorTemplates.AssemblyName">
+            <summary>
+            组件名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MonitorTemplates.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MonitorTemplates.description">
+            <summary>
+            模板描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.MonitorTemplates.name">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DirectoryStructure">
+            <summary>
+            目录结构关系
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryStructure.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryStructure.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectoryStructure.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryStructure.JuniorDirectory">
+            <summary>
+            下级目录（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectoryStructure.UpperDirectory">
+            <summary>
+            上级目录（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DatabaseConnectionConfig">
+            <summary>
+            外部数据源
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DatabaseConnectionConfig.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DatabaseConnectionConfig.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DatabaseConnectionConfig.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DatabaseConnectionConfig.DateSource">
+            <summary>
+            数据源
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DatabaseConnectionConfig.DatebaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DatabaseConnectionConfig.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DatabaseConnectionConfig.UserId">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DatabaseConnectionConfig.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbUpgradeScriptLog">
+            <summary>
+            数据库升级脚本运行记录
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DbUpgradeScriptLog.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DbUpgradeScriptLog.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DbUpgradeScriptLog.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DbUpgradeScriptLog.From">
+            <summary>
+            从α
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DbUpgradeScriptLog.To">
+            <summary>
+            到α
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DbUpgradeScriptLog.description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.TouchScreenTerminal">
+            <summary>
+            触摸屏终端 
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.CollectionTerminal">
+            <summary>
+            采集终端 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.CollectionTerminal.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.CollectionTerminal.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.CollectionTerminal.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.CollectionTerminal.Code">
+            <summary>
+            代号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.CollectionTerminal.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.CollectionTerminal.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.CollectionTerminal.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.TouchScreenTerminal.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.TouchScreenTerminal.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.TouchScreenTerminal.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchScreenTerminal.IdleTime">
+            <summary>
+            空闲注销时间(S)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TouchScreenTerminal.Index">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemLog.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemLog.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemLog.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.SysOption">
+            <summary>
+            系统选项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SysOption.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SysOption.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SysOption.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.SysOption.ApplicationTitle">
+            <summary>
+            系统标题
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PortalLayout">
+            <summary>
+            门户布局
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalLayout.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalLayout.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PortalLayout.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PortalLayout.PortalLayoutWebPart">
+            <summary>
+            门户布局面板关联集合
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MultiView">
+            <summary>
+            多视图对象
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MultiView.DeepClone">
+            <summary>
+            深拷贝
+            </summary>
+            <returns>拷贝的副本</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.MultiView.GetViewName(System.String)">
+            <summary>
+            获得一个不重名的字符串
+            </summary>
+            <param name="viewName">第一次用来尝试的字符串</param>
+            <returns>不重名的视图名</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.MultiView.GetViewByName(System.String,System.String)">
+            <summary>
+            通过对象ID和视图名称获取一个视图
+            </summary>
+            <param name="itemTypeId">对象ID</param>
+            <param name="viewName">视图名称</param>
+            <returns>获得的视图，如果查询不到返回null</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.MultiView.ItemType">
+            <summary>
+            对象类型（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MainMenuDirectory">
+            <summary>
+            主菜单目录
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuDirectory.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuDirectory.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.MainMenuDirectory.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.FunctionName">
+            <summary>
+            展示功能名称
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.FunctionName.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FunctionName.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.FunctionName.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.FunctionName.Assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FunctionName.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FunctionName.DataShowTemplate">
+            <summary>
+            电子看板（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FunctionName.RefreshTime">
+            <summary>
+            刷新时间(秒)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FunctionName.ShowOrder">
+            <summary>
+            显示次序
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.FunctionName.ShowTime">
+            <summary>
+            显示时间(秒)
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DataShowTemplate">
+            <summary>
+            电子看板
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DataShowTemplate.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DataShowTemplate.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DataShowTemplate.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DataShowTemplate.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DataShowTemplate.FunctionName">
+            <summary>
+            展示功能名称关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DataShowTemplate.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.AvailablePermissionItem">
+            <summary>
+            有效权限项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.AvailablePermissionItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.AvailablePermissionItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.AvailablePermissionItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.AvailablePermissionItem.SourceItemType">
+            <summary>
+            对象类型(源对象)
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.AvailablePermissionItem.PermissionItem">
+            <summary>
+            权限项（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UIStyle">
+            <summary>
+            界面风格
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.UIStyle.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UIStyle.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.UIStyle.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.UIStyle.Core">
+            <summary>
+            核心
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UIStyle.InstancePageUIStyle">
+            <summary>
+            对象界面动态效果
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.UIStyle.MainPageUIStyle">
+            <summary>
+            主界面动态效果
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Permission2Identity">
+            <summary>
+            对象权限用户标识 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2Identity.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2Identity.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission2Identity.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Permission2Identity.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Permission2Identity.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.LoginModeConfig">
+            <summary>
+            登录方式配置 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.LoginModeConfig.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LoginModeConfig.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LoginModeConfig.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.LoginModeConfig.Name">
+            <summary>
+            登录方式名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LoginModeConfig.Label">
+            <summary>
+            登录方式显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LoginModeConfig.Description">
+            <summary>
+            登录方式描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LoginModeConfig.ImageUrl">
+            <summary>
+            登录图标路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LoginModeConfig.NavigateUrl">
+            <summary>
+            跳转路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LoginModeConfig.Enabled">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Attribute">
+            <summary>
+            对象框架，对象特性 @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.GetValueType">
+            <summary>
+            特性值类型
+            </summary>
+            <returns>特性值类型</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.GetSingleValue">
+            <summary>
+            获取单值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.GetValueSet">
+            <summary>
+            获取值集合
+            </summary>
+            <returns>值集合</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.GetLowerLimit(System.Boolean@)">
+            <summary>
+            获取值下限（最小值）
+            </summary>
+            <param name="included">是否包含</param>
+            <returns>下限</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Attribute.GetUpperLimit(System.Boolean@)">
+            <summary>
+            获取上限（最大值）
+            </summary>
+            <param name="included">是否包含</param>
+            <returns>上限</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.Attribute.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Attribute.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Attribute.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Attribute.Unit">
+            <summary>
+            计量单位
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.WebPartIdentity">
+            <summary>
+            主页部件使用的用户
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.WebPartIdentity.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.WebPartIdentity.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.WebPartIdentity.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.WebPartIdentity.Identity">
+            <summary>
+            用户标识（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WebPartIdentity.Widget">
+            <summary>
+            主页部件（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ServerExtension">
+            <summary>
+            服务端扩展
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ServerExtension.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ServerExtension.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ServerExtension.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ServerExtension.Assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ServerExtension.ClassName">
+            <summary>
+            类(带命名空间，区分大小写）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ServerExtension.ExtensionPoint">
+            <summary>
+            扩展点
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Revision">
+            <summary>
+            版本序列
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Revision.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Revision.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Revision.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Revision.revision">
+            <summary>
+            版本序列
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyGroupContent.PropertyGroup">
+            <summary>
+            属性组（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyGroupContent.PropertyElements">
+            <summary>
+            属性元素（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyElements.Width">
+            <summary>
+            宽度
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyElements.Height">
+            <summary>
+            高度
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyElements.Readonly">
+            <summary>
+            只读
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PropertyElements.PropertyPath">
+            <summary>
+            属性路径（暂时只支持一级路径）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Portal">
+            <summary>
+            门户自定义
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Portal.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Portal.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Portal.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Portal.Assembly">
+            <summary>
+            程序集
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Portal.ClassName">
+            <summary>
+            类名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Portal.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Portal.PortalIdentity">
+            <summary>
+            门户自定义适用的用户
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Portal.SystemShowLabel">
+            <summary>
+            系统显示名
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PermissionDetail">
+            <summary>
+            类型权限明细
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionDetail.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionDetail.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PermissionDetail.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionDetail.Allow">
+            <summary>
+            允许
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionDetail.Deny">
+            <summary>
+            拒绝
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionDetail.ItemPermission">
+            <summary>
+            类型权限（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PermissionDetail.PermissionItem">
+            <summary>
+            权限项（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DirectorySubMainMenuItem">
+            <summary>
+            目录子菜单项
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectorySubMainMenuItem.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectorySubMainMenuItem.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DirectorySubMainMenuItem.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectorySubMainMenuItem.MainMenuDirectory">
+            <summary>
+            主菜单目录（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DirectorySubMainMenuItem.MainMenuItem">
+            <summary>
+            主菜单项（被关联对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SystemMailSettings">
+            <summary>
+            系统邮箱设置
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemMailSettings.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemMailSettings.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SystemMailSettings.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.Name">
+            <summary>
+            邮箱名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.Description">
+            <summary>
+            邮箱说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.Host">
+            <summary>
+            发送邮件服务器
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.UseSSL">
+            <summary>
+            使用SSL协议
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.SendPort">
+            <summary>
+            发送邮件端口号
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.UserName">
+            <summary>
+            发送邮件用户名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.Password">
+            <summary>
+            发送邮件密码
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.IsDefaultEmail">
+            <summary>
+            默认邮箱
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SystemMailSettings.Core">
+            <summary>
+            核心
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PersonalizationFilter">
+            <summary>
+            个性化过滤 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.PersonalizationFilter.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PersonalizationFilter.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.PersonalizationFilter.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.PersonalizationFilter.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PersonalizationFilter.Sql">
+            <summary>
+            过滤语句
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.PersonalizationFilter.Condition">
+            <summary>
+            条件
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemListPZationProperty">
+            <summary>
+            对象列表显示个性化属性 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPZationProperty.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPZationProperty.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemListPZationProperty.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemListPZationProperty.ItemType">
+            <summary>
+            对象类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemListPZationProperty.SourceId">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemListPZationProperty.RelatedId">
+            <summary>
+            被关联对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ElectronicKanban">
+            <summary>
+            电子看板配置 
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ElectronicKanban.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="baseItem"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ElectronicKanban.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ElectronicKanban.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.Key">
+            <summary>
+            键名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.ShowType">
+            <summary>
+            显示类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.CoordinateX">
+            <summary>
+            窗口X坐标
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.CoordinateY">
+            <summary>
+            窗口Y坐标
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.Width">
+            <summary>
+            窗口宽度
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ElectronicKanban.Height">
+            <summary>
+            窗口高度
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Directory">
+            <summary>
+            目录
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Directory.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Directory.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Directory.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Directory.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Directory.CurrentWorkDir">
+            <summary>
+            本地工作目录
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Directory.Description">
+            <summary>
+            说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Directory.DirectoryFiles">
+            <summary>
+            目录关联文件关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Directory.DirectoryStructure">
+            <summary>
+            目录结构关系关联集合
+            </summary>
+        </member>
+    </members>
+</doc>

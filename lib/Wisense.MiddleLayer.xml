@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisense.MiddleLayer</name>
+    </assembly>
+    <members>
+        <member name="T:Wisense.MiddleLayer.Util.MessagerTool">
+            <summary>
+            消息器工具
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.MessagerTool.GetMessager">
+            <summary>
+            获取消息器（短信发送、接收器）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Wisense.MiddleLayer.Util.Scheduler">
+            <summary>
+            计划任务协调器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.Current">
+            <summary>
+            获取当前计划任务工具
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.MaintainSchedule(Wisense.Common.Item.ISchedulingTask)">
+            <summary>
+            维护将要执行的计划任务
+            保证队列中存在chance个有效的执行计划
+            </summary>
+            <param name="st">计划任务</param>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.AddSchedulingTask2Aim(Wisense.Common.Item.ISchedulingTask)">
+            <summary>
+            添加计划任务到协调器执行计划中。
+            </summary>
+            <param name="st"></param>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.RemoveSchedulingTask2Aim(System.String)">
+            <summary>
+            移除计划任务（从协调器执行计划中）。
+            </summary>
+            <param name="st"></param>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.ExcecuteTask(System.Object)">
+            <summary>
+            执行计划任务
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.ExecuteTask2(System.Object)">
+            <summary>
+            执行处理
+            </summary>ISchedulingTask st
+            <param name="o">计划任务</param>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.Start">
+            <summary>
+            开始计划任务执行
+            </summary>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.Restart">
+            <summary>
+            重新开始计划任务执行
+            </summary>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Util.Scheduler.Stop">
+            <summary>
+            停止计划任务
+            </summary>
+        </member>
+        <member name="T:Wisense.MiddleLayer.Util.Extension.ExecutingSchedulingTaskEventReceiver">
+            <summary>
+            执行计划任务处理事件接收器
+            </summary>
+        </member>
+        <member name="T:Wisense.MiddleLayer.Cache.AutoTouchCache">
+            <summary>
+            自动刷新缓存过期时间
+            </summary>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Cache.AutoTouchCache.DoTreatment(Wisense.Extension.EventContext)">
+            <summary>
+            执行处理
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="P:Wisense.MiddleLayer.Cache.AutoTouchCache.Description">
+            <summary>
+            事件接收器描述
+            </summary>
+        </member>
+        <member name="P:Wisense.MiddleLayer.Cache.AutoTouchCache.Exclusive">
+            <summary>
+            是否排他（独占）
+            </summary>
+        </member>
+        <member name="P:Wisense.MiddleLayer.Cache.AutoTouchCache.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Wisense.MiddleLayer.Log.LogCleanup">
+            <summary>
+            自动日志维护
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Log.LogCleanup.DeleteLogByMaxNumber(Wisense.Common.Item.IBaseItem,Wisense.ItemCore.RuntimeContext)">
+            <summary>
+            按最大数量删除日志
+            </summary>
+            <param name="itemTypeItem"></param>
+        </member>
+        <member name="M:Wisense.MiddleLayer.Log.LogCleanup.DeleteLogByRetentionTime(Wisense.Common.Item.IBaseItem,Wisense.ItemCore.RuntimeContext)">
+            <summary>
+            按生效时间删除日志
+            </summary>
+            <param name="itemTypeItem"></param>
+        </member>
+        <member name="T:Wisense.MiddleLayer.Util.Extension.CreatingMessagerEventReceiver">
+            <summary>
+            创建消息器（短信发送、接收器）事件接收器
+            </summary>
+        </member>
+    </members>
+</doc>

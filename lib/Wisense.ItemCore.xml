@@ -1,0 +1,2658 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisense.ItemCore</name>
+    </assembly>
+    <members>
+        <member name="P:Wisense.ItemCore.WorkflowTemplate.Template">
+            <summary>
+            工作流模板
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTemplate.Name">
+            <summary>
+            工作流模板名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTemplate.Description">
+            <summary>
+            工作流模板描述
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCounter.TotalPlus">
+            <summary>
+            /////////////////////////////////////////////////////
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCounter.FirstCacheHitsPlus">
+            <summary>
+            ////////////////////////////////////////////
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCounter.SecondCacheHitsPlus">
+            <summary>
+            /////////////////////////////////////////////////
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCounter.ThirdCacheHitsPlus">
+            <summary>
+            /////////////////////////////////////////////////////////////////
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCounter.DbRetrieve">
+            <summary>
+            ///////////////////////////////////
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbDAO">
+            <summary>
+            对象框架，抽象数据访问对象
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.IItemDataAccessObject">
+            <summary>
+            对象框架，对象数据访问对象
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.QueryAll">
+            <summary>
+            对象框架，查询模式：全部
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SingleTableDAO">
+            <summary>
+            对象框架，单表数据访问对象
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.QueryPagination">
+            <summary>
+            对象框架，查询模式：分页
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.WisenseMiddleLayer">
+            <summary>
+            Wisense分布式运算中的中间层节点，此类单例、线程安全。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WisenseMiddleLayer.FppDataDirectory">
+            <summary>
+            获取或设置（允许设置一次）当前程序的FppData绝对目录
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WisenseMiddleLayer.BinaryDirectory">
+            <summary>
+            获取或设置（允许设置一次）当前程序的二进制绝对目录
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.MemBase">
+            <summary>
+            对象框架，Membase缓存（二级对象缓存）
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Cache">
+            <summary>
+            对象框架，抽象缓存
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ICache">
+            <summary>
+            对象框架，缓存
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Get(System.String,System.String)">
+            <summary>
+            从对象框架二级缓存获取对象
+            </summary>
+            <param name="id">对象id</param>
+            <param name="itemTypeId">对象类型id</param>
+            <returns>对象，入不存在返回null</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Add(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            将对象加入到对象框架二级缓存
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Add(Wisense.Common.Item.IBaseItem,System.TimeSpan)">
+            <summary>
+            将对象加入到对象框架二级缓存
+            </summary>
+            <param name="item">对象</param>
+            <param name="timeSpan">指定存在的时间段</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Set(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            更新对象到对象框架二级缓存，缓存中不存在则添加
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.MutiGet(System.Collections.Generic.List{Wisense.Common.Item.ItemRef})">
+            <summary>
+            从对象框架二级缓存获取多个对象
+            </summary>
+            <param name="itemRefs">对象引用列表</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Find(System.String,System.String)">
+            <summary>
+            对象框架二级缓存查找对象
+            </summary>
+            <param name="id">对象id</param>
+            <param name="itemTypeId">对象类型id</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Remove(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            对象框架二级缓存移除对象
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Clear">
+            <summary>
+            清除对象框架二级缓存
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ICache.Touch(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            触动对象框架二级缓存对象
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="T:Wisense.ItemCore.LifeCycleState">
+            <summary>
+            对象框架，生命周期状态
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Relationship">
+            <summary>
+            对象框架，关联对象
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Relationship.Afterreplicated(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】浅复制对象（创建对象副本）后处理
+            </summary>
+            <param name="replication">已创建的当前对象的副本</param>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycleState.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            装饰
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycleState.#ctor(System.String)">
+            <summary>
+            构造已有对象
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycleState.#ctor(System.String,System.String)">
+            <summary>
+            构造已有对象
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Source">
+            <summary>
+            （所属）生命周期
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.IsStartState">
+            <summary>
+            启动状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.SetIsReleased">
+            <summary>
+            设置为发布
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Color">
+            <summary>
+            颜色
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.SetNotLockable">
+            <summary>
+             设置为不可锁定
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Top">
+            <summary>
+            上
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Entries">
+            <summary>
+            进入的生命周期转换
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleState.Exits">
+            <summary>
+            离开的生命周期转换
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemTypeManager">
+            <summary>
+            对象框架，对象类型管理器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemManager">
+            <summary>
+            对象框架，对象管理器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.Persist(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            持久化对象
+            </summary>
+            <param name="item">当前对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.Delete(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            删除对象
+            </summary>
+            <param name="item">当前对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.Create(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            创建对象
+            </summary>
+            <param name="item">当前对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.Update(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            修改对象
+            </summary>
+            <param name="item">当前对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.SetManagedColumnValue4New(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            新建对象时，自动设置系统管理的属性。
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.SetManagedColumnValue4Create(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            创建对象时，自动设置系统管理的属性。
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.SetManagedColumnValue4Update(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            更改对象时，自动设置系统管理的属性。
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.GenerateKeyedName(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            生成关键名
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemManager.GenerateKeyedName(Wisense.Common.Item.IBaseItem,System.Collections.Generic.IEnumerable{Wisense.Common.Item.IBaseItem})">
+            <summary>
+            生成关键名
+            </summary>
+            <param name="item"></param>
+            <param name="keyedPropertys"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemTypeManager.Create(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            创建对象
+            </summary>
+            <param name="item">要创建的对象</param>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemFactory">
+            <summary>
+            对象工厂，此类单例、线程安全
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.TouchInceptionMetadata(System.Object)">
+            <summary>
+            更新缓存中元数据的过期时间
+            </summary>
+            <param name="o">0</param>
+            <param name="e">e</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.TouchInceptionMetadata">
+            <summary>
+            刷新缓存数据过期时间
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.GetCurrentTime">
+            <summary>
+            获取当前系统时间
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.GetNewId">
+            <summary>
+            获取一个GUID（去掉“-”并转为大写）串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.GetItem(System.String,System.String)">
+            <summary>
+            指定id，itemTypeId获取一个系统中已存在的对象
+            </summary>
+            <param name="id">对象id</param>
+            <param name="itemTypeId">对象类型id</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.GetItem``1(System.String,System.String)">
+            <summary>
+            指定id，itemTypeId获取一个系统中已存在的对象
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="id">对象id</param>
+            <param name="itemTypeId">对象类型id</param>
+            <returns>对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.IsItemExists(System.String,System.String)">
+            <summary>
+            判断对象是否存在
+            </summary>
+            <param name="id">对象Id</param>
+            <param name="itemTypeId">对象类型Id</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.NewItem(System.String)">
+            <summary>
+            创建一个新对象
+            </summary>
+            <param name="itemTypeId">要创建的对象实例所属的对象类型id</param>
+            <returns>新对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.NewItem``1(System.String)">
+            <summary>
+            创建一个新对象
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="itemTypeId">要创建的对象实例所属的对象类型id</param>
+            <returns>新对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.NewItem(System.String,System.String)">
+            <summary>
+            使用指定的id，创建一个新对象
+            </summary>
+            <param name="newId">指定的对象id</param>
+            <param name="itemTypeId">要创建的对象实例所属的对象类型id</param>
+            <returns>新对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.NewItem``1(System.String,System.String)">
+            <summary>
+            使用指定的id，创建一个新对象
+            </summary>
+            <typeparam name="T">泛型</typeparam>
+            <param name="newId">指定的对象id</param>
+            <param name="itemTypeId">要创建的对象实例所属的对象类型id</param>
+            <returns>新对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.ResetGlobalMetadata">
+            <summary>
+            重置1.5级缓存（元数据缓存）
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.ResetCache">
+            <summary>
+            重置2级缓存（全局缓存）
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemFactory.Init">
+            <summary>
+            系统初始化
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemFactory.Current">
+            <summary>
+            获取当前对象工厂
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SessionContext">
+            <summary>
+            对象框架，会话上下文
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SessionContext.#ctor(System.String,Wisense.Common.Item.IUser)">
+            <summary>
+            构造一个会话上下文
+            </summary>
+            <param name="sessionId">会话Id
+            （一个能分辨的字符串即可：如WCF的操作Id；线程Id；自定义的一个具有特定含义的字符串）</param>
+            <param name="user">会话用户</param>
+        </member>
+        <member name="P:Wisense.ItemCore.SessionContext.User">
+            <summary>
+            会话用户
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SessionContext.SessionId">
+            <summary>
+            会话标识
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.RuntimeContext">
+            <summary>
+            对象框架，运行时上下文（自动处理缓存、数据库事务）。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Begin">
+            <summary>
+            以无数据库事务方式开始运行时上下文。该方法仅适用于Web部署模式,系统自动创建SessionContext会话上下文。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Begin(Wisense.ItemCore.SessionContext)">
+            <summary>
+            以无数据库事务方式开始运行时上下文。
+            </summary>
+            <param name="currentSession">当前会话</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.BeginWithTransaction">
+            <summary>
+             以数据库事务方式开始运行时上下文。该方法仅适用于Web部署模式，系统自动创建SessionContext会话上下文。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.BeginWithTransaction(Wisense.ItemCore.SessionContext)">
+            <summary>
+            以数据库事务方式开始运行时上下文。
+            </summary>
+            <param name="currentSession">当前会话</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Accept">
+            <summary>
+            接受运行时上下文。当前运行上下文运行涉及的数据提交，包括对象、缓存、事务等。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Discard">
+            <summary>
+            丢弃运行时上下文。当前运行上下文运行涉及的数据被丢弃，包括对象数据更改、回滚事务等。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Register(System.IDisposable)">
+            <summary>
+            注册需释放的对象。
+            运行时上下文在释放时处理已注册的对象的释放工作。
+            </summary>
+            <param name="autoDisposed">需释放的对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Dispose">
+            <summary>
+            上下文实例销毁。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Merge(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            合并分离对象。将不在任何运行时上下文中的对象，合并到当前运行时上下文中。
+            </summary>
+            <param name="detachedItem">分离状态对象</param>
+            <returns>合并后的对象，该对象在当前上下文中</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.RuntimeContext.Merge``1(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            合并分离对象。将不在任何运行时上下文中的对象，合并到当前运行时上下文中。
+            </summary>
+            <typeparam name="T">实体对象类</typeparam>
+            <param name="detachedItem">分离状态对象</param>
+            <returns>合并后的对象，该对象在当前上下文中</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.ItemOperationLogging">
+            <summary>
+            获取、设置是否记录对象的操作日志
+            默认值true
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.Id">
+            <summary>
+            当前运行时上下文Id
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.NewInstance">
+            <summary>
+            创建一个运行时上下文实例。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.Current">
+            <summary>
+            当前运行时上下文。Web部署模式，系统自动创建维护。App部署模式需程序使用using语句显式创建（New）和Dispose，如果不存在，抛出异常；
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.Existing">
+            <summary>
+            判断当前是否存在有效的运行时上下文对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.IsBegining">
+            <summary>
+            当前运行时上下文是否开始
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.BeWithTransaction">
+            <summary>
+            当前运行时上下文是否具有事务
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.BeWithSession">
+            <summary>
+            当前运行时上下文是否具有会话（中间层是一定具有的）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.SessionContext">
+            <summary>
+            当前会话上下文。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.DbTransaction">
+            <summary>
+            当前运行时上下文数据库事务
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RuntimeContext.ItemContext">
+            <summary>
+            获取运行时上下文中的对象上下文。
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.AfterdeletedEventReceiver">
+            <summary>
+            对象删除（保存）后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.PrepersistEventReceiver">
+            <summary>
+            对象持久化（保存）前处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Identity">
+            <summary>
+            对象框架，用户标识（身份）
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.DbColumn">
+            <summary>
+            对象框架，数据库列
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Workflow.InstanceId">
+            <summary>
+            工作流实例ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Workflow.BindItemId">
+            <summary>
+            绑定的ITEM的ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Workflow.BindItemTypeId">
+            <summary>
+            绑定的ITEM的ITEM_TYPE_ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Workflow.CreatedById">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Workflow.Template">
+            <summary>
+            工作流模板对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.WFTaskTodoList">
+            <summary>
+            对象框架，工作流任务待办任务列表
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WFTaskTodoList.Decision">
+            <summary>
+            决定
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WFTaskTodoList.DecisionDescription">
+            <summary>
+            决定说明
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WFTaskTodoList.AdditionalParam">
+            <summary>
+            附加参数
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WFTaskTodoList.ReceivedBy">
+            <summary>
+            接受人
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WFTaskTodoList.ReceivedOn">
+            <summary>
+            接受时间
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SchedulingTask">
+            <summary>
+            对象框架，计划任务。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.SchedulingTask.SetBeginTime(System.DateTime)">
+            <summary>
+            设置开始时间
+            </summary>
+            <param name="begin"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.SchedulingTask.Next">
+            <summary>
+            下一次执行时间。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.BaseTime">
+            <summary>
+            基线时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Day">
+            <summary>
+            第几天
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Enable">
+            <summary>
+            计划是否启用
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Mode">
+            <summary>
+            计划模式
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Name">
+            <summary>
+            计划任务名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.PerDay">
+            <summary>
+            每几天
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.PerHour">
+            <summary>
+            每几小时
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.PerMinute">
+            <summary>
+            每几分钟
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Position">
+            <summary>
+            部署位置
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Time">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.SpecificTime">
+            <summary>
+            指定时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.SchedulingTask.Week">
+            <summary>
+            星期
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.RIC">
+            <summary>
+            对象框架，关联对象集合
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemCollectionByItemType">
+            <summary>
+            对象框架，（对象类型实例）对象集合
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemCollection">
+            <summary>
+            对象框架，对象集合
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.#ctor">
+            <summary>
+            不能自动加载对象的对象集合。作为一个对象容器，由使用者填充。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.#ctor(Wisense.Common.Item.DbNativeQuery)">
+            <summary>
+            不分页对象集合
+            </summary>
+            <param name="dbNativeQuery">Db原生查询</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.#ctor(Wisense.Common.Item.DbNativeQuery,Wisense.Common.Item.Pagination)">
+            <summary>
+            分页对象集合
+            </summary>
+            <param name="dbNativeQuery">Db原生查询</param>
+            <param name="pagination">分页</param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.GetItemRefs">
+            <summary>
+            获取集合中对象的引用（ItemRef）集。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.Load">
+            <summary>
+            加载集合
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.Reset">
+            <summary>
+            重置对象集合（清除集合的元素，并设为未加载状态，对集合的构成因素无影响）。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.Reload">
+            <summary>
+            重新加载（当集合的构成因素发生改变后）
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.ItemsBatchLoad">
+            <summary>
+            批量装载集合中的对象。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.GetEnumerator">
+            <summary>
+            替换父类获取枚举器（自动加载）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.ResetAll">
+            <summary>
+            批量复位对象集合中所有的对象（丢弃对象最后一次Original状态以来所有的更改）。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.DeleteAll">
+            <summary>
+            批量删除集合中所有的对象(将对象置为Deleted状态)。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.SaveAll">
+            <summary>
+            批量保存对象集合中的对象，没有发生持久化更改的对象无任何操作。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.RefreshAll">
+            <summary>
+            刷新集合中所有对象
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.FirstPage">
+            <summary>
+            分页集合定位至第一页
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.ForwardPage">
+            <summary>
+            分页集合向前翻页
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.NextPage">
+            <summary>
+            分页集合向后翻页
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.LastPage">
+            <summary>
+            分页集合定位至最后一页
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.GotoPage(System.Int32)">
+            <summary>
+            分页集合定位至指定页
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.BatchLoadItemPropertyItems(Wisense.Common.Item.IProperty)">
+            <summary>
+            批量加载集合元素（对象）的对象型属性的对象。
+            将以单个方式加载对象，改良为批量加载对象。
+            此方法对客户端列表展示对象集合时，展示对象型属性的列的性能具有很大的提升作用。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.GetSingleResult">
+            <summary>
+            获取单结果，仅当查询结果为单结果时正确返回，否则抛出异常。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollection.TryGetSingleResult">
+            <summary>
+            获取单结果，仅当查询结果为单结果时返回该对象，否则返回null
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.DbNativeQuery">
+            <summary>
+            获取当前集合的数据库原生查询
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.Pagination">
+            <summary>
+            获取当前集合的分页。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.QueryMode">
+            <summary>
+            获取当前集合的查询模式（分页、全部）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.IsPagination">
+            <summary>
+            是否分页
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.Loaded">
+            <summary>
+            集合是否装载
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.ItemsBatchLoading">
+            <summary>
+            获取、设置是否批量加载集合中的对象。
+            默认值为true。
+            如果集合中有相同对象类型的实例，并且可以预计到对象需要被加载（将来会访问对象的属性数据），批量加载比分别单个加载具有更高的性能。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemCollection.IsIdentityControl">
+            <summary>
+            是否使用用户标识控制（权限等）。
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(System.String)">
+            <summary>
+            不能自动加载对象的对象集合。作为一个对象容器，由使用者填充。
+            </summary>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType)">
+            <summary>
+            不包含子类实例；不分页；无where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,Wisense.Common.Item.WhereClause)">
+            <summary>
+            不包含子类实例、不分页，指定where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,System.Boolean)">
+            <summary>
+            指定是否包含子类实例；不分页；无where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="includingSubTypeInstance"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,System.Boolean,Wisense.Common.Item.WhereClause)">
+            <summary>
+            指定是否包含子类实例和where子句；不分页的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="includingSubTypeInstance"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,Wisense.Common.Item.Pagination)">
+            <summary>
+            不包含子类实例；指定分页；无where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="pagination"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,Wisense.Common.Item.Pagination,Wisense.Common.Item.WhereClause)">
+            <summary>
+            不包含子类实例；指定分页和where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="pagination"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,Wisense.Common.Item.Pagination,System.Boolean)">
+            <summary>
+            指定是否包含子类实例和分页；无where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="includingSubTypeInstance"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemCollectionByItemType.#ctor(Wisense.Common.Item.IItemType,Wisense.Common.Item.Pagination,System.Boolean,Wisense.Common.Item.WhereClause)">
+            <summary>
+            指定是否包含子类实例、分页和where子句的对象类型实例集合
+            </summary>
+            <param name="itemType"></param>
+            <param name="pagination"></param>
+            <param name="includingSubTypeInstance"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.ItemRef,Wisense.Common.Item.IRelationshipType)">
+            <summary>
+            不能自动加载对象的关联对象集合。作为一个对象容器，由使用者填充。
+            </summary>
+            <param name="sourceItem">源对象</param>
+            <param name="relationshipType">关联类型</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IItemType,Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.IItemType,System.Boolean)">
+            <summary>
+            用于原点数据加载的内部构造方法
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="itemType"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType)">
+            <summary>
+            不包含子类实例、不分页、无where子句的关联对象实例集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.WhereClause)">
+            <summary>
+            不包含子类实例、不分页，指定where子句的关联对象实例集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,System.Boolean)">
+            <summary>
+            指定是否包含子类实例、不分页、无where子句的关联对象实例集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="includingSubTypeInstance"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,System.Boolean,Wisense.Common.Item.WhereClause)">
+            <summary>
+            指定是否包含子类实例和where子句；不分页的关联对象实例集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="includingSubTypeInstance"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.Pagination)">
+            <summary>
+            不包含子类实例、无where子句、指定分页的关联对象集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="pagination"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.Pagination,Wisense.Common.Item.WhereClause)">
+            <summary>
+            不包含子类实例；指定分页和where子句的关联对象类型实例集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="pagination"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.Pagination,System.Boolean)">
+            <summary>
+            指定是否包含子类实例和分页，无where子句的关联对象集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="pagination"></param>
+            <param name="includingSubTypeInstance"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.RIC.#ctor(Wisense.Common.Item.IBaseItem,Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.Pagination,System.Boolean,Wisense.Common.Item.WhereClause)">
+            <summary>
+            指定是否包含子类实例、分页和where子句的关联对象类型实例集合
+            </summary>
+            <param name="source"></param>
+            <param name="relationshipType"></param>
+            <param name="pagination"></param>
+            <param name="includingSubTypeInstance"></param>
+            <param name="whereClause"></param>
+        </member>
+        <member name="T:Wisense.ItemCore.List">
+            <summary>
+            对象框架，列表
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.User">
+            <summary>
+            对象框架，用户
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.TodoList">
+            <summary>
+            对象框架，待办任务列表
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.EstimatedFinishTime">
+            <summary>
+            计划完成时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.ActualFinishTime">
+            <summary>
+            实际完成时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.AssignTo">
+            <summary>
+            待办人
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.Excutor">
+            <summary>
+            执行人
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.TodoList.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.SchedulingTaskManager">
+            <summary>
+            对象框架，计划任务管理器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.RelationshipTypeManager">
+            <summary>
+            对象框架，关联类型管理器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.RelationshipManager">
+            <summary>
+            对象框架，关联对象管理器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.NosqlDbOperation.MongoDbAdaper">
+            <summary>
+            对象框架，MongoDb适配器，单例，线程安全
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.NosqlDbOperation.MongoDbAdaper.Current">
+            <summary>
+            获取当前MongoServer实例
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.NosqlDbOperation.MongoDbAdaper.MongoDb">
+            <summary>
+            当前MongoDb
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.PreupdatingEventReceiver">
+            <summary>
+            对象修改（保存）后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.AfterpersistEventReceiver">
+            <summary>
+            对象持久化（保存）后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.CreatingSessionContextEventReceiver">
+            <summary>
+            创建运行时会话上下文(SessionContext)组件事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.UserGroup">
+            <summary>
+            对象框架，用户组
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.PropertyManager">
+            <summary>
+            对象框架，属性管理器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.NosqlDbOperation.MongoServerAdapter">
+            <summary>
+            /// <summary>
+            对象框架，MongoServer适配器，单例，线程安全
+            @author 张春红
+            </summary>
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.NosqlDbOperation.MongoServerAdapter.Current">
+            <summary>
+            获取当前MongoServer实例
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.NosqlDbOperation.MongoServerAdapter.MongoServer">
+            <summary>
+            当前MongoServer
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.CreatingSequenceStringEventReceiver">
+            <summary>
+            创建序列串事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.SqlDbOperator">
+            <summary>
+            对象框架，Sql Serer数据库操作器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.IDbOperator">
+            <summary>
+            对象框架，数据库操作器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Permission">
+            <summary>
+            对象框架,权限
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission.#ctor(Wisense.Common.Item.IBaseItem)">
+             <summary>
+            装饰方式构造一个权限对象
+             </summary>
+             <param name="item">对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission.#ctor(System.String)">
+            <summary>
+            以Id方式构造一个权限对象。
+            </summary>
+            <param name="id">Id</param>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission.GetGrantedPermissionItems(System.Collections.Generic.List{Wisense.Common.Item.ItemRef})">
+            <summary>
+            批量获取当前用户的对象权限。
+            </summary>
+            <param name="itemsRef">对象列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Permission.GetGrantedPermissionItem(Wisense.Common.Item.ItemRef)">
+            <summary>
+            获取当前用户的对象权限。
+            </summary>
+            <param name="itemRef">对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Wisense.ItemCore.File">
+            <summary>
+            对象框架，文件，该类型废弃，由File2代替
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.WorkHours">
+            <summary>
+            任务工时
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.EstimatedFinishTime">
+            <summary>
+            计划完成时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.CanceledOn">
+            <summary>
+            取消时间
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.CanceledBy">
+            <summary>
+            取消人
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.Type">
+            <summary>
+            类型（多人任务，单人任务）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.DecisionOption">
+            <summary>
+            决定选项
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.Label">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.Workflow">
+            <summary>
+            工作流
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.Name">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.ProcessView">
+            <summary>
+            处理界面
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.MaxTaskCount">
+            <summary>
+            最大产生任务数
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.MaxSubmitCount">
+            <summary>
+            最大提交任务数
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.AllowReceived">
+            <summary>
+            是否允许接收
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.WorkflowTask.Priority">
+            <summary>
+            优先级
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.RICC">
+            <summary>
+            对象框架，关联对象集合的集合
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.#ctor(Wisense.Common.Item.IItemType,System.Boolean)">
+            <summary>
+            仅用于原点加载的包内构造方法
+            </summary>
+            <param name="source">源对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            RICC构造方法
+            </summary>
+            <param name="source">源对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.#ctor(Wisense.Common.Item.IBaseItem,System.Boolean)">
+            <summary>
+            RICC构造方法
+            有机会通过loaded设置装载状态，而创建一个可以由使用者填充的关联对象集合（RIC）的集合。
+            </summary>
+            <param name="source">源对象</param>
+            <param name="loaded">是否已装载标识</param>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.GetRIC(Wisense.Common.Item.IRelationshipType)">
+            <summary>
+            获取关联对象集合。
+            注意此集合为对象的固有逻辑关联对象集合（不受权限和过滤条件的控制、不分页、包含子类实例、无where子句），与检索有本质区别。
+            如要检索，请自行构造一个RIC。
+            </summary>
+            <param name="relationshipType">关联类型</param>
+            <returns>对象的固有逻辑关联对象集合</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.GetRIC(System.String)">
+            <summary>
+            获取关联对象集合。
+            注意此集合为对象的固有逻辑关联对象集合（不受权限和过滤条件的控制、不分页、包含子类实例、无where子句），与检索有本质区别。
+            如要检索，请自行构造一个RIC。
+            </summary>
+            <param name="relationshipTypeName">关联类型名称</param>
+            <returns>对象的固有逻辑关联对象集合</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.TryGetRIC(Wisense.Common.Item.IRelationshipType,Wisense.Common.Item.IRIC@)">
+            <summary>
+            获取关联对象集合。
+            注意此集合为对象的固有逻辑关联对象集合（不受权限和过滤条件的控制、不分页、包含子类实例、无where子句），与检索有本质区别。
+            如要检索，请自行构造一个RIC。
+            </summary>
+            <param name="relationshipType">关联类型</param>
+            <param name="ric">对象的固有逻辑关联对象集合</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.RICC.TryGetRIC(System.String,Wisense.Common.Item.IRIC@)">
+            <summary>
+            获取关联对象集合。
+            注意此集合为对象的固有逻辑关联对象集合（不受权限和过滤条件的控制、不分页、包含子类实例、无where子句），与检索有本质区别。
+            如要检索，请自行构造一个RIC。
+            </summary>
+            <param name="relationshipTypeName">关联类型名称</param>
+            <param name="ric">对象的固有逻辑关联对象集合</param>
+            <returns>是否存在</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.RICC.Item(System.String)">
+            <summary>
+            获取关联对象集合。
+            注意此集合为对象的固有逻辑关联对象集合（不受权限和过滤条件的控制、不分页、包含子类实例、无where子句），与检索有本质区别。
+            如要检索，请自行构造一个RIC。
+            </summary>
+            <param name="relationshipTypeId">关联类型</param>
+            <returns>对象的固有逻辑关联对象集合</returns>
+        </member>
+        <member name="T:Wisense.ItemCore.Property">
+            <summary>
+            对象框架实体类：属性
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Property.IsOverridedBy(Wisense.Common.Item.IItemType)">
+            <summary>
+            是否被指定对象类型（及其子类）属性覆盖
+            </summary>
+            <param name="itemType">指定的对象类型</param>
+            <returns>是否</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.Property.ForeignDataSource">
+            <summary>
+            外部属性数据源
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Property.ForeignProperty">
+            <summary>
+            外部属性
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Property.IsOverriding">
+            <summary>
+            是否覆盖父类属性
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Property.IsOverrided">
+            <summary>
+            是否被子类属性覆盖
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Property.Filter">
+            <summary>
+            数据源过滤器
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemType">
+            <summary>
+            对象框架实体类：对象类型（元数据）
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.SetRICC(Wisense.ItemCore.RICC)">
+            <summary>
+            仅用于原点加载的包内方法
+            </summary>
+            <param name="ricc"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.IsAncestorOf(Wisense.Common.Item.IItemType)">
+            <summary>
+            是否是指定对象类型的祖先类型
+            </summary>
+            <param name="itemType">对象类型</param>
+            <returns>是否是指定对象类型的祖先类型</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.IsDescendantOf(Wisense.Common.Item.IItemType)">
+            <summary>
+            是否是指定对象类型的子孙类型
+            </summary>
+            <param name="itemType">对象类型</param>
+            <returns>是否是指定对象类型的子孙类型</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.GetMetadata(Wisense.Common.Item.IRelationshipType)">
+            <summary>
+            获取元数据（指定（元数据对应的）关联类型）
+            </summary>
+            <param name="relationshipType">关联类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.TryGetPropertyMetadata(System.String)">
+            <summary>
+            试图获取属性元数据
+            </summary>
+            <param name="dbColumnName">属性对应的数据库列名</param>
+            <returns>属性（如果存在的话），否则返回null</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.TryGetProperty(System.String)">
+            <summary>
+            试图获取对象类型的属性
+            </summary>
+            <param name="dbColumnName">属性对应的数据库列名</param>
+            <returns>属性（如果存在的话），否则返回null</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.GetPropertyMetadata(System.String)">
+            <summary>
+            获取属性
+            </summary>
+            <param name="dbColumnName">属性对应的数据库列名</param>
+            <returns>属性（如果存在的话），否则抛异常</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.TryGetRelationshipTypeMetadata(System.String)">
+            <summary>
+            试图获取关联类型元数据
+            </summary>
+            <param name="relationshipTypeName">关联类型名称</param>
+            <returns>关联类型（如果存在的话），否则返回null</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.TryGetRelationshipType(System.String)">
+            <summary>
+            试图获取对象类型的关联类型
+            </summary>
+            <param name="relationshipTypeName">关联类型名称</param>
+            <returns>关联类型（如果存在的话），否则返回null</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.GetRelationshipTypeMetadata(System.String)">
+            <summary>
+            获取关联类型元数据
+            </summary>
+            <param name="relationshipTypeName">关联类型名称</param>
+            <returns>关联类型（如果存在的话），否则抛异常</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemType.GetLifeCycle">
+            <summary>
+            生命周期
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.RelationshipType">
+            <summary>
+            关联对象类型对应的关联类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.Parent">
+            <summary>
+            获取父类型。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.Children">
+            <summary>
+            子类型
+            每次调用都返回一个新的未加载的对象集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.Ancestors">
+            <summary>
+            获取所有祖先类型。
+            每次调用都返回一个新的对象集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.Descendants">
+            <summary>
+            获取本类型的所有子孙后代类型。
+            每次调用都返回一个新的未加载的对象集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.PropertyMetadata">
+            <summary>
+            属性元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.RelationshipTypeMetadata">
+            <summary>
+            关联类型元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.ItemLifeCycleMetadata">
+            <summary>
+            生命周期元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.ItemWorkflowMetadata">
+            <summary>
+            工作流元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.ItemReportMetadata">
+            <summary>
+            报表元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.ClientExtensionMetadata">
+            <summary>
+            客户端扩展元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.ServerExtensionMetadata">
+            <summary>
+            服务端扩展元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.PermissionMetadata">
+            <summary>
+            权限元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.AvailablePermissionItemMetadata">
+            <summary>
+            有效权限项元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.FilterMetadata">
+            <summary>
+            过滤器元数据
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.EntityClass">
+            <summary>
+            对象类型对应的C#实体类全限定名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.EntityClassType">
+            <summary>
+            对象类型对应的C#实体类
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.EntityClassAssembly">
+            <summary>
+            对象类型对应的C#实体类所在程序集名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemType.EntityClassAssemblyAssembly">
+            <summary>
+            对象类型对应的C#实体类所在程序集
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemContext">
+            <summary>
+            对象框架，对象上下文（一级对象缓存）
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemContext.Register(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            【已废弃】对象框架外部调用不再使用该方法，请使用RuntimeContext.Merge()
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemContext.Clear">
+            <summary>
+            清楚缓冲区
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemContext.RegisterNonPersistantItems(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            由外部强制注册非持久化对象（需更新二级缓存）
+            </summary>
+            <param name="item">对象</param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.Items">
+            <summary>
+            获取当前对象上下文中的对象列表副本
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.PersistingItems">
+            <summary>
+            获取持久化成功前当前对象上下文中需要持久化的对象。包含新增、修改、删除的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.PersistedItems">
+            <summary>
+            获取持久化成功后当前对象上下文中持久化的对象（包含新建、修改、删除的对象）。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.CreatingItems">
+            <summary>
+            获取持久化成功前当前对象上下文中创建的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.CreatedItems">
+            <summary>
+            获取持久化成功后当前对象上下文中创建的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.ModifyingItems">
+            <summary>
+            获取持久化成功前当前对象上下文中修改的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.ModifiedItems">
+            <summary>
+            获取持久化成功后当前对象上下文中修改的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.DeletingItems">
+            <summary>
+            获取持久化成功前当前对象上下文中删除的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.DeletedItems">
+            <summary>
+            获取持久化成功后当前对象上下文中删除的对象。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemContext.PositiveCacheStrategy">
+            <summary>
+            获取、设置是否采用积极的缓存策略
+            默认值为true:尽可能的缓存对象数据；false：尽可能的不缓存对象数据
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.LifeCycleTransition">
+            <summary>
+            对象框架，生命周期跃迁
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycleTransition.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            装饰构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycleTransition.#ctor(System.String)">
+            <summary>
+            构造已有对象构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.Left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.Top">
+            <summary>
+            上
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.From">
+            <summary>
+            源状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.To">
+            <summary>
+            目标状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.X">
+            <summary>
+            X坐标
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.Y">
+            <summary>
+            Y坐标
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycleTransition.Source">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ForeignDAO">
+            <summary>
+            对象框架，外部数据访问对象
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.AfterupdatedEventReceiver">
+            <summary>
+            对象修改（保存）后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DenyDeletingItemException">
+            <summary>
+            对象框架，拒绝删除对象异常
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.DbOperator">
+            <summary>
+            对象框架，数据库操作器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Value">
+            <summary>
+            对象框架，列表值
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Sequence">
+             <summary>
+            对象框架，序列
+             @author 张春红
+             </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Sequence.NewSquence">
+            <summary>
+            （生成）下一个序列值
+            该方法需要事务（调整序列的当前值）
+            </summary>
+            <returns>新序列</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.Sequence.ResetSequence">
+            <summary>
+            复位。当前值清零。
+            该方法需要事务（调整序列的当前值）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.Prefix">
+            <summary>
+            前缀
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.Suffix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.PadWith">
+            <summary>
+            填充字符
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.CurrentValue">
+            <summary>
+            当前值
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.Step">
+            <summary>
+            步进
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Sequence.PadTo">
+            <summary>
+            填充位数
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.JoinedTableDAO">
+            <summary>
+            对象框架，连接表数据访问对象（尚未实现）
+            @author 张春红
+            </summary>
+        </member>
+        <!-- 对于成员“T:Wisense.ItemCore.ItemLifeCycle”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wisense.ItemCore.ItemLifeCycle.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            装饰
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.ItemLifeCycle.#ctor(System.String)">
+            <summary>
+            构造已有对象
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLifeCycle.Source">
+            <summary>
+            对象类型（源对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLifeCycle.Related">
+            <summary>
+            生命周期（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLifeCycle.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.ItemLifeCycle.Enabled">
+            <summary>
+            启用
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.CreatingSequenceStringParameter">
+            <summary>
+            创建序列串扩展点参数。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Extension.CreatingSequenceStringParameter.#ctor(System.String,System.String,System.String)">
+            <summary>
+            创建序列串扩展点参数
+            </summary>
+            <param name="prefix">前缀</param>
+            <param name="sequence">序列（已填充好的流水号）</param>
+            <param name="suffix">后缀</param>
+        </member>
+        <member name="P:Wisense.ItemCore.Extension.CreatingSequenceStringParameter.Prefix">
+            <summary>
+            序列前缀
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Extension.CreatingSequenceStringParameter.Squence">
+            <summary>
+            序列（已填充好的流水号）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Extension.CreatingSequenceStringParameter.Suffix">
+            <summary>
+            后缀
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.AfternewedEventReceiver">
+            <summary>
+            新建对象后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.QueryCurrentItemType">
+            <summary>
+            对象框架，查询范围：仅当前对象类型
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.FileOperation.MongoFsFileRepository">
+            <summary>
+            MongoFs文件库。此类单例，线程安全。
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.FileOperation.FileRepository">
+            <summary>
+            文件库。
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.FileOperation.IFileRepository">
+            <summary>
+            文件库
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.IFileRepository.Add(System.String,System.IO.Stream)">
+            <summary>
+            添加一个文件到文件库
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.IFileRepository.Set(System.String,System.IO.Stream)">
+            <summary>
+            设置文件。存在此文件则更新，否则添加。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.IFileRepository.Delete(System.String)">
+            <summary>
+            从文件库删除文件，存在此文件则删除，不存在则直接返回（不抛异常）。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.IFileRepository.Get(System.String)">
+            <summary>
+            获取文件，不存在则抛出异常。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <returns>文件内容</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.IFileRepository.TryGet(System.String,System.IO.Stream@)">
+            <summary>
+            尝试获取文件，不存在，输出参数“content”为null
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+            <returns>成功获取返回true，否则为false</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.IFileRepository.Exists(System.String)">
+            <summary>
+            判断文件是否存在
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <returns>存在返回true，否则为false</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.FileRepository.Add(System.String,System.IO.Stream)">
+            <summary>
+            添加一个文件到文件库
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.FileRepository.Set(System.String,System.IO.Stream)">
+            <summary>
+            设置文件。存在此文件则更新，否则添加。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.FileRepository.Delete(System.String)">
+            <summary>
+            从文件库删除文件，存在此文件则删除，不存在则直接返回（不抛异常）。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.FileRepository.Get(System.String)">
+            <summary>
+            获取文件，不存在则抛出异常。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <returns>文件内容</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.FileRepository.TryGet(System.String,System.IO.Stream@)">
+            <summary>
+            尝试获取文件，不存在，输出参数“content”为null
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+            <returns>成功获取返回true，否则为false</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.FileRepository.Exists(System.String)">
+            <summary>
+            判断文件是否存在
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <returns>存在返回true，否则为false</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.FileOperation.FileRepository.Current">
+            <summary>
+            获取当前文件库
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.MongoFsFileRepository.Add(System.String,System.IO.Stream)">
+            <summary>
+            添加一个文件到文件库
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.MongoFsFileRepository.Set(System.String,System.IO.Stream)">
+            <summary>
+            设置文件。存在此文件则更新，否则添加。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.MongoFsFileRepository.Delete(System.String)">
+            <summary>
+            从文件库删除文件，存在此文件则删除，不存在则直接返回（不抛异常）。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.MongoFsFileRepository.Get(System.String)">
+            <summary>
+            获取文件，不存在则抛出异常。
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <returns>文件内容</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.MongoFsFileRepository.TryGet(System.String,System.IO.Stream@)">
+            <summary>
+            尝试获取文件，不存在，输出参数“content”为null
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <param name="content">文件内容</param>
+            <returns>成功获取返回true，否则为false</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.FileOperation.MongoFsFileRepository.Exists(System.String)">
+            <summary>
+            判断文件是否存在
+            </summary>
+            <param name="id">文件Id，32位GUID</param>
+            <returns>存在返回true，否则为false</returns>
+        </member>
+        <member name="P:Wisense.ItemCore.FileOperation.MongoFsFileRepository.Current">
+            <summary>
+            获取当前MongoFs文件库
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.StringDbColumn">
+            <summary>
+            对象框架，String 型数据库列
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.OracleDbOperator">
+            <summary>
+            对象框架，Oracle数据库操作器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.StateTransitionHistory">
+            <summary>
+            对象框架，生命周期转换历史
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.StateTransitionHistory.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            装饰构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.StateTransitionHistory.#ctor(System.String)">
+            <summary>
+            构造已有对象构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.StateTransitionHistory.From">
+            <summary>
+            从状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.StateTransitionHistory.Transition">
+            <summary>
+            转换
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.StateTransitionHistory.To">
+            <summary>
+            到状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.StateTransitionHistory.Source">
+            <summary>
+            源对象
+            </summary>
+        </member>
+        <!-- 对于成员“T:Wisense.ItemCore.LifeCycle”忽略有格式错误的 XML 注释 -->
+        <member name="M:Wisense.ItemCore.LifeCycle.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycle.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.LifeCycle.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycle.LifeCycleState">
+            <summary>
+            生命周期状态关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycle.LifeCycleTransition">
+            <summary>
+            生命周期跃迁关联集合
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycle.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycle.Label">
+            <summary>
+            显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycle.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.LifeCycle.StartState">
+            <summary>
+            开始状态
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.Filter.#ctor(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Filter.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.Filter.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="P:Wisense.ItemCore.Filter.ClassPath">
+            <summary>
+            类路径
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Filter.FilterCondition">
+            <summary>
+            筛选条件
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Filter.OrderBy">
+            <summary>
+            标准的Sql排序字符串
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Filter.Identity">
+            <summary>
+            用户标识（被关联对象）
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.Filter.ItemType">
+            <summary>
+            对象类型（源对象）
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.PreacceptingEventReceiver">
+            <summary>
+            运行时上下文(RuntimeContext)接受（Accept）前处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.TablePerItemTypeDAO">
+            <summary>
+            对象框架，每对象类型一表数据访问对象（尚未实现）
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.AfterreplicatedEventReceiver">
+            <summary>
+            对象复制（创建副本）后处理事件接收器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DbOperation.MainDatabase">
+            <summary>
+            系统主数据库，此类单例、线程安全
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.AftercreatedEventReceiver">
+            <summary>
+            对象创建（保存）后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.QueryIncludingSubItemType">
+            <summary>
+            对象框架，查询范围：当前对象类型及其子孙类型
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.RelationshipType">
+            <summary>
+            对象框架，关联类型
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RelationshipType.IsOverriding">
+            <summary>
+            是否覆盖父类关联类型
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.RelationshipType.IsOverrided">
+            <summary>
+            是否被子类关联类型覆盖
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.ItemManagerDispatcher">
+            <summary>
+            对象框架，对象管理器调度器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.PredeletingEventReceiver">
+            <summary>
+            对象删除（保存）后处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.Extension.PrecreatingEventReceiver">
+            <summary>
+            对象创建（保存）前处理事件接收器。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.ItemCore.DecoratedItem">
+            <summary>
+            对象框架，（内部）被装饰对象；外部非对象框架代码不允许直接使用该类型。
+            @author 张春红
+            </summary>>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.#ctor(System.String)">
+            <summary>
+            构造一个新对象
+            </summary>
+            <param name="itemTypeId">对象类型Id</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            有机会使用指定的Id构造一个新对象
+            </summary>
+            <param name="newId">指定的Id</param>
+            <param name="itemTypeId">对象类型Id</param>
+            <param name="specifiedId">是否使用指定的Id</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.#ctor(System.String,System.String)">
+            <summary>
+            构造一个已有对象
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.SetPersistentStateForward(Wisense.Common.Item.ItemState)">
+            <summary>
+            设置对象持久化状态(正向)
+            </summary>
+            <param name="itemState">状态</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.SetPersistentStateBackward(Wisense.Common.Item.ItemState)">
+            <summary>
+            设置对象持久化状态(反向)
+            </summary>
+            <param name="itemState">状态</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.SetItemState(Wisense.Common.Item.ItemState)">
+            <summary>
+            设置对象状态
+            </summary>
+            <param name="itemState">状态</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.SetRICC(Wisense.Common.Item.IRICC)">
+            <summary>
+            仅用于原点加载的包内部方法
+            </summary>
+            <param name="ricc"></param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.IsModifiedProperty(System.String)">
+            <summary>
+            判断指定的属性项值是否发生更改。
+            </summary>
+            <param name="dbColumnName">数据库列名</param>
+            <returns>是否发生更改</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetPropertyCell(System.String)">
+            <summary>
+            获取对象属性单元
+            </summary>
+            <param name="dbColumnName">数据库列名</param>
+            <returns>对象属性单元</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.ContainsAttribute(System.String)">
+            <summary>
+            判断对象是否包含指定的特性
+            </summary>
+            <param name="dbColumnName">特性名称</param>
+            <returns>是否包含</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetProperty(System.String)">
+            <summary>
+            获取对象属性值
+            </summary>
+            <param name="dbColumnName">数据库列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetProperty(System.String,Wisense.Common.Item.ItemDataVersion)">
+            <summary>
+            获取对象属性值
+            </summary>
+            <param name="dbColumnName">数据库列名</param>
+            <param name="version">对象数据版本</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetProperty``1(System.String)">
+            <summary>
+            获取对象属性值
+            </summary>
+            <typeparam name="T">与wisense数据类型对应的.net类型，包括自定义的item类(继承自BaseItem)</typeparam>
+            <param name="columnName">数据库列名</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetProperty``1(System.String,Wisense.Common.Item.ItemDataVersion)">
+            <summary>
+            获取对象指定数据版本的属性值
+            </summary>
+            <typeparam name="T">与wisense数据类型对应的.net类型，包括自定义的item类(继承自BaseItem)</typeparam>
+            <param name="dbColumnName">数据库列名</param>
+            <param name="version">版本</param>
+            <returns>值</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.SetProperty(System.String,System.Object)">
+            <summary>
+            设置对象属性值
+            </summary>
+            <param name="dbColumnName">数据库列名</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.SetProperty``1(System.String,``0)">
+            <summary>
+            设置对象属性值
+            </summary>
+            <typeparam name="T">与Wisense数据类型对应的.net类型，包括自定义的item类（实现IBaseItem）</typeparam>
+            <param name="dbColumnName">数据库列名</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Refresh">
+            <summary>
+            刷新
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetAttributes">
+            <summary>
+            获取特性集
+            </summary>
+            <returns>特性集</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.GetAttribute(System.String)">
+            <summary>
+            获取特性
+            </summary>
+            <param name="name">特性名称（不区分大小写）</param>
+            <returns>特性值</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Delete">
+            <summary>
+            删除
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.IsExists">
+            <summary>
+            当前对象是否存在。
+            对于已持久化对象，当数据库中有对应的记录时才返回true；
+            对于新建对象，始终返回false
+            </summary>
+            <returns>是否存在</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.IsInstanceOf(Wisense.Common.Item.IItemType)">
+            <summary>
+            当前对象是否是指定的对象类型（含子孙后代）的实例
+            </summary>
+            <param name="itemType">指定的对象类型</param>
+            <returns>是否是指定对象类型（含子孙后代）的实例</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.MoveTo(Wisense.Common.Item.IItemType)">
+            <summary>
+            将当前对象实例数据迁移到其他对象类中。当前对象删除。
+            该操作仅迁移原对象类和目标对象类中共同的属性项值和关联对象（AB）实例，其余的将损失。
+            </summary>
+            <param name="destination">目标对象类</param>
+            <returns>目的对象</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Replicate">
+            <summary>
+            浅复制一个对象副本，仅创建，未（不）保存；
+            只复制当前对象本身，不级联复制其关联对象；
+            此对象副本拥有与源对象的相同的属性值。
+            </summary>
+            <returns>对象副本</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Replicate(Wisense.Common.Item.IItemCollection)">
+            <summary>
+            深复制一个对象副本，仅创建，未（不）保存；
+            相当于一系列的浅复制：浅复制当前对象->浅复制当前对象的关联对象->浅复制当前对象的关联对象的关联对象->...以此递推。
+            会级联浅复制该对象的关联对象，以及关联对象的关联对象,以此递推，将这些对象填充到relationshipItems集合中。
+            此对象副本及其层级复制的关联对象拥有与源对象的相同的属性值。
+            </summary>
+            <param name="relationshipItems">事先构造好的对象容器【relationshipItems = new ItemCollection();】，用以填充级联复制创建的关联对象（级联复制的关联对象，及其关联对象的关联对象，以此递推）</param>
+            <returns>对象副本</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.IsEqualTo(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            判断与item是否等值（所有属性值相等）
+            </summary>
+            <param name="item">指定比较的目的对象</param>
+            <returns>是否等值</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.TransitState(Wisense.Common.Item.ILifeCycleTransition)">
+            <summary>
+            使用指定的转换对象进行状态转换
+            </summary>
+            <param name="transition">生命周期转换对象</param>
+            <returns>是否已转换</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.PretransitState(Wisense.Common.Item.ILifeCycleTransition)">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】状态转换前处理
+            </summary>
+            <param name="transition">状态转换对象</param>
+            <returns>是否继续状态转换处理</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.AftertransitState(Wisense.Common.Item.ILifeCycleTransition)">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】状态转换后处理
+            </summary>
+            <param name="transition">状态转换对象</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Presaving">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】保存前处理，当调用Save时由框架触发（Save前）
+            </summary>
+            <returns>是否继续保存操作</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Aftersaved">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】保存后处理，当调用Save时由框架触发（Save后）
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.PresettingProperty``1(System.String,``0)">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】设值前处理，当调用SetProperty时由框架触发（SetProperty前）
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="dbColumnName">属性列名</param>
+            <param name="value">属性值</param>
+            <returns>是否继续设值操作</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.AftersetedProperty``1(System.String,``0)">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】设值后处理，当调用SetProperty时由框架触发（SetProperty后）
+            </summary>
+            <typeparam name="T">数据类型</typeparam>
+            <param name="dbColumnName">属性列名</param>
+            <param name="value">属性值</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Predeleting">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】删除前处理
+            </summary>
+            <returns>是否继续删除操作</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Afterdeleted">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】删除后处理
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Precreating">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】新建前处理
+            </summary>
+            <returns>是否继续新建操作</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Aftercreated">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】删除后处理
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Preupdating">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】修改前处理
+            </summary>
+            <returns>是否继续修改操作</returns>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Afterupdated">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】修改后处理
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Afternewed">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】新建对象（未保存）后处理，ItemFactory.NewItem...时触发
+            </summary>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Afterreplicated(Wisense.Common.Item.IBaseItem)">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】浅复制对象（创建对象副本）后处理
+            </summary>
+            <param name="replication">已创建的当前对象的副本</param>
+        </member>
+        <member name="M:Wisense.ItemCore.DecoratedItem.Dispose">
+            <summary>
+            【该方法由对象框架回调，不要直接调用】深复制对象（创建对象副本）后处理
+            </summary>
+            <param name="replication">已复制创建的当前对象的副本</param>
+            <param name="AdditionalReplicationContainer">事先构造好的对象容器，用以填充级联创建的相关对象副本，这些对象不应该在该方法中执行保存操作，统一交由调用对象复制的类处理。</param>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.IsDeleting">
+            <summary>
+            对象是否正在删除
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.ItemState">
+            <summary>
+            对象状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.PersistentState">
+            <summary>
+            对象持久化状态
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.RICC">
+            <summary>
+            对象的关联对象集合的集合。
+            注意此集合为当前对象的固有逻辑关联对象集合的集合（不受权限和过滤条件的控制），与检索有本质区别。
+            如要检索，请自行构造一个RICC。
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.CascadeDelete">
+            <summary>
+            是否级联删除
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.IntegriteDelete">
+            <summary>
+            是否完整性删除
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.CascadeDeleteRef">
+            <summary>
+            是否级联删除引用对象
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.CurrentItemContext">
+            <summary>
+            当前运行时上下文
+            </summary>
+        </member>
+        <member name="P:Wisense.ItemCore.DecoratedItem.IsDetached">
+            <summary>
+            对象是否分离（不在当前运行时上下文中，即对象不由当前运行时上下文中生成--由另一个上下文产生，跨上下文）
+            </summary>
+        </member>
+    </members>
+</doc>

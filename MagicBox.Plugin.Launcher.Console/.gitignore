@@ -1,0 +1,7 @@
+/obj/
+MagicBox.Plugin.Launcher.Console.csproj.user
+Web.config
+/bin/
+/_ReSharper.MagicBox.Plugin.Launcher.Console/
+*.DotSettings.user
+/Plugins/

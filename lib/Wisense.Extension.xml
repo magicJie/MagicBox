@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisense.Extension</name>
+    </assembly>
+    <members>
+        <member name="T:Wisense.Extension.CreatingComponentsExtensionPoint`2">
+            <summary>
+            创建多个组件扩展点
+             @author 张春红
+            </summary>
+            <typeparam name="EventReceiver">事件接收器类型，一个继承自CreatingComponentEventReceiver的抽象类。扩展开发者继承此抽象类，实现，并Export。</typeparam>
+            <typeparam name="Component">交由外部创建的组件类型</typeparam>
+        </member>
+        <member name="T:Wisense.Extension.ExtensionPoint">
+            <summary>
+            扩展开发框架，抽象扩展点
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.Extension.CreatingComponentsExtensionPoint`2.CreateComponent(Wisense.Extension.EventContext)">
+            <summary>
+            创建组件
+            </summary>
+            <param name="context">事件上下文参数</param>
+            <returns>创建的组件</returns>
+        </member>
+        <member name="T:Wisense.Extension.ExtensionFramework">
+            <summary>
+            Wisense扩展框架。维护MEF容器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="P:Wisense.Extension.ExtensionFramework.Container">
+            <summary>
+            获取MEF容器
+            </summary>
+        </member>
+        <member name="T:Wisense.Extension.PretreatmentEventReceiver">
+            <summary>
+            前处理事件接收器。扩展开发者定义的具体事件接收器由此类派生。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="T:Wisense.Extension.EventReceiver">
+            <summary>
+            顶层抽象事件接收器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.Extension.EventReceiver.CompareTo(Wisense.Extension.EventReceiver)">
+            <summary>
+            比较
+            </summary>
+            <param name="other">比较目标</param>
+            <returns>结果</returns>
+        </member>
+        <member name="P:Wisense.Extension.EventReceiver.Priority">
+            <summary>
+            事件接收器优先级。数值越大优先级越高，越先接收到事件。
+            </summary>
+        </member>
+        <member name="P:Wisense.Extension.EventReceiver.Exclusive">
+            <summary>
+            是否排他。独占的事件接收器可以阻止当前事件继续传递到其他相对较低优先级的接收器。
+            </summary>
+        </member>
+        <member name="P:Wisense.Extension.EventReceiver.Description">
+            <summary>
+            事件接收器描述。
+            </summary>
+        </member>
+        <member name="M:Wisense.Extension.PretreatmentEventReceiver.DoPretreatment(Wisense.Extension.EventContext)">
+            <summary>
+            前处理
+            </summary>
+            <param name="context">事件上下文</param>
+            <returns>是否继续事件发生</returns>
+        </member>
+        <member name="T:Wisense.Extension.CreatingComponentExtensionPoint`2">
+            <summary>
+            创建组件扩展点
+            @author 张春红
+            </summary>
+            <typeparam name="EventReceiver">事件接收器类型，一个继承自CreatingComponentEventReceiver的抽象类。扩展开发者继承此抽象类，实现，并Export。</typeparam>
+            <typeparam name="Component">交由外部创建的组件类型</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.CreatingComponentExtensionPoint`2.CreateComponent(Wisense.Extension.EventContext)">
+            <summary>
+            创建组件
+            </summary>
+            <param name="context">事件上下文参数</param>
+            <returns>创建的组件</returns>
+        </member>
+        <member name="T:Wisense.Extension.AftertreatmentEventReceiver">
+            <summary>
+            后处理事件接收器。扩展开发者定义的具体事件接收器由此类派生。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.Extension.AftertreatmentEventReceiver.DoAftertreatment(Wisense.Extension.EventContext)">
+            <summary>
+            后处理
+            </summary>
+            <param name="context">事件上下文</param>
+        </member>
+        <member name="T:Wisense.Extension.ProcessingComponentEventReceiver`1">
+            <summary>
+            加工组件事件接收器。扩展开发者定义的具体事件接收器由此类派生。
+            @author 张春红
+            </summary>
+            <typeparam name="Component">加工的组件类型</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.ProcessingComponentEventReceiver`1.ProcessComponent(Wisense.Extension.EventContext,`0)">
+            <summary>
+            加工组件
+            </summary>
+            <param name="context">事件上下文</param>
+            <param name="component">要加工处理的组件</param>
+        </member>
+        <member name="T:Wisense.Extension.TreatmentExtensionPoint`1">
+            <summary>
+            事件处理扩展点。一般情况下次事件接收扩展点等同于使用后处理事件扩展点。
+            @author 张春红
+            </summary>
+            <typeparam name="EventReceiver">事件接收器类型，一个继承自TreatmentEventReceiver的抽象类。扩展开发者继承此抽象类，实现，并Export。</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.TreatmentExtensionPoint`1.DoTreatment(Wisense.Extension.EventContext)">
+            <summary>
+            事件处理
+            </summary>
+            <param name="context">事件上下文</param>
+        </member>
+        <member name="T:Wisense.Extension.CreatingComponentEventReceiver`1">
+            <summary>
+            创建组件事件接收器。扩展开发者定义的具体事件接收器由此类派生。
+            @author 张春红
+            </summary>
+            <typeparam name="Component">要创建的组件类型</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.CreatingComponentEventReceiver`1.CreateComponent(Wisense.Extension.EventContext)">
+            <summary>
+             创建组件
+             </summary>
+             <param name="context">事件上下文</param>
+             <returns>创建的组件</returns>
+        </member>
+        <member name="P:Wisense.Extension.CreatingComponentEventReceiver`1.Exclusive">
+            <summary>
+            是否排他。创建组件事件接收器固定排他。
+            </summary>
+        </member>
+        <member name="T:Wisense.Extension.ProcessingComponentExtensionPoint`2">
+            <summary>
+            加工组件扩展点。
+             @author 张春红
+            </summary>
+            <typeparam name="EventReceiver">事件接收器类型，一个继承自ProcessingComponentEventReceiver的抽象类。扩展开发者继承此抽象类，实现，并Export。</typeparam>
+            <typeparam name="Component">交由外部加工的组件</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.ProcessingComponentExtensionPoint`2.ProcessComponent(Wisense.Extension.EventContext,`1)">
+            <summary>
+            加工组件
+            </summary>
+            <param name="context">事件上下文参数</param>
+            <param name="component">交由外部加工的组件</param>
+        </member>
+        <member name="T:Wisense.Extension.PretreatmentExtensionPoint`1">
+            <summary>
+            前处理扩展点
+            @author 张春红
+            </summary>
+            <typeparam name="EventReceiver">事件接收器类型，一个继承自PretreatmentEventReceiver的抽象类。扩展开发者继承此抽象类，实现，并Export。</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.PretreatmentExtensionPoint`1.DoPretreatment(Wisense.Extension.EventContext)">
+            <summary>
+            前处理
+            </summary>
+            <param name="context">事件上下文</param>
+            <returns>事件是否继续执行。返回false则意味着扩展程序阻止当前事件继续执行。</returns>
+        </member>
+        <member name="T:Wisense.Extension.AftertreatmentExtensionPoint`1">
+            <summary>
+            后处理扩展点
+            @author 张春红
+            </summary>
+            <typeparam name="EventReceiver">事件接收器类型，一个继承自AftertreatmentEventReceiver的抽象类。扩展开发者继承此抽象类，实现，并Export。</typeparam>
+        </member>
+        <member name="M:Wisense.Extension.AftertreatmentExtensionPoint`1.DoAftertreatment(Wisense.Extension.EventContext)">
+            <summary>
+            后处理
+            </summary>
+            <param name="context">事件上下文</param>
+        </member>
+        <member name="T:Wisense.Extension.TreatmentEventReceiver">
+            <summary>
+            处理事件接收器。扩展开发者定义的具体事件接收器由此类派生。一般情况下次事件接收器等同于使用后处理事件接收器
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.Extension.TreatmentEventReceiver.DoTreatment(Wisense.Extension.EventContext)">
+            <summary>
+            处理
+            </summary>
+            <param name="context">事件上下文</param>
+        </member>
+        <member name="T:Wisense.Extension.EventContext">
+            <summary>
+            包含一个参数的事件上下文。如果有多个参数，可以将参数定义为复合型参数，或者使用一个派生自此类的类。
+            @author 张春红
+            </summary>
+        </member>
+        <member name="M:Wisense.Extension.EventContext.#ctor(System.Object,System.Object)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="sender">事件发送者</param>
+            <param name="parameter">参数</param>
+        </member>
+        <member name="P:Wisense.Extension.EventContext.Sender">
+            <summary>
+            获取事件发生者
+            </summary>
+        </member>
+        <member name="P:Wisense.Extension.EventContext.Parameter">
+            <summary>
+            参数
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisense.Workflow</name>
+    </assembly>
+    <members>
+        <member name="P:Wisense.Workflow.Activities.Extension.IActivity.Type">
+            <summary>
+            活动类对象类型
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Extension.IActivity.Title">
+            <summary>
+            活动在模版设计器中的显示名
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Extension.IActivity.Order">
+            <summary>
+            活动在模版设计器分组中的顺序
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Extension.IActivity.DesignerType">
+            <summary>
+            活动对应的模版设计器中界面的类路径
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Extension.IActivity.BitmapName">
+            <summary>
+            活动在工具箱中的图标
+            </summary>
+        </member>
+        <member name="M:Wisense.Workflow.MethodService.IdentityMethodService.QueryOrgByUserId(System.String,System.Boolean,Wisense.Common.Item.WhereClause,Wisense.Common.Item.OrderByClause,Wisense.Common.Item.Pagination)">
+            <summary>
+            获取指定用户的所属部门
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="includeParent">是否包括父部门</param>
+            <param name="wc">条件</param>
+            <param name="obc">排序</param>
+            <param name="pagination">分页</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.CreateTask.TodoListKey">
+            <summary>
+            工作流待办任务的key值
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.CreateTask.CreatorID">
+            <summary>
+            任务创建人ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.CreateTask.InstanceType">
+            <summary>
+            类型（type）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.CreateTask.MethodName">
+            <summary>
+            方法名（string）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.CreateTask.Param">
+            <summary>
+            参数（object[]）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.CreateTask.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="F:Wisense.Workflow.Activities.Task.Users.keyedName">
+            <summary>
+            关键名
+            </summary>
+        </member>
+        <member name="F:Wisense.Workflow.Activities.Task.Users.AssignToKind">
+            <summary>
+            待办人类型
+            </summary>
+        </member>
+        <member name="F:Wisense.Workflow.Activities.Task.Users.userDescription">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Task.Users.AssignToKindName">
+            <summary>
+            待办人类型名称
+            </summary>
+        </member>
+        <member name="M:Wisense.Workflow.MethodService.ItemMethodService.GetGeneralItem(System.String,System.String,System.String)">
+            <summary>
+            根据Id、ItemTypeId和指定的实现Item类返回对象
+            </summary>
+            <param name="id"></param>
+            <param name="itemTypeId"></param>
+            <param name="typeName">如果不指定则返回GeneralItem</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.MethodService.ItemMethodService.QueryItemCollectionByItemTypeId(System.String,System.Boolean,Wisense.Common.Item.WhereClause,Wisense.Common.Item.OrderByClause,Wisense.Common.Item.Pagination)">
+            <summary>
+            根据对象类型ID取对象列表
+            </summary>
+            <param name="itemtypeId"></param>
+            <param name="includeSub"></param>
+            <param name="pagination"></param>
+            <param name="wc"></param>
+            <param name="obc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.MethodService.ItemMethodService.QueryRICByRelationshipTypeId(Wisense.Common.Item.IBaseItem,System.String,System.Boolean,Wisense.Common.Item.WhereClause,Wisense.Common.Item.OrderByClause,Wisense.Common.Item.Pagination)">
+            <summary>
+            根据关联类型ID取RIC
+            </summary>
+            <param name="sourceItem"></param>
+            <param name="relationshipTypeId"></param>
+            <param name="includeSub"></param>
+            <param name="pagination"></param>
+            <param name="wc"></param>
+            <param name="obc"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.GetGroupTaskItem.TaskName">
+            <summary>
+            任务标识名
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.GetGroupTaskItem.WFTask">
+            <summary>
+            工作流任务对象参数
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.GetGroupTaskItem.WFTaskTodoList">
+            <summary>
+            工作流任务的关联对象参数列表
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CancelGroupTask.TaskName">
+            <summary>
+            任务标识名
+            </summary>
+        </member>
+        <member name="M:Wisense.Workflow.MethodService.WorkflowTaskMethodService.GetTaskByName(System.String,System.String)">
+            <summary>
+            获取指定工作流中的指定任务
+            </summary>
+            <param name="workflowId">工作流ID</param>
+            <param name="taskName">任务标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.MethodService.WorkflowTaskMethodService.QueryWFTaskTodoListByTaskName(System.String,System.String,System.String)">
+            <summary>
+            获取指定工作流中的指定任务的关联待办任务列表
+            </summary>
+            <param name="workflowId">工作流ID</param>
+            <param name="taskName">任务标识</param>
+            <param name="stateId">待办任务状态，如果为null表示所有</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Base.InvokeMethod.InstanceType">
+            <summary>
+            类型（type）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Base.InvokeMethod.MethodName">
+            <summary>
+            方法名（string）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Base.InvokeMethod.Param">
+            <summary>
+            参数（object[]）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Base.InvokeMethod.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="T:Wisense.Workflow.Activities.Message.AddressType">
+            <summary>
+            邮件类型
+            </summary>
+        </member>
+        <member name="T:Wisense.Workflow.Activities.Message.SendType">
+            <summary>
+            邮件发送
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTaskExpAssignTo.TodoListKey">
+            <summary>
+            工作流待办任务的key值
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTaskExpAssignTo.CreatorID">
+            <summary>
+            任务创建人ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTaskExpAssignTo.InstanceType">
+            <summary>
+            类型（type）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTaskExpAssignTo.MethodName">
+            <summary>
+            方法名（string）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTaskExpAssignTo.Param">
+            <summary>
+            参数（object[]）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTaskExpAssignTo.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+        <member name="M:Wisense.Workflow.Param.WorkflowArgument.GetTaskByName(System.String)">
+            <summary>
+            获取当前流程中指定任务
+            </summary>
+            <param name="taskName">任务标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.Param.WorkflowArgument.QueryWFTaskTodoListByTaskName(System.String,System.String)">
+            <summary>
+            获取当前流程中指定任务上关联的待办任务
+            </summary>
+            <param name="taskName">任务标识</param>
+            <param name="stateId">待办任务状态，如果为null则表示所有状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.Param.WorkflowArgument.QueryFinishedWFTaskTodoListByTaskName(System.String)">
+            <summary>
+            获取当前流程中指定任务上关联的已经完成的待办任务
+            </summary>
+            <param name="taskName">任务标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.Param.WorkflowArgument.QueryCancellededWFTaskTodoListByTaskName(System.String)">
+            <summary>
+            获取当前流程中指定任务上关联的已经取消的待办任务
+            </summary>
+            <param name="taskName">任务标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Workflow.Param.WorkflowArgument.QueryRceivedWFTaskTodoListByTaskName(System.String)">
+            <summary>
+            获取当前流程中指定任务上关联的已经接收的待办任务
+            </summary>
+            <param name="taskName">任务标识</param>
+            <returns></returns>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.SessionId">
+            <summary>
+            服务会话ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.InvokerId">
+            <summary>
+            当前调用者ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.WorkflowId">
+            <summary>
+            流程实例ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.AllTask">
+            <summary>
+            所有任务的集合（KEY是任务标识，VALUE是任务ID）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.LastTaskId">
+            <summary>
+            最近创建的任务ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.LastTask">
+            <summary>
+            最近创建的任务
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.Invoker">
+            <summary>
+            当前调用者
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.Workflow">
+            <summary>
+            流程实例
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.Creator">
+            <summary>
+            流程创建人
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.Item">
+            <summary>
+            流程绑定的对象
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.HistoryWorkflowTasks">
+            <summary>
+            当前工作流的全部历史任务
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Param.WorkflowArgument.CompletedWorkflowTasks">
+            <summary>
+            当前工作流已经完成的任务
+            </summary>
+        </member>
+        <member name="F:Wisense.Workflow.Activities.Message.Email.ReceiverKind">
+            <summary>
+            收件人类型
+            </summary>
+        </member>
+        <member name="F:Wisense.Workflow.Activities.Message.Email.receiver">
+            <summary>
+            收件人
+            </summary>
+        </member>
+        <member name="F:Wisense.Workflow.Activities.Message.Email.receiverData">
+            <summary>
+            收件人地址
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.Message.Email.ReceiverKindName">
+            <summary>
+            收件人类型名称ReceiverKindName
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTask.TodoListKey">
+            <summary>
+            工作流待办任务的key值
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTask.CreatorID">
+            <summary>
+            任务创建人ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTask.InstanceType">
+            <summary>
+            类型（type）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTask.MethodName">
+            <summary>
+            方法名（string）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTask.Param">
+            <summary>
+            参数（object[]）
+            </summary>
+        </member>
+        <member name="P:Wisense.Workflow.Activities.GroupTask.CreateGroupTask.Result">
+            <summary>
+            返回结果
+            </summary>
+        </member>
+    </members>
+</doc>

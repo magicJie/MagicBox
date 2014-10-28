@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisense.Service.Workflow</name>
+    </assembly>
+    <members>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowResumeEventContext.InvokerId">
+            <summary>
+            调用者
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowResumeEventContext.WfTaskTodoListId">
+            <summary>
+            工作流待办任务ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowResumeEventContext.Dict">
+            <summary>
+            提交参数
+            </summary>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Util.WorkflowUtil.GetFromEmail(System.String,System.String)">
+            <summary>
+             拼接发送人邮件
+            </summary>
+            <param name="userName"></param>
+            <param name="host"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Util.WorkflowUtil.SendMail(System.Net.Mail.MailMessage,System.String)">
+            <summary>
+            发送电子邮件
+            </summary>
+            <param name="mm">mailmessage</param>
+            <param name="emailServerID">邮件服务器实例ID</param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Util.WorkflowUtil.SetDefaultEmailHostandFrom(System.Net.Mail.SmtpClient,System.Net.Mail.MailMessage)">
+            <summary>
+            默认邮件服务器
+            </summary>
+            <param name="smtp"></param>
+            <param name="mm"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Util.WorkflowUtil.SetEmailHostandFrom(System.Net.Mail.SmtpClient,System.Net.Mail.MailMessage,System.String)">
+            <summary>
+            指定用户服务器
+            </summary>
+            <param name="smtp"></param>
+            <param name="mm"></param>
+            <param name="emailServerID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.Message.SendEmailExcutor.AddMailListFromSelection(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            将选择列表添加到邮件列表中
+            </summary>
+            <param name="source"></param>
+            <param name="mails"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.Message.SendEmailExcutor.AddMailListfromExpList(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            将变量列表添加到邮件列表中
+            </summary>
+            <param name="emailList"></param>
+            <param name="mails"></param>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.WorkflowParam.InvokerId">
+            <summary>
+            调用人ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.WorkflowParam.InvokerName">
+            <summary>
+            调用人用户名
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.WorkflowParam.InvokerPassword">
+            <summary>
+            调用人密码
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.WorkflowParam.ItemId">
+            <summary>
+            对象ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.WorkflowParam.ItemTypeId">
+            <summary>
+            对象类型ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.WorkflowParam.Additions">
+            <summary>
+            附加参数
+            </summary>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExcutor.GetUserListFromUser(System.String)">
+            <summary>
+            用户列表中添加用户型用户
+            </summary>
+            <param name="userID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExcutor.GetUserListFromUserGroup(System.String)">
+            <summary>
+            用户列表中添加用户组中用户
+            </summary>
+            <param name="userGroupID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExcutor.GetUserListFromOrganization(System.String)">
+            <summary>
+            用户列表中添加组织中用户
+            </summary>
+            <param name="organizationID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExcutor.GetUsersList(System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
+            <summary>
+            获得所有用户列表
+            </summary>
+            <param name="source"></param>
+            <param name="userList"></param>
+            <param name="userGroupList"></param>
+            <param name="organizationList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExcutor.GetAssignToExpList(System.String)">
+            <summary>
+            将待办人变量列表分类
+            </summary>
+            <param name="AssignToList"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.Start(System.String,System.String,System.String,System.String)">
+            <summary>
+            开始工作流
+            </summary>
+            <param name="invokerId"></param>
+            <param name="workflowTemplateId"></param>
+            <param name="bindItemId"></param>
+            <param name="bingItemTypeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.Start(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            开始工作流，包含启动工作流的说明
+            </summary>
+            <param name="invokerId"></param>
+            <param name="workflowTemplateId"></param>
+            <param name="bindItemId"></param>
+            <param name="bindItemTypeId"></param>
+            <param name="decisionOption"></param>
+            <param name="dt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.Resume(System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            唤起工作流
+            </summary>
+            <param name="invokerId"></param>
+            <param name="wfTaskTodoListId"></param>
+            <param name="dict"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.TaskRequireCount(Wisense.ItemCore.ItemCollection,System.String)">
+            <summary>
+            获取当前工作流任务要求的最大(提交,接受）数
+            </summary>
+            <param name="todoTasks"></param>
+            <param name="maxCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.Percent2Double(System.String)">
+            <summary>
+            百分比转化为小数
+            </summary>
+            <param name="percent"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.TaskRealityCount(Wisense.ItemCore.ItemCollection,System.String)">
+            <summary>
+            获取当前工作流任务实际（完成，接受）的数量
+            </summary>
+            <param name="todoTasks"></param>
+            <param name="todolist_state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.Terminate(System.String,System.String,System.String)">
+            <summary>
+            终止工作流
+            </summary>
+            <param name="invokerId"></param>
+            <param name="workflowTemplateId"></param>
+            <param name="workflowId"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.ReceiveTask(System.String,System.String)">
+            <summary>
+             接收工作流任务
+            </summary>
+            <param name="invokerId"></param>
+            <param name="taskId"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.WorkflowWrapper.DeleteWorkflow(System.String,System.String)">
+            <summary>
+            删除工作流
+            </summary>
+            <param name="workflowId"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.Message.SendEmailMethodExcutor.GetUserListFromUser(System.String)">
+            <summary>
+            用户列表中添加用户型用户
+            </summary>
+            <param name="userID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.Message.SendEmailMethodExcutor.GetUserListFromUserGroup(System.String)">
+            <summary>
+            用户列表中添加用户组中用户
+            </summary>
+            <param name="userGroupID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.Message.SendEmailMethodExcutor.GetUserListFromOrganization(System.String)">
+            <summary>
+            用户列表中添加组织中用户
+            </summary>
+            <param name="organizationID"></param>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.ReceiveTaskParam.InvokerName">
+            <summary>
+            调用人用户名
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Param.ReceiveTaskParam.InvokerPassword">
+            <summary>
+            调用人密码
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowStartEventContext.InvokerId">
+            <summary>
+            调用者
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowStartEventContext.WorkflowTemplateId">
+            <summary>
+            工作流模版ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowStartEventContext.BindItemId">
+            <summary>
+            绑定对象ID
+            </summary>
+        </member>
+        <member name="P:Wisense.Service.Workflow.Extensions.PretreatmentWorkflowStartEventContext.BindItemTypeId">
+            <summary>
+            绑定对象类型ID
+            </summary>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExpAssignToExcutor.GetUserListFromUser(System.String)">
+            <summary>
+            用户列表中添加用户型用户
+            </summary>
+            <param name="userID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExpAssignToExcutor.GetUserListFromUserGroup(System.String)">
+            <summary>
+            用户列表中添加用户组中用户
+            </summary>
+            <param name="userGroupID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExpAssignToExcutor.GetUserListFromOrganization(System.String)">
+            <summary>
+            用户列表中添加组织中用户
+            </summary>
+            <param name="organizationID"></param>
+        </member>
+        <member name="M:Wisense.Service.Workflow.Excutor.GroupTask.CreateGroupTaskExpAssignToExcutor.GetUsersList(System.Collections.Generic.List{Wisense.Common.Item.ItemRef})">
+            <summary>
+            获得所有用户列表
+            </summary>
+            <param name="list"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
