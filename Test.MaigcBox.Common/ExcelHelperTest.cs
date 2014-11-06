@@ -1,8 +1,12 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
+using System.Threading;
 using MagicBox.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using Microsoft.Office.Interop.Excel;
+using Timeout = MagicBox.Common.Timeout;
 
 namespace Test.MaigcBox.Common
 {
@@ -119,6 +123,23 @@ namespace Test.MaigcBox.Common
         public void GetDefaultPrinter1Test()
         {
             Assert.IsFalse(string.IsNullOrWhiteSpace(ExcelHelper.GetDefaultPrinter1()));
+        }
+
+        /// <summary>
+        ///Kill 的测试
+        ///</summary>
+        [TestMethod()]
+        public void KillTest()
+        {
+            Application excel = new Application();
+            Workbooks workbooks = excel.Workbooks;
+            Workbook workbook = workbooks.Open(@"D:\Developing\ddmes\01源码\FppData\Excel\工票批20141103012411598.xls");
+            Timeout timeout=new Timeout();
+            timeout.DoWithTimeout(new TimeSpan(0, 0, 0,5), () => workbook.PrintOut());
+            Thread.Sleep(5000);
+            //workbook.PrintOut();
+            ExcelHelper.Kill(excel);
+            Assert.Inconclusive("无法验证不返回值的方法。");
         }
     }
 }

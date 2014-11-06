@@ -16,7 +16,6 @@ namespace Test.MaigcBox.Common
     public class TimeoutTest
     {
 
-
         private TestContext testContextInstance;
 
         /// <summary>
@@ -72,15 +71,8 @@ namespace Test.MaigcBox.Common
         [TestMethod()]
         public void DoWithTimeoutTest()
         {
-            Stopwatch watch=new Stopwatch();
-            Timeout timeout = new Timeout()
-            {
-                Action = () => watch.Elapsed.TotalSeconds.ToString("F2")
-            };
-            watch.Start();
-            Timer timer = new Timer(obj => Thread.Sleep(new TimeSpan(0,0,0,3)), null, 0, 500);
-            var result = timeout.DoWithTimeout(new TimeSpan(0, 0, 0, 4));
-            Assert.IsTrue(result);
+            Timeout timeout=new Timeout();
+            Assert.IsTrue(timeout.DoWithTimeout(new TimeSpan(0,0,0,5), () => Thread.Sleep(new TimeSpan(0,0,0,2))));
         }
     }
 }

@@ -8,57 +8,33 @@ namespace MagicBox.Common
     /// </summary>
     public class Timeout
     {
-        private readonly ManualResetEvent _timeoutObject;
-        private bool _isTimeout;
-        //标记变量
-        public Action Action;
-
-        public Timeout()
-        {
-            //初始状态为停止
-            _timeoutObject=new ManualResetEvent(true);
-        }
-
         /// <summary>
-        /// 指定超时时间 异步执行某个方法
+        /// 指定一个时间尝试完成一个任务
         /// </summary>
-        /// <param name="timeSpan"></param>
-        /// <returns>超时为true，否则为false</returns>
-        public bool DoWithTimeout(TimeSpan timeSpan)
+        /// <param name="timeSpan">执行任务的限定时间</param> 
+        /// <param name="action">执行任务的委托</param>
+        /// <returns>任务在规定时间内完成返回true，否则为false</returns>6
+        public bool DoWithTimeout(TimeSpan timeSpan, Action action)
         {
-            if (Action==null)
+            if (action == null)
             {
                 return false;
             }
-            _timeoutObject.Reset();
-            _isTimeout = true;
-            Action.BeginInvoke(DoAsyncCallBack, null);
-            //等待信号 set
-            if (!_timeoutObject.WaitOne(timeSpan,false))
+            var isActionComplected = false;
+            ManualResetEvent manualResetEvent=new ManualResetEvent(false);
+            Thread thread = new Thread(() =>
             {
-                _isTimeout = true;
-            }
-            return _isTimeout;
-        }
-        /// <summary>
-        /// 异步委托 回调方法
-        /// </summary>
-        /// <param name="result"></param>
-        private void DoAsyncCallBack(IAsyncResult result)
-        {
-            try
+                action();
+                manualResetEvent.Set();
+                isActionComplected = true;
+            });
+            thread.Start();
+            manualResetEvent.WaitOne(timeSpan);
+            if (thread.IsAlive)
             {
-                Action.EndInvoke(result);
-                _isTimeout = false;
+                thread.Abort();//如果执行超时则回收线程
             }
-            catch (Exception)
-            {
-                _isTimeout = true;
-            }
-            finally
-            {
-                _timeoutObject.Set();
-            }
+            return isActionComplected;
         }
     }
 }
