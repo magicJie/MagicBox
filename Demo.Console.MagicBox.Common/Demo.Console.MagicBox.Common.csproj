@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{58BB12D8-81CC-448D-8DEE-ABA8C16A4D39}</ProjectGuid>
+    <ProjectGuid>{D362D0E7-9315-428C-8AF9-F6ACBEDF3196}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Demo.MagicBox.Common</RootNamespace>
-    <AssemblyName>Demo.MagicBox.Common</AssemblyName>
+    <RootNamespace>Demo.Console.MagicBox.Common</RootNamespace>
+    <AssemblyName>Demo.Console.MagicBox.Common</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,13 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">
-      <Project>{4539136E-2F6C-4E72-BE3A-9DE59E1337EF}</Project>
-      <Name>MagicBox.Common</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

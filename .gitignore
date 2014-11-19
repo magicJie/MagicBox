@@ -1,4 +1,4 @@
-MagicBox.suo
+*.suo
 *.DotSettings.user
 /*/bin/
 /*/obj/
