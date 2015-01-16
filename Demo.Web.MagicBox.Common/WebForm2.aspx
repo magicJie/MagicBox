@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         //打印工作薄
         var idTmr = "";
         function xlPrint() {
@@ -28,7 +28,7 @@
         function Cleanup() {
             window.clearInterval(idTmr);
             CollectGarbage();
-        }</script>
+        }</script>-->
     <title></title>
 </head>
 <body>
@@ -36,6 +36,8 @@
     <div>
         <button onclick="xlPrint()" style="width: 147px" >点击测试打印excel
         </button>
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+            Text="测试打印excel1" />
     </div>
     </form>
 </body>
