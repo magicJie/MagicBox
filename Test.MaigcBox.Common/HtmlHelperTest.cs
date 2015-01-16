@@ -1,4 +1,5 @@
-﻿using MagicBox.Common;
+﻿using System.Globalization;
+using MagicBox.Common;
 using Microsoft.SqlServer.Server;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -93,44 +94,25 @@ namespace Test.MaigcBox.Common
             dic.Add("$订单类型$","东电无物料生产订单");
             var content = target.OpenAndReplaceData(path, dic);
         }
-    }
 
-    public struct Workticket
-    {
-        public string PlainCode { get; set; }
+        [TestMethod()]
+        public void TestForToString()
+        {
+            const double m = 1.1254;
+            var a = m.ToString("G2");
+            var b = m.ToString("f1");
+            var c = Math.Round(m, 2, MidpointRounding.AwayFromZero);
+            var d = Math.Round(m, 2, MidpointRounding.ToEven);
+            var e = m.ToString(CultureInfo.CurrentCulture);
+            var f = e.Substring(0, e.IndexOf('.') + 3);
+        }
 
-        public string WorkNum { get; set; }
+        [TestMethod]
+        public void TestTmp()
+        {
+            var a = "a;b;c;;;d;e;f";
+            var b = a.Split(';');
 
-        public string ProductOrderNum { get; set; }
-
-        public string OrderType { get; set; }
-
-        public string MaterialNum { get; set; }
-
-        public string WbsNum { get; set; }
-
-        public string OrderDescription { get; set; }
-
-        public string WbsDescription { get; set; }
-
-        public string LastWork { get; set; }
-
-        public string ThisWork { get; set; }
-
-        public string NextWork { get; set; }
-
-        public string WorkCenter { get; set; }
-
-        public string PrepareTime { get; set; }
-
-        public string DispatchingNum { get; set; }
-
-        public string QuotaTime { get; set; }
-
-        public string Creator { get; set; }
-
-        public string Drawer { get; set; }
-
-        public string MakeDate { get; set; }
+        }
     }
 }
