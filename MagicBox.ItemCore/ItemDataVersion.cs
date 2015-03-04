@@ -5,7 +5,9 @@ using System.Text;
 
 namespace MagicBox.ItemCore
 {
-    public class Class1
+    public enum ItemDataVersion
     {
+        Original,
+        Current
     }
 }

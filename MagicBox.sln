@@ -1,6 +1,19 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E3BB1288-6B7F-4CAA-A4BD-BE75E78567F5}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		MagicBox.vsmdi = MagicBox.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8D23B679-2893-4410-9D3F-60FF346B46A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{82B0460F-06BF-4E26-B92B-9ADBAB126170}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox", "MagicBox\MagicBox.csproj", "{73E5D8D5-8337-448A-A510-8351E2260B21}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.Common", "MagicBox.Common\MagicBox.Common.csproj", "{4539136E-2F6C-4E72-BE3A-9DE59E1337EF}"
@@ -19,27 +32,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.Plugin.Launcher.We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.Plugin.Launcher.WinForm", "MagicBox.Plugin.Launcher.WinForm\MagicBox.Plugin.Launcher.WinForm.csproj", "{56AC7E77-0C92-4E21-80FE-0BB7B0FF7B80}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E3BB1288-6B7F-4CAA-A4BD-BE75E78567F5}"
-	ProjectSection(SolutionItems) = preProject
-		Local.testsettings = Local.testsettings
-		MagicBox.vsmdi = MagicBox.vsmdi
-		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.MaigcBox.Common", "Test.MaigcBox.Common\Test.MaigcBox.Common.csproj", "{1D196AC0-4354-44EE-9BC6-86870D706372}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{8D23B679-2893-4410-9D3F-60FF346B46A3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{82B0460F-06BF-4E26-B92B-9ADBAB126170}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Web.MagicBox.Common", "Demo.Web.MagicBox.Common\Demo.Web.MagicBox.Common.csproj", "{2D5CF1D8-895D-43AD-BE22-750B5EA25C39}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Console.MagicBox.Common", "Demo.Console.MagicBox.Common\Demo.Console.MagicBox.Common.csproj", "{D362D0E7-9315-428C-8AF9-F6ACBEDF3196}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "MagicBox.Modeling", "MagicBox.Modeling\MagicBox.Modeling.modelproj", "{A1A859CB-E82B-4068-A1F9-107778DDE56E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.AgileWeb", "MagicBox.AgileWeb\MagicBox.AgileWeb.csproj", "{6E594F63-7238-4878-A600-4DCAD1D98B4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.MagicBox", "Test.MagicBox\Test.MagicBox.csproj", "{0AD8AE99-EC58-431D-A020-CB16C5D76A75}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = MagicBox.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -169,13 +174,47 @@ Global
 		{D362D0E7-9315-428C-8AF9-F6ACBEDF3196}.Release|Mixed Platforms.Build.0 = Release|x86
 		{D362D0E7-9315-428C-8AF9-F6ACBEDF3196}.Release|x86.ActiveCfg = Release|x86
 		{D362D0E7-9315-428C-8AF9-F6ACBEDF3196}.Release|x86.Build.0 = Release|x86
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A1A859CB-E82B-4068-A1F9-107778DDE56E}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6E594F63-7238-4878-A600-4DCAD1D98B4B}.Release|x86.ActiveCfg = Release|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1D196AC0-4354-44EE-9BC6-86870D706372} = {8D23B679-2893-4410-9D3F-60FF346B46A3}
+		{0AD8AE99-EC58-431D-A020-CB16C5D76A75} = {8D23B679-2893-4410-9D3F-60FF346B46A3}
 		{2D5CF1D8-895D-43AD-BE22-750B5EA25C39} = {82B0460F-06BF-4E26-B92B-9ADBAB126170}
 		{D362D0E7-9315-428C-8AF9-F6ACBEDF3196} = {82B0460F-06BF-4E26-B92B-9ADBAB126170}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = MagicBox.vsmdi
 	EndGlobalSection
 EndGlobal

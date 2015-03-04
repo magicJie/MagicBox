@@ -40,8 +40,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DbNativeQuery.cs" />
+    <Compile Include="IAttribute.cs" />
+    <Compile Include="IBaseItem.cs" />
+    <Compile Include="IGeneralItem.cs" />
+    <Compile Include="IItemCollection.cs" />
+    <Compile Include="IItemCollectionByItemType.cs" />
+    <Compile Include="IItemContext.cs" />
+    <Compile Include="IItemFactory.cs" />
+    <Compile Include="IItemType.cs" />
+    <Compile Include="ILifeCycle.cs" />
+    <Compile Include="ILifeCycleState.cs" />
+    <Compile Include="ILifeCycleTransition.cs" />
+    <Compile Include="IRIC.cs" />
+    <Compile Include="IRICC.cs" />
+    <Compile Include="ItemDataVersion.cs" />
+    <Compile Include="NamedSqlParameter.cs" />
+    <Compile Include="Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbOperation\" />
+    <Folder Include="Extension\" />
+    <Folder Include="FileOperation\" />
+    <Folder Include="NosqlDbOperation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MagicBox.ItemCore.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

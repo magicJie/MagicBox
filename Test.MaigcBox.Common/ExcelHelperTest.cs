@@ -61,7 +61,7 @@ namespace Test.MaigcBox.Common
         //
         //使用 TestCleanup 在运行完每个测试后运行代码
         //[TestCleanup()]
-        //public void MyTestCleanup()
+        //public void MyTestCleanup().
         //{
         //}
         //

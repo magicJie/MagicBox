@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a1a859cb-e82b-4068-a1f9-107778dde56e}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>MagicBox.Modeling</Name>
+    <RootNamespace>MagicBox.Modeling</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\MagicBox.Modeling.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="MagicBox.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="MagicBox.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MagicBox.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="MagicBox.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>MagicBox.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Console.MagicBox.Common\Demo.Console.MagicBox.Common.csproj">
+      <Name>Demo.Console.MagicBox.Common</Name>
+      <Project>{d362d0e7-9315-428c-8af9-f6acbedf3196}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Demo.Web.MagicBox.Common\Demo.Web.MagicBox.Common.csproj">
+      <Name>Demo.Web.MagicBox.Common</Name>
+      <Project>{2d5cf1d8-895d-43ad-be22-750b5ea25c39}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicBox.AgileWeb\MagicBox.AgileWeb.csproj">
+      <Name>MagicBox.AgileWeb</Name>
+      <Project>{6e594f63-7238-4878-a600-4dcad1d98b4b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">
+      <Name>MagicBox.Common</Name>
+      <Project>{4539136e-2f6c-4e72-be3a-9de59e1337ef}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicBox.Extension\MagicBox.Extension.csproj">
+      <Name>MagicBox.Extension</Name>
+      <Project>{75e0cbc5-2a35-4715-a6d1-e2983c137d55}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicBox.ItemCore\MagicBox.ItemCore.csproj">
+      <Name>MagicBox.ItemCore</Name>
+      <Project>{a8d0fa3d-39d4-4927-bf8c-4dcc4d12b6f0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicBox.Plugin\MagicBox.Plugin.csproj">
+      <Name>MagicBox.Plugin</Name>
+      <Project>{e4d31bde-4e71-4de3-923c-e661305ce6cf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MagicBox\MagicBox.csproj">
+      <Name>MagicBox</Name>
+      <Project>{73e5d8d5-8337-448a-a510-8351e2260b21}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

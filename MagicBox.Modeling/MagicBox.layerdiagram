@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e96f6a07-ba16-452f-ab83-ffcaad8a26a0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="0bcb3d9b-e50d-4d32-afff-7af0269fe2de" name="Comment1">
+      <body>基本类型、算法封装，但是不实现软件的功能</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="73f94c9a-0dc3-4856-9009-2da9e9fc3063" name="Comment2">
+      <body>提供软件基本功能，比如日志、异常、缓存等机制的实现。</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="5aafc507-94de-4cf6-afc9-d6451911ee89" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="db1ecfb7-8c89-43d7-9d4c-9306628e4d70" name="Comment3">
+      <body>提供对插件的支持</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="af19e960-9092-42c9-adb7-edf6b5fbf3be" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="f86870d4-eb3c-426d-9d4e-1669b5e45c4d" name="Comment4">
+      <body>bootStrap和.netMVC5的封装，提供单对象、多对象以及其他常用view</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="cd094809-c75c-4bb1-89fc-50267681eeb8" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="2d170f3f-8843-4944-8917-72829ed3f2f2" name="Comment5">
+      <body>提供对DDD更好的支持，对NHibernate的封装和二次开发</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="bedd4ca8-119b-4942-917d-9f4fdff7df81" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+    <comment Id="c5fa9bbb-6d4a-4009-be69-33d60af14ef7" name="Comment6">
+      <body>提供对扩展点机制的支持</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="8f4a2aff-e9a2-47a1-b3b4-dd7ee2f33c42" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="af19e960-9092-42c9-adb7-edf6b5fbf3be" name="MagicBox.Plugin">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="18b5529e-26fe-4a6b-b4d6-9b3d5f308f40" direction="Forward">
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="01359de9-c055-4dbe-9c66-10f7d3370eaa" name="MagicBox.Plugin">
+          <ArtifactNode Label="MagicBox.Plugin" Category="CodeSchema_Project" Id="(Assembly=../MagicBox.Plugin/MagicBox.Plugin.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox.Plugin)" Label="MagicBox.Plugin.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="cd094809-c75c-4bb1-89fc-50267681eeb8" name="MagicBox.AgileWeb">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="3442f45b-6970-40be-a1f1-95ceea3a7e37" direction="Forward">
+          <layerMoniker Id="5aafc507-94de-4cf6-afc9-d6451911ee89" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="5a453c04-c615-4309-a4b8-edb3579a756b" direction="Forward">
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="186de851-48ad-48f7-bf66-676b2236fa5d" direction="Forward">
+          <layerMoniker Id="af19e960-9092-42c9-adb7-edf6b5fbf3be" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="5330edf3-4ea3-48bd-b3e5-fb2f3df025c0" direction="Forward">
+          <layerMoniker Id="bedd4ca8-119b-4942-917d-9f4fdff7df81" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="017998cc-63a9-4213-bb1a-9b6d54bd77f7" direction="Forward">
+          <layerMoniker Id="8f4a2aff-e9a2-47a1-b3b4-dd7ee2f33c42" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="d0a67971-d510-445f-adce-7c019efe4077" name="MagicBox.AgileWeb">
+          <ArtifactNode Label="MagicBox.AgileWeb" Category="CodeSchema_Project" Id="(Assembly=../MagicBox.AgileWeb/MagicBox.AgileWeb.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox.AgileWeb)" Label="MagicBox.AgileWeb.dll" Category="CodeSchema_Assembly">
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" name="MagicBox">
+      <references>
+        <reference Id="3d152293-0304-4649-955c-375d78ce1798" name="MagicBox">
+          <ArtifactNode Label="MagicBox" Category="CodeSchema_Project" Id="(Assembly=../MagicBox/MagicBox.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox)" Label="MagicBox.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="bedd4ca8-119b-4942-917d-9f4fdff7df81" name="MagicBox.ItemCore">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="eb1030fb-5fa0-45ea-9687-4b9021f6d4fd" direction="Forward">
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="51d1e1c0-b54c-4dd3-8646-3348a7363265" name="MagicBox.ItemCore">
+          <ArtifactNode Label="MagicBox.ItemCore" Category="CodeSchema_Project" Id="(Assembly=../MagicBox.ItemCore/MagicBox.ItemCore.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox.ItemCore)" Label="MagicBox.ItemCore.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="5aafc507-94de-4cf6-afc9-d6451911ee89" name="MagicBox.Common">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d0a19a88-f943-4835-8163-5ae4e9f7f3fc" direction="Forward">
+          <layerMoniker Id="8f4a2aff-e9a2-47a1-b3b4-dd7ee2f33c42" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="e5d1115d-295c-4855-b4ff-f45e4a423f92" direction="Forward">
+          <layerMoniker Id="af19e960-9092-42c9-adb7-edf6b5fbf3be" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="1e1ba5c3-8417-45c5-b46e-a46c43a5d00a" direction="Forward">
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d313d8e7-e7ff-4e32-b522-3cfba9b84848" direction="Forward">
+          <layerMoniker Id="bedd4ca8-119b-4942-917d-9f4fdff7df81" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="eb75277f-25fe-4da9-9de2-4debedcc8ff9" name="MagicBox.Common">
+          <ArtifactNode Label="MagicBox.Common" Category="CodeSchema_Project" Id="(Assembly=../MagicBox.Common/MagicBox.Common.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox.Common)" Label="MagicBox.Common.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="8f4a2aff-e9a2-47a1-b3b4-dd7ee2f33c42" name="MagicBox.Extension">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="79ab687e-e097-4599-9d8b-a963be903a7c" direction="Forward">
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="b8e45a51-514e-4db4-96a0-7f713787d1f4" name="MagicBox.Extension">
+          <ArtifactNode Label="MagicBox.Extension" Category="CodeSchema_Project" Id="(Assembly=../MagicBox.Extension/MagicBox.Extension.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox.Extension)" Label="MagicBox.Extension.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
