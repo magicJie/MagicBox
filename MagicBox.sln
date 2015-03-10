@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.AgileWeb", "MagicB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.MagicBox", "Test.MagicBox\Test.MagicBox.csproj", "{0AD8AE99-EC58-431D-A020-CB16C5D76A75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.WinForm", "Demo.WinForm\Demo.WinForm.csproj", "{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -204,6 +206,16 @@ Global
 		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{0AD8AE99-EC58-431D-A020-CB16C5D76A75}.Release|x86.ActiveCfg = Release|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -213,6 +225,7 @@ Global
 		{0AD8AE99-EC58-431D-A020-CB16C5D76A75} = {8D23B679-2893-4410-9D3F-60FF346B46A3}
 		{2D5CF1D8-895D-43AD-BE22-750B5EA25C39} = {82B0460F-06BF-4E26-B92B-9ADBAB126170}
 		{D362D0E7-9315-428C-8AF9-F6ACBEDF3196} = {82B0460F-06BF-4E26-B92B-9ADBAB126170}
+		{56515ADC-0EE3-4D3D-AA3B-F3E7C2B3F584} = {82B0460F-06BF-4E26-B92B-9ADBAB126170}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = MagicBox.vsmdi

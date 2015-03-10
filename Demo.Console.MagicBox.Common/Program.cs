@@ -1,4 +1,5 @@
-﻿using NHibernate;
+﻿using System;
+using NHibernate;
 using Spring.Context.Support;
 
 namespace Demo.Console.MagicBox.Common
@@ -16,10 +17,11 @@ namespace Demo.Console.MagicBox.Common
             var obj = factory.GetObject("PersonDao") as PersonDao;
              * 
             var ctx = ContextRegistry.GetContext();
-            var obj = ctx.GetObject("PersonDao") as PersonDao;*/
+            var obj = ctx.GetObject("PersonDao") as PersonDao;
             var cfg = new NHibernate.Cfg.Configuration().Configure("hibernate.cfg.xml");
-            using (ISessionFactory sessionFactory = cfg.BuildSessionFactory()) { }
-
+            using (ISessionFactory sessionFactory = cfg.BuildSessionFactory()) { }*/
+            var a = 3.1415926;
+            var b = Math.Round(a, 3);
         }
     }
 }

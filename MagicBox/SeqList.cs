@@ -40,7 +40,17 @@ namespace MagicBox
         {   
             get { return _maxsize; }
             //注意在重置最大容量后要修改_data
-            set { _maxsize = value; }
+            set
+            {
+                _maxsize = value;
+                var tmp = new T[_maxsize];
+                var i = 0;
+                foreach (var item in _data)
+                {
+                    tmp[i++] = item;
+                }
+                _data = tmp;
+            }
         }
         /// <summary>
         /// 指定最大容量进行初始化

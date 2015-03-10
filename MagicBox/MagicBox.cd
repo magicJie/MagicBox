@@ -3,16 +3,16 @@
   <Class Name="MagicBox.SeqList&lt;T&gt;" Collapsed="true">
     <Position X="3.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAMAAAIAAAAAABACAAAEAAAAAAQACCAACAABIAAA=</HashCode>
+      <HashCode>AEBAAMAABIAAAAAECAAAAAUAAAACQQAISAACAABIAAA=</HashCode>
       <FileName>SeqList.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MagicBox.LinkList&lt;T&gt;" Collapsed="true">
+  <Class Name="MagicBox.SingleLinkList&lt;T&gt;" Collapsed="true">
     <Position X="5.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAMAAAIAAAAAABACAAAEAAAAAAQACCAACAABIAAA=</HashCode>
-      <FileName>LinkList.cs</FileName>
+      <HashCode>AMBAAMAAAIAAAAAAAAAAAAUAAAAAAQAACAACAABJAAA=</HashCode>
+      <FileName>SingleLinkList.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -26,7 +26,7 @@
   <Interface Name="MagicBox.IList&lt;T&gt;" Collapsed="true">
     <Position X="4.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAMAAAIAAAAAABACAAAEAAAAAAQACCAACAABIAAA=</HashCode>
+      <HashCode>AEBAAMAAAIAAAAAAAAAAAAUAAAAAAQAACAACAABIAAA=</HashCode>
       <FileName>IList.cs</FileName>
     </TypeIdentifier>
   </Interface>

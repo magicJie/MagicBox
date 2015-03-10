@@ -5,14 +5,12 @@ using System.Text;
 
 namespace MagicBox
 {
-    public class LinkList<T> : IList<T>
+    public class SingleLinkList<T> : IList<T>
     {
-        public int Last
-        {
-            get { throw new NotImplementedException(); }
-        }
+        private Node<T> _head;
+        private int _inedex;
 
-        bool IList<T>.IsEmpty
+        public int Last
         {
             get { throw new NotImplementedException(); }
         }
@@ -70,6 +68,11 @@ namespace MagicBox
         public void Reverse()
         {
             throw new NotImplementedException();
+        }
+
+        public bool IsEmpty
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }
