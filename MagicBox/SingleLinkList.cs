@@ -204,32 +204,44 @@ namespace MagicBox
 
         public void Reverse()
         {
+           /*
             if (_head==null)
             {
                 return;
             }
             var p = _head;
-            while (p.Next!=null)
+            Node<Root> y , z;
+            y = z = null;
+            while (p!=null&&p.Next!=null)
             {
+                var tmp = y;
                 var x = p;
-                p = p.Next;
-                var y = p;
-                var z = p.Next;
-                if (x==_head)
-                {
-                    x.Next = null;
-                }
-                if (z==null)
-                {
-                    _head = y;
-                    _head.Next = x;
-                }
-                else
-                {
-                    z.Next = y;
-                    y.Next = x;
-                }
+                y = p.Next;
+                z = y.Next;
+                y.Next = x;
+                p = z;
+                x.Next = tmp;//衔接两次循环
             }
+            if (p==null)
+            {
+                _head = z;
+            }
+            else
+            {
+                _head = p;
+                _head.Next = y;
+            }
+            */
+           Node<T> r = null;
+           var y = _head;
+           while (y != null)
+           {
+               var t = y.Next;
+               y.Next = r;
+               r = y;
+               y = t;
+           }
+           _head = r;//把head链上最后一个
         }
 
         public bool IsEmpty

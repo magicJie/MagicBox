@@ -13,63 +13,63 @@ namespace Test.MagicBox
             Assert.AreEqual(0,singleLinkList[0]);
         }
         [TestMethod]
-        public void LastText()
+        public void LastTest()
         {
-            Assert.AreEqual(singleLinkList.Last,4);
+            Assert.AreEqual(4,singleLinkList.Last);
         }
         [TestMethod]
-        public void CountText()
+        public void CountTest()
         {
-            Assert.AreEqual(singleLinkList.Count, 5);
+            Assert.AreEqual(5,singleLinkList.Count);
         }
         [TestMethod]
-        public void GetElementText()
+        public void GetElementTest()
         {
-            Assert.AreEqual(singleLinkList.GetElement(4), 4);
+            Assert.AreEqual(4,singleLinkList.GetElement(4));
         }
         [TestMethod]
-        public void IndexOfText()
+        public void IndexOfTest()
         {
-            Assert.AreEqual(singleLinkList.IndexOf(4), 4);
+            Assert.AreEqual(4,singleLinkList.IndexOf(4));
         }
         [TestMethod]
-        public void PreElementText()
+        public void PreElementTest()
         {
-            Assert.AreEqual(singleLinkList.PreElement(4), 3);
+            Assert.AreEqual(3,singleLinkList.PreElement(4));
         }
         [TestMethod]
-        public void NextElementText()
+        public void NextElementTest()
         {
-            Assert.AreEqual(singleLinkList.NextElement(3), 4);
+            Assert.AreEqual(4,singleLinkList.NextElement(3));
         }
         [TestMethod]
-        public void AppendText()
+        public void AppendTest()
         {
             singleLinkList.Append(5);
-            Assert.AreEqual(singleLinkList.Last, 5);
+            Assert.AreEqual(5,singleLinkList.Last);
         }
         [TestMethod]
-        public void InsertText()
+        public void InsertTest()
         {
             singleLinkList.Insert(0,6);
-            Assert.AreEqual(singleLinkList[0],6);
+            Assert.AreEqual(6,singleLinkList[0]);
         }
         [TestMethod]
-        public void RemoveAtText()
+        public void RemoveAtTest()
         {
             singleLinkList.RemoveAt(0);
-            Assert.AreEqual(singleLinkList[0], 1);
+            Assert.AreEqual(1,singleLinkList[0]);
         }
         [TestMethod]
-        public void ToStringText()
+        public void ToStringTest()
         {
-            Assert.AreEqual(singleLinkList.ToString(), "0,1,2,3,4");
+            Assert.AreEqual("0,1,2,3,4",singleLinkList.ToString());
         }
         [TestMethod]
-        public void ReverseText()
+        public void ReverseTest()
         {
             singleLinkList.Reverse();
-            Assert.AreEqual(singleLinkList.ToString(), "4,3,2,1,0");
+            Assert.AreEqual("4,3,2,1,0",singleLinkList.ToString());
         }
     }
 }
