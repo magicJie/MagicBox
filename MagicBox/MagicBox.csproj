@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CircleLinkList.cs" />
     <Compile Include="Delegate.cs" />
     <Compile Include="ICache.cs" />
     <Compile Include="IList.cs" />

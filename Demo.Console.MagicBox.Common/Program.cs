@@ -19,11 +19,12 @@ namespace Demo.Console.MagicBox.Common
             var cfg = new NHibernate.Cfg.Configuration().Configure("hibernate.cfg.xml");
             using (ISessionFactory sessionFactory = cfg.BuildSessionFactory()) { }
             var a = 3.1415926;
-            var b = Math.Round(a, 3);*/
+            var b = Math.Round(a, 3);
 
             var singleLinkList = new SingleLinkList<int>(0, 1, 2, 3, 4);
             singleLinkList.Reverse();
-            System.Console.WriteLine(singleLinkList.ToString());
+            System.Console.WriteLine(singleLinkList.ToString());*/
+            JosephRing.JosephRingTest();
         }
     }
 }

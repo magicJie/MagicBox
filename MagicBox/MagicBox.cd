@@ -16,6 +16,20 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
+  <Class Name="MagicBox.CircleLinkList&lt;T&gt;">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <NestedTypes>
+      <Class Name="MagicBox.CircleLinkList&lt;T&gt;.Node" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CircleLinkList.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAEAAQAAAACAAAAAAAQ=</HashCode>
+      <FileName>CircleLinkList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="MagicBox.ICache" Collapsed="true">
     <Position X="1.75" Y="2" Width="1.5" />
     <TypeIdentifier>
