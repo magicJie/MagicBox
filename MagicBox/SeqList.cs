@@ -146,7 +146,7 @@ namespace MagicBox
             else
             {
                 //位置index及以后元素后移
-                for (int i = _last; i >=index; i--)
+                for (var i = _last; i >=index; i--)
                 {
                     _data[i + 1] = _data[i];
                 }

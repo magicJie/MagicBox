@@ -50,14 +50,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleLinkList.cs" />
+    <Compile Include="CSeqQueue.cs" />
     <Compile Include="Delegate.cs" />
     <Compile Include="ICache.cs" />
     <Compile Include="IList.cs" />
+    <Compile Include="IQueue.cs" />
+    <Compile Include="IStack.cs" />
     <Compile Include="ITree.cs" />
+    <Compile Include="LinkQueue.cs" />
+    <Compile Include="LinkStack.cs" />
     <Compile Include="Node.cs" />
+    <Compile Include="SequenceStack.cs" />
     <Compile Include="SingleLinkList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeqList.cs" />
+    <Compile Include="SingleLinkNode.cs" />
     <Compile Include="TransverType.cs" />
   </ItemGroup>
   <ItemGroup>
