@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="MagicBox.AgileWeb" namespace="MagicBox.AgileWeb.Domain">
+  <class name="User" table="Identity" lazy="true" >
+    <id name="ID" column="ID" type="string" >
+      <generator class="assigned" />
+    </id>
+
+    <property name="Account" type="string">
+      <column name="account" length="50"/>
+    </property>
+
+    <property name="Name" type="string">
+      <column name="Name" length="50"/>
+    </property>
+
+    <property name="Password" type="string">
+      <column name="Password" length="50"/>
+    </property>
+    <property name="LoginNum" type="int">
+      <column name="login_num" />
+    </property>
+  </class>
+</hibernate-mapping>
