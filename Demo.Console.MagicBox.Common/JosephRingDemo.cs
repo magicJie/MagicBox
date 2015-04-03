@@ -2,7 +2,7 @@
 
 namespace Demo.Console.MagicBox.Common
 {
-    public class JosephRing
+    public class JosephRingDemo
     {
         private struct Data
         {

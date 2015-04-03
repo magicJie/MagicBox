@@ -90,7 +90,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JosephRing.cs" />
+    <Compile Include="JosephRingDemo.cs" />
+    <Compile Include="NhibernateDemo.cs" />
     <Compile Include="PersonDao.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
