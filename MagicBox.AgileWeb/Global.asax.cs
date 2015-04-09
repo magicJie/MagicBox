@@ -6,8 +6,8 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using log4net;
 using log4net.Config;
-using MagicBox.AgileWeb.Domain;
 using MagicBox.AgileWeb.Service;
+using MagicBox.MF;
 using Spring.Context.Support;
 using Spring.Web.Mvc;
 
@@ -43,7 +43,7 @@ namespace MagicBox.AgileWeb
         private void SetInitAccount()
         {
             var context = ContextRegistry.GetContext();
-            var userManager = (IUserInfoManager) context.GetObject("Manager.UserInfo");
+            var userManager = (IPermissionManager) context.GetObject("Manager.UserInfo");
             const string account = "admin";
             var user = userManager.Get("198515fd-9aae-45ed-b287-fe0355853628");
             if(user!=null)return;

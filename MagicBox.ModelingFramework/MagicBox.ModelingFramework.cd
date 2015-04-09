@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MagicBox.MF.Model" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACkIAAAAAAAAAAAAAAAAAAAAEAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RMCC" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagicBox.MF.ModelType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAABCAAIAAAAAARAAAAAAAAIAAEAAAAQAAAAE=</HashCode>
+      <FileName>ModelType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ModelCollection" Collapsed="true">
+    <Position X="9.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAAAAAAAAAABAAAAAAQAAAAAAAAAKAAAAgAEAAA=</HashCode>
+      <FileName>ModelCollection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DbNativeQuery" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagicBox.MF.LifeCycleState" Collapsed="true">
+    <Position X="2.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LifeCycleState.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LifeCycle" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagicBox.MF.ModelCollectionByModelType" Collapsed="true">
+    <Position X="9" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelCollectionByItemType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WhereCause" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagicBox.MF.LifeCycle" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAACAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>LifeCycle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.Relationship" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Relationship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.RMC" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RMC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.RMCC" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RMCC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.LifeCycleTransition" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>LifeCycleTransition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LifeCycle" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagicBox.MF.DbNativeQuery" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAEAAAEAAAAAAACAAAAAAQAAIAAAAAAAAA=</HashCode>
+      <FileName>DbNativeQuery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.WhereCause">
+    <Position X="12.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WhereCause.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ModelFactory" Collapsed="true">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ModelFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ModelRef" Collapsed="true">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelRef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.User">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAQgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MagicBox.MF.Orgnainzation">
+    <Position X="7.25" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAQgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orgnainzation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MagicBox.MF.UserGroup">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAQgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MagicBox.MF.BaseModel">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAACkIAAAAAAAAAAAAAAAAAAAAEAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>BaseModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

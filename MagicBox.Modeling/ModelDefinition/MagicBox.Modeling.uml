@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="c4213236-9aeb-47f7-87a9-76ff86db03ed"
   name="MagicBox.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -17,28 +17,1137 @@
         name="StandardProfileL3" />
     </packageHasProfileInstances>
   </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="588f3477-cafd-4241-92f9-8c7b19a85ece"
+        name="BaseModel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a32691e6-23cb-4576-a7ff-2d777ba4b342">
+            <classMoniker
+              Id="16ef7658-d427-435d-91b1-2dc723b1ff27"
+              LastKnownName="LifeCycleState"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </dependency>
+          <dependency
+            Id="f1276941-64dd-463d-911a-1630bc629817">
+            <classMoniker
+              Id="a91f8966-756e-49ad-bb5e-2d7071e20ccd"
+              LastKnownName="RMCC"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="2dffd592-5638-4235-bca4-3e686dd3d51a"
+            isDerived="false"
+            sourceEndRoleName="BaseModel"
+            targetEndRoleName="ModelCollection"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7dfcff79-7304-420e-9c0d-00460b7f004d"
+              LastKnownName="ModelCollection"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="21f6a33a-50de-4509-8e2f-770eca048c96"
+                  name="BaseModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5241c746-a971-4ced-9d42-24853441481f"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="dfdd9690-4289-4bfb-b16e-45ab3791acd8"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1cad8fa7-cd4f-4083-83e1-3062a41ee0d4"
+                  name="ModelCollection"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="ce2512dd-abaf-4ba0-bb7c-24fb77351a95"
+            name="ModelType"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="36a4ded7-75e1-484a-b2c8-9d56eaac876d"
+            name="Id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e03c5e09-87fd-49f6-bda0-06e93617aba6"
+            name="LifeCyleState"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="821e4f70-cd83-406f-a04f-1f724da3636b"
+            name="RICC"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="86ed34ca-fc3a-4048-97bf-842c00914818"
+            name="Load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="443fe6d3-f44b-4290-8123-57daa0e82cd0"
+            name="Save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="27153f54-1045-4b93-b411-e3da5b5b6130"
+            name="Delete"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="558506a7-ccc0-4491-b16a-feba23327d24"
+        name="ModelType"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="dd6fcd30-cd1d-424d-aab9-fe661427bd96"
+            isSubstitutable="false">
+            <classMoniker
+              Id="588f3477-cafd-4241-92f9-8c7b19a85ece"
+              LastKnownName="BaseModel"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="022d35b4-c3d4-401d-82a8-2fb70c3845a1"
+            name="FullName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="f7394d0f-529d-40f7-8887-d24655e2c10a"
+            name="Assembly"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d5cdbd36-b584-40d3-9233-e6d945a7d386"
+            name="TableName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9c834ce5-46c6-46d3-adc2-85b496d42024"
+            name="Creator"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4e750d34-8156-433a-9287-c72790ce0723"
+            name="CreatedTime"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a05281a9-2b4a-4350-a0f0-9d4551a1a6b7"
+            name="Modifier"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d3382e8f-183b-484d-a6f3-d608c8bdd079"
+            name="ModifiedTime"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="1cb64c07-ce93-4912-b126-9d645e1b3027"
+            name="IsAbstract"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="81932f71-3a84-498b-99c8-836d2766d03b"
+            name="IsSealed"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="29227cec-f26e-494b-b150-97354a26e547"
+            name="Parent"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="56fc4316-cad3-409f-b4fa-6b9dfc28b7e7"
+            name="AncestorType"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fc84dca7-a5bf-4ea7-8580-fb3a59097850"
+        name="BaseRelationship"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="92dd9277-f2d9-44df-b2a3-93ae8082afef"
+            isSubstitutable="false">
+            <classMoniker
+              Id="588f3477-cafd-4241-92f9-8c7b19a85ece"
+              LastKnownName="BaseModel"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="be51dd76-e873-485d-90e9-e62f93300092"
+            isDerived="false"
+            sourceEndRoleName="BaseRelationship"
+            targetEndRoleName="RIC"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="15572f67-8100-4700-9ba4-6e2ef2a2cb9e"
+              LastKnownName="RMC"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="107950ff-c8c5-42f4-ac90-36e78f887925"
+                  name="BaseRelationship"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="912d3785-a00f-4d5d-9114-f925e9b0bee8"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b150d29b-f7d4-4c47-9c05-9aaf7e1d0127"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7928b9bf-9e88-4393-9552-96721d57310d"
+                  name="RIC"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b2ee064b-b266-40f7-8be6-b91591693252"
+            isDerived="false"
+            sourceEndRoleName="BaseRelationship"
+            targetEndRoleName="BaseModel"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="588f3477-cafd-4241-92f9-8c7b19a85ece"
+              LastKnownName="BaseModel"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="137df483-7c09-477b-8f3c-3f94934fc6a7"
+                  name="BaseRelationship"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f98ecdb-125a-40b4-aaf7-e80bfe2e592a"
+                  name="BaseModel"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4c140e6a-8592-4b70-b268-2b8dbb11ed35"
+                      name="Lower"
+                      value="1:2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="dddb8744-74f8-4a0b-95b3-b0bb9e59843c"
+                      name="Upper"
+                      value="1:2" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="8d62049b-2d43-4d43-8040-d9fc6179ef3a"
+            name="Source"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b69e3e88-59de-4b76-b071-ff1c4ec2d7fa"
+            name="Related"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7dfcff79-7304-420e-9c0d-00460b7f004d"
+        name="ModelCollection"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="7c1fa810-1af5-4dd9-b5c5-df68c86f9e59">
+            <classMoniker
+              Id="c6375870-a53a-41e8-bbeb-54cbecfc481c"
+              LastKnownName="DbNativeQuery"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="a8f66e92-abf8-4b50-8f11-f3d9561556ac"
+            name="int Count"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c6c4aefc-79bc-49b9-8986-79ea6137603b"
+            name="DbQuery DbQuery"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="94c43134-d3d5-48fa-8dd6-f165da086f21"
+            name="Load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b240611d-f78a-44fc-a157-7f5214918480"
+            name="SaveAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4f9f6dce-9f61-4c03-a5d0-d39f8ce3d424"
+            name="RemoveAt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="771a256a-953d-48ae-89bf-8c3eddcc723d"
+            name="RemoveAll"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="db692459-7bb8-4c9f-bc61-91b9e82fa3b2"
+            name="Add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="375d5969-7289-4a44-a4f1-45ba60c21486"
+            name="AddRange"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ce6b60f4-4554-4ae7-8572-3b95279765f2"
+            name="ModelCollection"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="92fd52e9-425f-4fe3-87dd-77c3316e7466"
+                  name="DbQuery"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="414e58d7-9024-449d-993d-398b0dc7050c"
+        name="ModelFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="be281efa-caf4-449c-bfaf-376e8ea7cb3d"
+            name="NewModel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6dced3f1-3d95-48a9-bec8-d5a6fbd44c97"
+            name="GetModel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f6e20958-dba9-42c3-af93-ffb98ebe3df3"
+                  name="ModelId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a15f00e-0ed5-482c-8b1b-88a0041985dd"
+                  name="ModelTypeId"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c6375870-a53a-41e8-bbeb-54cbecfc481c"
+        name="DbNativeQuery"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="05520c31-34f4-4803-bfd2-54df642ef2a7"
+            name="QueryString"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a42a0cba-046c-404d-9ebe-e7e9a92286c4"
+        name="LifeCycle"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="4950a864-dea2-405c-90db-cb572ba2e81c"
+            name="RMC LifeCycleStates"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="e8c14507-1e4c-4b6e-ba56-de8b13b0ec00"
+            name="RMC LifeCycleTransitions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6d3b25e0-3947-4afc-9398-0eef48a8fd15"
+            name="BaseModel StartLifeCycleState"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8c4741f0-43b6-4d26-9dc3-4f39b6a99315"
+            name="String Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="d9e025f1-eaf0-42b3-b031-fb0466c606c5"
+            name="String Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4a3ca2eb-6bd0-4822-962e-08e61b412055"
+        name="LifeCycleTransition"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="6e9b9437-f2a6-463c-aebf-c9f35418fbf4"
+            isDerived="false"
+            sourceEndRoleName="LifeCycleTransition"
+            targetEndRoleName="LifeCycle"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a42a0cba-046c-404d-9ebe-e7e9a92286c4"
+              LastKnownName="LifeCycle"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bdc04717-1b78-4670-8119-2d6f52088030"
+                  name="LifeCycleTransition"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="82f031eb-8bd6-4196-9ec4-39d7f02927c5"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2fcb838c-598b-4f15-b5b1-dfb53abeb371"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93cd11de-1c0b-4386-bdc1-22a36ce36cc4"
+                  name="LifeCycle"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7522accc-4704-47e1-b1a9-d98d51367cb4"
+            isDerived="false"
+            sourceEndRoleName="LifeCycleTransition"
+            targetEndRoleName="LifeCycleState"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="16ef7658-d427-435d-91b1-2dc723b1ff27"
+              LastKnownName="LifeCycleState"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="39504eea-76b6-4eec-94f6-e0ecbaf275b1"
+                  name="LifeCycleTransition"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="387c469f-1cc6-4dcb-8b29-d15b968221b4"
+                  name="LifeCycleState"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="50f5937f-5624-462d-9168-8268321f95c6"
+                      name="Lower"
+                      value="2" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="07ad5780-5655-43cd-a377-9886ab53a9fa"
+                      name="Upper"
+                      value="2" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="828a8529-cad0-4e90-a7a3-b850dd82f7f6"
+            name="PreLifeCycleState"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="911cfa7d-96a9-4c8e-8485-8a2ca5be5dbe"
+            name="NextLifeCycleState"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9a1c72e8-b5db-422b-88f9-50f153357417"
+            name="LifeCycle"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="16ef7658-d427-435d-91b1-2dc723b1ff27"
+        name="LifeCycleState"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="ad942490-010a-4faa-83a5-7950e6144406"
+            isDerived="false"
+            sourceEndRoleName="LifeCycleState"
+            targetEndRoleName="LifeCycle"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a42a0cba-046c-404d-9ebe-e7e9a92286c4"
+              LastKnownName="LifeCycle"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="033022cf-0952-4ed1-8d0c-235d938b85e4"
+                  name="LifeCycleState"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="db3adacc-c2c8-4a43-92e3-12f98720ac91"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="44f18fbc-fefb-4f00-a358-21448e7c7baa"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3348e775-bb50-4643-8bd4-8572051c692b"
+                  name="LifeCycle"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0cf30205-bf87-40ae-9135-079f540861d7"
+            name="LifeCycle"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="15572f67-8100-4700-9ba4-6e2ef2a2cb9e"
+        name="RMC"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="425c476a-2812-48ce-ba27-4ba91c3830a0"
+            isSubstitutable="false">
+            <classMoniker
+              Id="c1d27cfb-2e42-4f62-a484-0a1f48756d6f"
+              LastKnownName="ModelCollectionByModelType"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="349c1a5b-0a5f-45d6-9b0a-a1621e065576"
+            isDerived="false"
+            sourceEndRoleName="RIC"
+            targetEndRoleName="RICC"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a91f8966-756e-49ad-bb5e-2d7071e20ccd"
+              LastKnownName="RMCC"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="93941f02-a511-43d4-9b11-33a91b81b3bf"
+                  name="RIC"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7a449751-b033-4da6-b53a-85281a510ebd"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b2954a16-ad4e-4ba7-b11f-f61188e7fc8b"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f33f274b-0366-4e72-9eed-5cb23b5b683d"
+                  name="RICC"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a91f8966-756e-49ad-bb5e-2d7071e20ccd"
+        name="RMCC"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c1d27cfb-2e42-4f62-a484-0a1f48756d6f"
+        name="ModelCollectionByModelType"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="55a4de32-c262-411b-9fad-f0ac569246cf">
+            <classMoniker
+              Id="a25edfc1-98a9-4c68-94c4-8144f42b6107"
+              LastKnownName="WhereCause"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="33bc8e1a-fd05-40d5-a5ee-3f8ea59400ce"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7dfcff79-7304-420e-9c0d-00460b7f004d"
+              LastKnownName="ModelCollection"
+              LastKnownLocation="MagicBox.Modeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="c90f224e-e36b-4110-b996-7d3a845a05e4"
+            name="ModelType"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4344a147-63d9-4008-9864-a17c7b9c4862"
+            name="WhereCause"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3cebaeae-3d10-46dc-a1b7-6a87af3ade92"
+            name="ModelCollectionByModelType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e2a3ee40-15e7-4566-bfa4-46c67a56066f"
+                  name="ModelType"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="71c4fd4f-675a-4697-b35f-cd628f208fee"
+                  name="WhereCause"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a25edfc1-98a9-4c68-94c4-8144f42b6107"
+        name="WhereCause"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d1d6cf13-ff95-4384-9627-8dfad34467b7"
+        name="ModelRef"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="60eb0ba2-8a55-465e-9006-fe4d6af7878c"
+            name="string ModelId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0b88bebf-50b5-4880-a7a1-a08e07d131ba"
+            name="String ModelTypeId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"
     name="Integer"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
     name="Boolean"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
     name="String"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
   <primitiveType
     Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
     name="UnlimitedNatural"
     isAbstract="false"
-    isTemplate="false"
     isLeaf="false" />
 </modelStoreModel>

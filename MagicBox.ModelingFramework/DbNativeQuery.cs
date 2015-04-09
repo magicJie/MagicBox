@@ -1,43 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using MagicBox.ItemCore;
 
-namespace MagicBox.ItemCore
+namespace MagicBox.MF
 {
    [Serializable]
     public class DbNativeQuery
     {
-        private Dictionary<string, NamedSqlParameter> parameters;
-        private string sql;
+        private Dictionary<string, NamedSqlParameter> _parameters;
+        private string _sql;
         
         public DbNativeQuery(string sql)
         {
-            this.sql = sql;
-            this.parameters = new Dictionary<string, NamedSqlParameter>();
+            _sql = sql;
+            _parameters = new Dictionary<string, NamedSqlParameter>();
         }
         
         public DbNativeQuery AddParameter(NamedSqlParameter parameter)
         {
             NamedSqlParameter parameter2;
-            if (this.parameters.TryGetValue(parameter.Key, out parameter2))
+            if (_parameters.TryGetValue(parameter.Key, out parameter2))
             {
-                this.parameters.Remove(parameter.Key);
+                _parameters.Remove(parameter.Key);
             }
-            this.parameters.Add(parameter.Key, parameter);
+            _parameters.Add(parameter.Key, parameter);
             return this;
         }
         
         public override string ToString()
         {
-            return this.sql;
+            return _sql;
         }
         
         public Dictionary<string, NamedSqlParameter> Parameters
         {
             get
             {
-                return this.parameters;
+                return _parameters;
             }
         }
         
@@ -45,11 +44,11 @@ namespace MagicBox.ItemCore
         {
             get
             {
-                return this.sql;
+                return _sql;
             }
             set
             {
-                this.sql = value;
+                _sql = value;
             }
         }
     }

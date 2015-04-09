@@ -23,6 +23,13 @@
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Folder Include="ModelDefinition\" />
+    <Content Include="MagicBox.ModelFramework.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MagicBox.ModelFramework.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MagicBox.ModelFramework.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\MagicBox.Modeling.uml">
       <SubType>Content</SubType>
     </Content>
@@ -60,10 +67,6 @@
     <ProjectReference Include="..\MagicBox.Extension\MagicBox.Extension.csproj">
       <Name>MagicBox.Extension</Name>
       <Project>{75e0cbc5-2a35-4715-a6d1-e2983c137d55}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\MagicBox.ItemCore\MagicBox.ItemCore.csproj">
-      <Name>MagicBox.ItemCore</Name>
-      <Project>{a8d0fa3d-39d4-4927-bf8c-4dcc4d12b6f0}</Project>
     </ProjectReference>
     <ProjectReference Include="..\MagicBox.Plugin\MagicBox.Plugin.csproj">
       <Name>MagicBox.Plugin</Name>

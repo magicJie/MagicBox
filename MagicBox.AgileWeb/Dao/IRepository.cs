@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using MagicBox.AgileWeb.Domain;
+using MagicBox.MF;
 
 namespace MagicBox.AgileWeb.Dao
 {
-    public interface IRepository<T> where T:IBaseModel
+    public interface IRepository<T> where T:BaseModel
     {
         /// <summary>
         /// 获取实体

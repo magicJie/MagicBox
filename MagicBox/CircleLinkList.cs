@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Text;
-using System.Xml;
-
-namespace MagicBox
+﻿namespace MagicBox
 {
     public class CircleLinkList<T>
     {
@@ -45,6 +38,8 @@ namespace MagicBox
 
         private Node _point;
         private int _count;
+        private Node _head;
+        private Node _tail;
 
         /// <summary>
         /// 在Point后增加一个节点
@@ -55,13 +50,15 @@ namespace MagicBox
             if (_count < 1)
             {
                 _point = node;
+                _head = node;
+                _tail = node;
             }
             else if (_count==1)
             {
-                _point.NextNode = node;
-                _point.PreNode = node;
-                node.PreNode = _point;
-                node.NextNode = _point;
+                _point = node;
+                _head.NextNode = node;
+                node.PreNode = _head;
+                node.NextNode = _tail;
             }
             else
             {
@@ -98,6 +95,7 @@ namespace MagicBox
             else
             {
                 _point = null;
+                _head = null;
             }
             _count--;
             return node;
@@ -106,8 +104,8 @@ namespace MagicBox
         public CircleLinkList(Node node)
         {
             _point = node;
+            _head = node;
             _count = 1;
         }
-
     }
 }

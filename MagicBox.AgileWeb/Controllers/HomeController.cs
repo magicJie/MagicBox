@@ -8,7 +8,7 @@ namespace MagicBox.AgileWeb.Controllers
 {
     public class HomeController : Controller
     {
-        public IUserInfoManager UserInfoManager { set; get; }
+        public IPermissionManager PermissionManager { set; get; }
 
         [UserAuthorization]
         public ActionResult Index()
@@ -25,7 +25,7 @@ namespace MagicBox.AgileWeb.Controllers
         public ActionResult Login(HomeLoginRequest model)
         {
             model.Trim();
-            var loginUserSession = UserInfoManager.GetUserSession(model.UserName, model.Password, Request.UserHostAddress);
+            var loginUserSession = PermissionManager.GetUserSession(model.UserName, model.Password, Request.UserHostAddress);
             if (loginUserSession != null)
             {
                 Session[Session.SessionID] = loginUserSession;
@@ -42,7 +42,7 @@ namespace MagicBox.AgileWeb.Controllers
             if (Request.Cookies[UserAuthorizationAttribute.CookieUserName] != null &&
                 !string.IsNullOrWhiteSpace(Request.Cookies[UserAuthorizationAttribute.CookieUserName].Value))
             {
-                UserInfoManager.LoginOut(Request.Cookies[UserAuthorizationAttribute
+                PermissionManager.LoginOut(Request.Cookies[UserAuthorizationAttribute
                     .CookieUserName].Value, Request.UserHostAddress);
                 Session[Session.SessionID] = null;
                 Request.Cookies.Add(new HttpCookie(UserAuthorizationAttribute.CookieUserName,string.Empty));                
