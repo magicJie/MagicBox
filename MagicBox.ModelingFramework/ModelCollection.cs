@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using MagicBox.MF.Domain;
 
 namespace MagicBox.MF
 {
-    public class ModelCollection 
+    public class ModelCollection: ICollection
     {
         public ModelCollection()
         {
@@ -25,6 +27,11 @@ namespace MagicBox.MF
             }
         }
 
+        public void CopyTo(Array array, int index)
+        {
+            throw new NotImplementedException();
+        }
+
         public int Count
         {
             get
@@ -34,6 +41,16 @@ namespace MagicBox.MF
             set
             {
             }
+        }
+
+        public object SyncRoot
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        public bool IsSynchronized
+        {
+            get { throw new NotImplementedException(); }
         }
 
         public void Add(Model model)
@@ -64,6 +81,11 @@ namespace MagicBox.MF
         public void SaveAll()
         {
             throw new System.NotImplementedException();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

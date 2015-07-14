@@ -1,4 +1,7 @@
-﻿namespace MagicBox.MF
+﻿using System;
+using MagicBox.MF.Domain;
+
+namespace MagicBox.MF
 {
     public class ModelCollectionByModelType : ModelCollection
     {
@@ -8,9 +11,14 @@
 
         public ModelCollectionByModelType(ModelType modelType, WhereCause whereCause)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
-    
+
+        public ModelCollectionByModelType(string modelTypeId, string whereCauseStr)
+        {
+            throw new NotImplementedException();
+        }
+
         public WhereCause WhereCause
         {
             get

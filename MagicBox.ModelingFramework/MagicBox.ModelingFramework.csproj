@@ -34,7 +34,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web.v20, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,41 +51,92 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseModel.cs" />
-    <Compile Include="ModelDecorator.cs" />
-    <Compile Include="Class2.cs" />
-    <Compile Include="Identity.cs" />
-    <Compile Include="Model.cs" />
+    <Compile Include="Domain\BaseModel.cs" />
+    <Compile Include="Cfg\CfgXmlHelper.cs" />
+    <Compile Include="Cfg\SettingsFactory.cs" />
+    <Compile Include="Cfg\IMFConfiguration.cs" />
+    <Compile Include="Cfg\Configuration.cs" />
+    <Compile Include="Cell.cs" />
+    <Compile Include="DbOperation\BaseDbOperation.cs" />
+    <Compile Include="DbOperation\IDbOperation.cs" />
+    <Compile Include="DbOperation\MySqlOperation.cs" />
+    <Compile Include="Domain\Identity.cs" />
+    <Compile Include="Domain\Model.cs" />
     <Compile Include="DbNativeQuery.cs" />
     <Compile Include="Attribute.cs" />
     <Compile Include="ModelCollection.cs" />
     <Compile Include="ModelCollectionByItemType.cs" />
-    <Compile Include="ModelContext.cs" />
     <Compile Include="ModelFactory.cs" />
-    <Compile Include="LifeCycle.cs" />
-    <Compile Include="LifeCycleState.cs" />
-    <Compile Include="LifeCycleTransition.cs" />
+    <Compile Include="Domain\LifeCycle.cs" />
+    <Compile Include="Domain\LifeCycleState.cs" />
+    <Compile Include="Domain\LifeCycleTransition.cs" />
     <Compile Include="ModelRef.cs" />
-    <Compile Include="Orgnainzation.cs" />
-    <Compile Include="Relationship.cs" />
+    <Compile Include="Id\ModelTypeId.cs" />
+    <Compile Include="Domain\Orgnainzation.cs" />
+    <Compile Include="Domain\Property.cs" />
+    <Compile Include="Domain\Relationship.cs" />
+    <Compile Include="ORM\MySqlSqlGenerator.cs" />
+    <Compile Include="OracleSqlGenerator.cs" />
+    <Compile Include="ORM\SqlTree\SqlColumnConstraint.cs" />
+    <Compile Include="ORM\SqlTree\SqlJoinType.cs" />
+    <Compile Include="ORM\SqlTree\OrderDirection.cs" />
+    <Compile Include="ORM\SqlTree\SqlColumnConstraintOperator.cs" />
+    <Compile Include="ORM\SqlTree\SqlNode.cs" />
     <Compile Include="RMC.cs" />
     <Compile Include="RMCC.cs" />
     <Compile Include="ItemDataVersion.cs" />
-    <Compile Include="ModelType.cs" />
+    <Compile Include="Domain\ModelType.cs" />
     <Compile Include="NamedSqlParameter.cs" />
     <Compile Include="Pagination.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserGroup.cs" />
-    <Compile Include="WhereCause.cs" />
+    <Compile Include="RuntimeContext.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserGroup.cs" />
+    <Compile Include="ORM\SqlTree\SqlArray.cs" />
+    <Compile Include="ORM\SqlTree\SqlBinaryConstraint.cs" />
+    <Compile Include="ORM\SqlTree\SqlColumn.cs" />
+    <Compile Include="ORM\SqlTree\SqlColumnsComparisonConstraint.cs" />
+    <Compile Include="ORM\SqlTree\SqlConstraint.cs" />
+    <Compile Include="ORM\SqlTree\SqlExistsConstraint.cs" />
+    <Compile Include="ORM\SqlTree\SqlJoin.cs" />
+    <Compile Include="ORM\SqlTree\SqlLiteral.cs" />
+    <Compile Include="ORM\SqlTree\SqlNamedSource.cs" />
+    <Compile Include="ORM\SqlTree\SqlNodeType.cs" />
+    <Compile Include="ORM\SqlTree\SqlNotConstraint.cs" />
+    <Compile Include="ORM\SqlTree\SqlOrderBy.cs" />
+    <Compile Include="ORM\SqlTree\SqlSelect.cs" />
+    <Compile Include="ORM\SqlTree\SqlSelectAll.cs" />
+    <Compile Include="ORM\SqlTree\SqlSource.cs" />
+    <Compile Include="ORM\SqlTree\SqlSubSelect.cs" />
+    <Compile Include="ORM\SqlTree\SqlTable.cs" />
+    <Compile Include="ORM\SqlGenerator.cs" />
+    <Compile Include="ORM\SqlTree\SqlNodeVisitor.cs" />
+    <Compile Include="ORM\SqlServerSqlGenerator.cs" />
+    <Compile Include="Util\TypeCreator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DbOperation\" />
+    <Folder Include="Data\DbScripts\" />
+    <Folder Include="Data\Log\" />
     <Folder Include="FileOperation\" />
     <Folder Include="NosqlDbOperation\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="MagicBox.ModelingFramework.cd" />
+    <None Include="MagicBox.ModelingFramework.cd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MF.config" />
+    <None Include="ORM\SqlGenerator.cd" />
+    <None Include="ORM\SqlTree\SqlTree.cd" />
+    <None Include="packages.config" />
+    <None Include="MF.config.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">
+      <Project>{4539136e-2f6c-4e72-be3a-9de59e1337ef}</Project>
+      <Name>MagicBox.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

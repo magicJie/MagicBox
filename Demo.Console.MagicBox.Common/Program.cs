@@ -1,4 +1,9 @@
-﻿using MagicBox;
+﻿using System;
+using System.Data.OracleClient;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using MagicBox;
 
 namespace Demo.Console.MagicBox.Common
 {
@@ -6,6 +11,10 @@ namespace Demo.Console.MagicBox.Common
     {
         static void Main(string[] args)
         {
+            OracleParamterDemo.Test1();
         }
+
+        
+
     }
 }

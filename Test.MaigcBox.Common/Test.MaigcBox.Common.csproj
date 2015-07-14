@@ -68,6 +68,8 @@
     <Compile Include="HtmlHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimeoutTest.cs" />
+    <Compile Include="Seurity.Cryptography.EncrypterTest.cs" />
+    <Compile Include="LoggerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">

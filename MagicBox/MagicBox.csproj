@@ -60,6 +60,7 @@
     <Compile Include="LinkQueue.cs" />
     <Compile Include="LinkStack.cs" />
     <Compile Include="Node.cs" />
+    <Compile Include="Reflection\TypeCreator.cs" />
     <Compile Include="SequenceStack.cs" />
     <Compile Include="SingleLinkList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +71,7 @@
   <ItemGroup>
     <None Include="MagicBox.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

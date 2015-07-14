@@ -8,6 +8,7 @@ using log4net;
 using log4net.Config;
 using MagicBox.AgileWeb.Service;
 using MagicBox.MF;
+using MagicBox.MF.Domain;
 using Spring.Context.Support;
 using Spring.Web.Mvc;
 

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlNode" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlSelect" Collapsed="true">
+    <Position X="5" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Selection" Type="MagicBox.MF.ORM.SqlTree.SqlNode" FixedFromPoint="true">
+      <Path>
+        <Point X="6.188" Y="2.75" />
+        <Point X="6.188" Y="2.048" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.567" Y="0.445" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="From" Type="MagicBox.MF.ORM.SqlTree.SqlSource">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.641" Y="0.383" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Where" Type="MagicBox.MF.ORM.SqlTree.SqlConstraint">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.227" Y="-0.307" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AoACACQAgAAAAEAAAAAAAAAAAAEIAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlSelect.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Selection" />
+      <Property Name="From" />
+      <Property Name="Where" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlSelectAll" Collapsed="true">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlSelectAll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlArray" Collapsed="true">
+    <Position X="0.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlLiteral" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlLiteral.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlConstraint" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlBinaryConstraint" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAIAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlBinaryConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlExistsConstraint" Collapsed="true">
+    <Position X="1.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlExistsConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlColumnsComparisonConstraint" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAgAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>ORM\SqlTree\SqlColumnsComparisonConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlNotConstraint" Collapsed="true">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlNotConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlColumn" Collapsed="true">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAIAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlColumn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlOrderBy" Collapsed="true">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAADAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlOrderBy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlSource" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlJoin" Collapsed="true">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlJoin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlNamedSource" Collapsed="true">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlNamedSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlTable" Collapsed="true">
+    <Position X="9.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.ORM.SqlTree.SqlSubSelect" Collapsed="true">
+    <Position X="11.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlSubSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="MagicBox.MF.ORM.SqlTree.SqlNodeType" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAQAAGAABAQADAgACAAACAAAAAAAAAAIACAAA=</HashCode>
+      <FileName>ORM\SqlTree\SqlNodeType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
