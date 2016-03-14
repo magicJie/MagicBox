@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MagicBox.Common.Configuration
 {
+    public delegate void ConfigLoad(object sender,EventArgs args );
+
     public class CfgLoader
     {
+        public CfgLoader()
+        {
+        }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using MagicBox.AgileWeb.Infrastructure;
 using MagicBox.MF;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Model;
 
 namespace MagicBox.AgileWeb.Service.Impl
 {

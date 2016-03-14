@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MagicBox.Common</RootNamespace>
     <AssemblyName>MagicBox.Common</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -34,6 +34,18 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NPOI">
+      <HintPath>..\lib\NPOI\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\lib\NPOI\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\lib\NPOI\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\lib\NPOI\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -52,14 +64,17 @@
     <Compile Include="Data\PagingInfo.cs" />
     <Compile Include="Data\FormattedSqlParameters.cs" />
     <Compile Include="Data\FormattedSql.cs" />
+    <Compile Include="DateTimeExtension.cs" />
     <Compile Include="FileInfoExtension.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="Data\NPOIExcelHelper.cs" />
+    <Compile Include="Printer.cs" />
     <Compile Include="Security\Cryptography\BigInteger.cs" />
     <Compile Include="Security\Cryptography\EncryptDataTable.cs" />
     <Compile Include="Security\Cryptography\Encrypter.cs" />
-    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="Data\ExcelHelper.cs" />
     <Compile Include="HtmlHelper.cs" />
-    <Compile Include="OleDBHelper.cs" />
+    <Compile Include="Data\OleDBHelper.cs" />
     <Compile Include="Security\Program.cs" />
     <Compile Include="Security\Program1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

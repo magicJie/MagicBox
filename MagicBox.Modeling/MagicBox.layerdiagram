@@ -34,7 +34,7 @@
       </layerElements>
     </comment>
     <comment Id="2d170f3f-8843-4944-8917-72829ed3f2f2" name="Comment5">
-      <body>提供对DDD更好的支持，对NHibernate的封装和二次开发</body>
+      <body>提供对DDD更好的支持</body>
       <layerElements>
         <linkFromCommentToLayerElement>
           <layerMoniker Id="bedd4ca8-119b-4942-917d-9f4fdff7df81" />
@@ -118,6 +118,9 @@
       <dependencyToLayers>
         <dependencyFromLayerToLayer Id="eb1030fb-5fa0-45ea-9687-4b9021f6d4fd" direction="Forward">
           <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="6281142a-3a6a-49f3-bd55-c4c7030e7155" direction="Forward">
+          <layerMoniker Id="8f4a2aff-e9a2-47a1-b3b4-dd7ee2f33c42" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>

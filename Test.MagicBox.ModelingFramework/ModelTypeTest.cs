@@ -1,6 +1,6 @@
 ﻿using System;
 using MagicBox.MF;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Test.MagicBox.ModelingFramework

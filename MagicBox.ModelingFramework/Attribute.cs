@@ -1,6 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Models;
 
 namespace MagicBox.MF
 {

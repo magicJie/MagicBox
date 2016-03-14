@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="c4213236-9aeb-47f7-87a9-76ff86db03ed"
   name="MagicBox.Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1128,6 +1128,172 @@
             isComposite="false" />
         </ownedAttributesInternal>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="229b6212-756d-4524-996c-50ede9a6fd32"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="145c2d00-d1e1-4d27-a9d1-38eb559015a2"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b2c4df51-fd10-4c57-939c-ff251450cb86"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2cf1dafe-da72-4f88-af6a-213f6b375258"
+                  LastKnownName="ModelFactory设置Configuration属性"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="2cf1dafe-da72-4f88-af6a-213f6b375258"
+            name="ModelFactory设置Configuration属性"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6447d065-13b8-49af-b0ef-b2bb7bbbfc69"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="59bef589-c999-4194-81d4-a0e6cdb3b7b8"
+                  LastKnownName="检查数据库是否初始化"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode
+            Id="f1344c1f-0793-413b-bfdd-b9a71f51bbf2"
+            name="IMFConfiguration"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="cc90219b-adcf-415b-bc15-26c85336c043"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="2cf1dafe-da72-4f88-af6a-213f6b375258"
+                  LastKnownName="ModelFactory设置Configuration属性"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="f0d07793-f3bd-49c8-a851-eb520fec6b81"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="59bef589-c999-4194-81d4-a0e6cdb3b7b8"
+            name="检查数据库是否初始化"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="05952b5b-e7a4-450d-9d3d-e3e75fef863f"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="5ca5e8a4-8f74-44d2-98de-66becc1d7aa6"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="5ca5e8a4-8f74-44d2-98de-66becc1d7aa6"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="a3855a05-3b68-4b8c-ae59-c96c88cca95e"
+                guard="是"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e81af8ec-d914-451e-ac42-e69f6bdff715"
+                  LastKnownName="载入缓存"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="0ff29009-f65b-4dd7-bd34-99fc51932b9c"
+                guard="否"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7e1f66bf-89bb-4fa8-9798-eca7303afe5c"
+                  LastKnownName="建基础表表"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="e81af8ec-d914-451e-ac42-e69f6bdff715"
+            name="载入缓存"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7e5430ea-fa12-480b-90b7-3b6dddd0759d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6f4abb95-3c66-477a-9617-1c1b893bb20f"
+                  LastKnownName="设置单例RuntimeContext.Current"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="7e1f66bf-89bb-4fa8-9798-eca7303afe5c"
+            name="建基础表表"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae482358-8ef3-4b59-8417-b5b02a8e8efc"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e81af8ec-d914-451e-ac42-e69f6bdff715"
+                  LastKnownName="载入缓存"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6f4abb95-3c66-477a-9617-1c1b893bb20f"
+            name="设置单例RuntimeContext.Current"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3e529ec3-2a9a-48a6-ba09-4b18cd79537d"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="866d00a9-8de0-4d1b-813e-55009248dbb8"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="MagicBox.Modeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="866d00a9-8de0-4d1b-813e-55009248dbb8"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dfbfc514-2627-4998-b3c1-1438db9bcee6"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

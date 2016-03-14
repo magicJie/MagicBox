@@ -1,6 +1,6 @@
 ﻿namespace MagicBox.MF
 {
-    public abstract class RMC : ModelCollectionByModelType
+    public class RMC : ModelCollectionByType
     {
     }
 }

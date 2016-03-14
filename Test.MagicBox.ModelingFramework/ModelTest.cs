@@ -1,6 +1,5 @@
 ﻿using System.Text;
 using MagicBox.MF;
-using MagicBox.MF.Domain;
 using MagicBox.MF.Id;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -47,7 +46,7 @@ namespace Test.MagicBox.ModelingFramework
         [TestMethod]
         public void ModelCollectionByModelTypeOperationTest()
         {
-            var modelCollByType = new ModelCollectionByModelType(ModelTypeId.User, "name like 't*'");
+            var modelCollByType = new ModelCollectionByType(ModelTypeId.User, "name like 't*'");
             modelCollByType.Load();
             var conut = modelCollByType.Count;
             var sb = new StringBuilder();

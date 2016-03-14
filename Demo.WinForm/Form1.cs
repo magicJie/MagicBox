@@ -79,5 +79,10 @@ namespace Demo.WinForm
                 table.Rows.Add(n, m1, n1, "NA", "读");
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

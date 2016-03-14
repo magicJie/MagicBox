@@ -32,9 +32,10 @@ using System.Xml.Linq;
 namespace MagicBox.MF.Cfg
 {
     [Serializable]
-    public class Configuration:ISerializable
+    public class Configuration:ISerializable,IMFConfiguration
     {
-        public const string DefaultConfigName = "MF.config"; 
+        public const string DefaultConfigName = "MF.config";
+
         #region Field
 
         private IDictionary<string, object> _configSettings;
@@ -45,18 +46,36 @@ namespace MagicBox.MF.Cfg
         #endregion Propertity
 
         #region Method
-
-        public ModelFactory BuildModelFactory()
-        {
-            var currentModelFactory = new ModelFactory(this);
-            ModelFactory.Current = currentModelFactory;
-            return currentModelFactory;
-        }
+        //Configuration不依赖ModelFactory，如果存在这个方法，则会产生依赖
+        //public ModelFactory BuildModelFactory()
+        //{
+        //    var currentModelFactory = new ModelFactory(this);
+        //    ModelFactory.Current = currentModelFactory;
+        //    return currentModelFactory;
+        //}
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             throw new NotImplementedException();
         }
+
+        public object GetSetting(string name)
+        {
+            object obj;
+            var isSettingExist = _configSettings.TryGetValue(name,out obj);
+            if (!isSettingExist)
+            {
+                switch (name)
+                {
+                    case "connectingStr":
+                        throw new Exception("未配置连接字符串！");                      
+                }
+            }
+            return _configSettings["name"];
+        }
+
+
+        #endregion Method
 
         /// <summary>
         /// 获取默认的配置
@@ -85,7 +104,7 @@ namespace MagicBox.MF.Cfg
         {
             var doc = XDocument.Load(configFile);
             var results = from c in doc.Descendants("connectingStr")
-                select c;
+                          select c;
             var s = "";
             foreach (var result in results)
             {
@@ -93,24 +112,9 @@ namespace MagicBox.MF.Cfg
             }
             configSetting.Add("connectingStr", s);
         }
+        #region Static Method
 
-        public object GetSetting(string name)
-        {
-            object obj;
-            var isSettingExist = _configSettings.TryGetValue(name,out obj);
-            if (!isSettingExist)
-            {
-                switch (name)
-                {
-                    case "connectingStr":
-                        throw new Exception("未配置连接字符串！");                      
-                }
-            }
-            return _configSettings["name"];
-        }
-
-
-        #endregion Method
+        #endregion
 
         #region Constructor
         public Configuration()

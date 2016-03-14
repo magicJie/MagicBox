@@ -21,13 +21,13 @@
 using System;
 using System.Collections.Generic;
 using System.Security.Permissions;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Models;
 
 namespace MagicBox.MF
 {
     public class RuntimeContext
     {
-        #region Field        
+        #region Field
         private static RuntimeContext _current;
         private readonly IDictionary<string, object> _data;
         private User _user;

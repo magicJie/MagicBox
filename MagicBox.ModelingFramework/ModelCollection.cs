@@ -1,91 +1,54 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Models;
 
 namespace MagicBox.MF
 {
-    public class ModelCollection: ICollection
+    public class ModelCollection: ICollection<Model>
     {
-        public ModelCollection()
-        {
-        }
 
-        public ModelCollection(DbNativeQuery dbNativeQuery)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public DbNativeQuery DbNativeQuery
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public void CopyTo(Array array, int index)
+        public void AddRange(Model[] models)
         {
             throw new NotImplementedException();
         }
 
-        public int Count
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public object SyncRoot
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public bool IsSynchronized
-        {
-            get { throw new NotImplementedException(); }
-        }
-
-        public void Add(Model model)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void AddRange(List<Model> listModel)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Load()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void RemoveAll()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Model RemoveAt(int index)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void SaveAll()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IEnumerator GetEnumerator()
+        public IEnumerator<Model> GetEnumerator()
         {
             throw new NotImplementedException();
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        public void Add(Model item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(Model item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CopyTo(Model[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Remove(Model item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Count { get; private set; }
+        public bool IsReadOnly { get; private set; }
     }
 }

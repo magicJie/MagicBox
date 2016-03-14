@@ -1,25 +1,29 @@
 ﻿using System;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Models;
 
 namespace MagicBox.MF
 {
-    public class ModelCollectionByModelType : ModelCollection
+    public class ModelCollectionByType : ModelCollection
     {
-        public ModelCollectionByModelType()
+        public ModelCollectionByType()
         {
         }
 
-        public ModelCollectionByModelType(ModelType modelType, WhereCause whereCause)
+        public ModelCollectionByType(string modelTypeId)
+        {
+        }
+
+        public ModelCollectionByType(ModelType modelType, WhereClause whereClause)
         {
             throw new NotImplementedException();
         }
 
-        public ModelCollectionByModelType(string modelTypeId, string whereCauseStr)
+        public ModelCollectionByType(string modelTypeId, string whereClauseStr)
         {
             throw new NotImplementedException();
         }
 
-        public WhereCause WhereCause
+        public WhereClause WhereClause
         {
             get
             {
@@ -39,6 +43,13 @@ namespace MagicBox.MF
             set
             {
             }
+        }
+        /// <summary>
+        /// 从缓存或数据库加载数据
+        /// </summary>
+        public void Load()
+        {
+            throw new NotImplementedException();
         }
     }
 }

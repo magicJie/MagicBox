@@ -182,5 +182,13 @@
         <layerShapeMoniker Id="6dccfb0a-75a5-4d06-8f57-ebaadd68eb35" />
       </nodes>
     </dependencyConnector>
+    <dependencyConnector edgePoints="[(5.375 : 3.9062525); (5.47916416666667 : 3.9062525 : JumpStart); (5.64583083333333 : 3.9062525 : JumpEnd); (5.875 : 3.9062525)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <dependencyFromLayerToLayerMoniker Id="6281142a-3a6a-49f3-bd55-c4c7030e7155" />
+      <relativeChildShapes />
+      <nodes>
+        <layerShapeMoniker Id="14964d18-724b-4c23-b831-d7830197feed" />
+        <layerShapeMoniker Id="6dccfb0a-75a5-4d06-8f57-ebaadd68eb35" />
+      </nodes>
+    </dependencyConnector>
   </nestedChildShapes>
 </layerDiagram>

@@ -22,10 +22,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MagicBox.MF.ORM;
 
 namespace MagicBox.MF.Cfg
 {
-    public interface IMFConfiguration
+    public interface IMFConfiguration:IORMConfig
     {
     }
 }

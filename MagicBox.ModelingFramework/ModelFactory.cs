@@ -20,24 +20,36 @@
 
 using System;
 using System.IO;
+using System.Data;
+using System.Linq;
 using MagicBox.MF.Cfg;
-using MagicBox.MF.Domain;
+using MagicBox.MF.Models;
+using MagicBox.MF.ORM;
+
 
 namespace MagicBox.MF
 {
     /// <summary>
     /// MF核心类型。提供对模型实例的创建、获取。单例、线程安全
     /// </summary>
-    public class ModelFactory
+    public class ModelFactory:IObjectOperationSet
     {
         #region Field
         private static ModelFactory _current;
         private ModelFactoryState _state;
-        private Configuration _configuration;
+        private IMFConfiguration _configuration;
         private RuntimeContext _runtimeContext;
         #endregion Field
 
         #region Propertity
+        /// <summary>
+        /// 框架当前使用的配置
+        /// </summary>
+        public IMFConfiguration Configuration
+        {
+            get { return _configuration; }
+        }
+
 
         public ModelFactoryState State
         {         
@@ -52,7 +64,7 @@ namespace MagicBox.MF
                     throw new Exception("模型工厂未初始化！");
                 return _current;
             }
-            internal set { _current = value; }
+            private set { _current = value; }
         }        
 
         #endregion Propertity
@@ -84,6 +96,16 @@ namespace MagicBox.MF
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private void CreateTable()
+        {
+            
+        }
+
         /// <summary>
         /// 根据属性值尝试获取一个模型，若不存在对应模型则返回空
         /// </summary>
@@ -99,7 +121,7 @@ namespace MagicBox.MF
 
         #region Constructor
 
-        internal ModelFactory(Configuration configuration)
+        private ModelFactory(IMFConfiguration configuration)
         {
             _state = ModelFactoryState.LoadingConfig;
             _configuration = configuration;
@@ -110,6 +132,55 @@ namespace MagicBox.MF
 
         #region Event
         #endregion Event
+
+        #region static Method
+        /// <summary>
+        /// 初始化MF。触发配置载入，检查代码和数据库是否同步
+        /// </summary>
+        /// <param name="configuration">初始化MF时使用的配置</param>
+        public static void Init(IMFConfiguration configuration)
+        {
+            //1 检查数据库状态、同步数据库和代码 TODO 代码升级和sql脚本交替执行效率问题需要详细思考，问题关键在于缓存重启代价太大
+            //2 
+            try
+            {
+                Current=new ModelFactory(configuration);
+                RuntimeContext.Current=new RuntimeContext();
+                try
+                {
+                    new ModelCollectionByType(ModelType.TypeId).Load();
+                }
+                catch (ModelNotExistException ex)
+                {
+                    //如果无法加载ModelType则说明数据库未初始化，需要执行初始化
+                    InitDataBase();
+                    throw;
+                }
+                new ScriptExecutor().AutoExecute();
+            }
+            catch (Exception ex)
+            {
+                //
+                throw;
+            }
+        }
+        /// <summary>
+        /// 对空白数据库执行初始化，使其符合MF要求
+        /// </summary>
+        private static void InitDataBase()
+        {            
+            //将对象描述的表结构转换到DataTable中
+            var dt=new DataTable();
+
+            Current.CreateTable(dt);
+        }
+
+        #endregion
+
+        public void CreateTable(DataTable dt)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public enum ModelFactoryState
