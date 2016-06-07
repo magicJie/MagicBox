@@ -16,7 +16,7 @@ namespace Test.MagicBox
             seqList.Append(2);
             seqList.Append(3);
             seqList.Traverse(x=>++x);
-            var a = seqList.Count();
+            var a = seqList.Count;
             var b=seqList.GetElement(2);
             var c = seqList.IndexOf(2);
             seqList.Maxsize=5;

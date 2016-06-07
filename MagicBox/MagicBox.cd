@@ -1,34 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MagicBox.SeqList&lt;T&gt;" Collapsed="true">
-    <Position X="3.25" Y="2" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MagicBox.SeqList&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEBAAMAABIAAAAAECAAAAAUAAAACQQAISAACAABIAAA=</HashCode>
       <FileName>SeqList.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="MagicBox.SingleLinkList&lt;T&gt;" Collapsed="true">
-    <Position X="5.75" Y="2" Width="1.5" />
+  <Class Name="MagicBox.SingleLinkList&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AMBAAMAAAIAAAAAAAAAAAAUAAAAAAQAACAACAABJAAA=</HashCode>
+      <HashCode>AEBAAMAAAIAAAAAECAAAAAUAAAAAAQAACAACAABJAAA=</HashCode>
       <FileName>SingleLinkList.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Interface Name="MagicBox.ICache">
+  <Class Name="MagicBox.CircleLinkList&lt;T&gt;" Collapsed="true">
     <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQgAAAAAAAAAQAAAEAAQAAAACAAAABAAQ=</HashCode>
+      <FileName>CircleLinkList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.SequenceStack&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAABAACAAAECAAAgABAAACCQAAIAAAAAABACAA=</HashCode>
+      <FileName>SequenceStack.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MagicBox.LinkStack&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAACAAAEAAAAgABAAACAAAAAAAAAAAJACAA=</HashCode>
+      <FileName>LinkStack.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MagicBox.SingleLinkNode&lt;T&gt;" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>SingleLinkNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.CSeqQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQEAAABAAABAAACAAAAABAAAkCRAAIAAAAAABAAAA=</HashCode>
+      <FileName>CSeqQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MagicBox.LinkQueue&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQEAAAAAAABAAAAAAAAABAAAkABAAIAAAAAAJAAAA=</HashCode>
+      <FileName>LinkQueue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MagicBox.ICache" Collapsed="true">
+    <Position X="1.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ICache.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="MagicBox.IList&lt;T&gt;" Collapsed="true">
-    <Position X="4.25" Y="0.75" Width="1.5" />
+    <Position X="3.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEBAAMAAAIAAAAAAAAAAAAUAAAAAAQAACAACAABIAAA=</HashCode>
+      <HashCode>AEBAAMAAAIAAAAAACAAAAAUAAAAAAQAACAACAABIAAA=</HashCode>
       <FileName>IList.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="MagicBox.ITree&lt;T&gt;" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABIAMAAAAAAAKAAAAAgQAAAAAEAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ITree.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MagicBox.IStack&lt;T&gt;" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAgABAAACAAAAAAAAAAABACAA=</HashCode>
+      <FileName>IStack.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MagicBox.IQueue&lt;T&gt;" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAABAAAEABAAIAAAAAABAAAA=</HashCode>
+      <FileName>IQueue.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="MagicBox.TraverseType" Collapsed="true">
+    <Position X="1.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TransverType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

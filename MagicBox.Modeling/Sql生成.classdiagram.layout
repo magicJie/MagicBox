@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Sql生成">
+  <logicalClassDesignerModelMoniker Id="d8cacb5d-c6e8-462a-947f-dac13f346dd0" />
+  <nestedChildShapes>
+    <classShape Id="44783335-91ea-41be-9f7e-7767a9ece5f4" absoluteBounds="3.75, 1.25, 1.5, 0.95263671875" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="55626a73-fa4e-4970-912b-c9ea3a9dee6f" LastKnownName="Class1" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="ca482405-a80c-416b-bffb-4a13be87f39f" absoluteBounds="3.765, 1.6400000000000001, 1.4700000000000002, 0.226318359375" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="c1848701-98ea-4f55-84e1-93cc67fdffa2" absoluteBounds="3.765, 1.876318359375, 1.4700000000000002, 0.226318359375" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

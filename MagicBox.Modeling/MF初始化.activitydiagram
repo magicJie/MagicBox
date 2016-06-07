@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="91c65592-f37a-4a84-a777-803377ad44a3" name="Activity1" linkedPackageId="fec1eb11-a81b-412f-aa63-9bc954e9817f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="dcfb154f-0d48-485f-80bb-02ab58e22eb1" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="229b6212-756d-4524-996c-50ede9a6fd32" />
+        <nodes>
+          <initialNode Id="142533a1-03f8-418c-bbb0-db21f8384509" name="Initial1" isLeaf="false">
+            <elementDefinition Id="145c2d00-d1e1-4d27-a9d1-38eb559015a2" />
+            <flowNodeTargets>
+              <controlFlow Id="01c1f6da-5f7e-406a-9c5b-f58e8842d046" isLeaf="false">
+                <opaqueActionMoniker Id="f14330c2-2c73-4af1-886c-2f00deb251d9" LastKnownName="ModelFactory设置Configuration属性" />
+                <elementDefinition Id="b2c4df51-fd10-4c57-939c-ff251450cb86" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="f14330c2-2c73-4af1-886c-2f00deb251d9" name="ModelFactory设置Configuration属性" isLeaf="false">
+            <elementDefinition Id="2cf1dafe-da72-4f88-af6a-213f6b375258" />
+            <flowNodeTargets>
+              <controlFlow Id="511b1de5-43f3-48c7-8417-3c18aab4864d" isLeaf="false">
+                <opaqueActionMoniker Id="58e71141-5626-4bff-96b1-a2962d0ec072" LastKnownName="检查数据库是否初始化" />
+                <elementDefinition Id="6447d065-13b8-49af-b0ef-b2bb7bbbfc69" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <objectNode Id="3f3ce068-05f4-4e35-8323-02e7483d460d" name="IMFConfiguration" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="f1344c1f-0793-413b-bfdd-b9a71f51bbf2" />
+            <objectFlowTargets>
+              <objectFlow Id="8c2f5a07-02e7-4b70-b7fb-a611975993e7" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="f14330c2-2c73-4af1-886c-2f00deb251d9" LastKnownName="ModelFactory设置Configuration属性" />
+                <elementDefinition Id="cc90219b-adcf-415b-bc15-26c85336c043" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="2b5abb3f-cf49-476d-bcf4-668268eff7ac" name="2147483647" value="2147483647">
+                <elementDefinition Id="f0d07793-f3bd-49c8-a851-eb520fec6b81" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="58e71141-5626-4bff-96b1-a2962d0ec072" name="检查数据库是否初始化" isLeaf="false">
+            <elementDefinition Id="59bef589-c999-4194-81d4-a0e6cdb3b7b8" />
+            <flowNodeTargets>
+              <controlFlow Id="2174cc5b-f826-4db0-b5aa-6fed878974b6" isLeaf="false">
+                <decisionNodeMoniker Id="3a511075-3c95-45de-b20d-830300739cb5" LastKnownName="Decision1" />
+                <elementDefinition Id="05952b5b-e7a4-450d-9d3d-e3e75fef863f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="3a511075-3c95-45de-b20d-830300739cb5" name="Decision1" isLeaf="false">
+            <elementDefinition Id="5ca5e8a4-8f74-44d2-98de-66becc1d7aa6" />
+            <flowNodeTargets>
+              <controlFlow Id="fd8b2115-b613-4662-902a-1a1ab401f618" guard="是" isLeaf="false">
+                <opaqueActionMoniker Id="e873c8b3-7c80-4b09-aca3-f615981af787" LastKnownName="载入缓存" />
+                <elementDefinition Id="a3855a05-3b68-4b8c-ae59-c96c88cca95e" />
+              </controlFlow>
+              <controlFlow Id="7afeb4e0-208b-48f9-80be-c8d5644330dd" guard="否" isLeaf="false">
+                <opaqueActionMoniker Id="f1e7c4af-067b-49c4-8e36-88e92af14002" LastKnownName="建基础表表" />
+                <elementDefinition Id="0ff29009-f65b-4dd7-bd34-99fc51932b9c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="e873c8b3-7c80-4b09-aca3-f615981af787" name="载入缓存" isLeaf="false">
+            <elementDefinition Id="e81af8ec-d914-451e-ac42-e69f6bdff715" />
+            <flowNodeTargets>
+              <controlFlow Id="3d6cf32f-f549-4372-93b5-47b52b46bf32" isLeaf="false">
+                <opaqueActionMoniker Id="0528082a-a1a8-4ebb-a669-f0d52f8ead83" LastKnownName="设置单例RuntimeContext.Current" />
+                <elementDefinition Id="7e5430ea-fa12-480b-90b7-3b6dddd0759d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="f1e7c4af-067b-49c4-8e36-88e92af14002" name="建基础表表" isLeaf="false">
+            <elementDefinition Id="7e1f66bf-89bb-4fa8-9798-eca7303afe5c" />
+            <flowNodeTargets>
+              <controlFlow Id="bcf0582a-6310-42f6-bf55-bf52995b3f86" isLeaf="false">
+                <opaqueActionMoniker Id="e873c8b3-7c80-4b09-aca3-f615981af787" LastKnownName="载入缓存" />
+                <elementDefinition Id="ae482358-8ef3-4b59-8417-b5b02a8e8efc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0528082a-a1a8-4ebb-a669-f0d52f8ead83" name="设置单例RuntimeContext.Current" isLeaf="false">
+            <elementDefinition Id="6f4abb95-3c66-477a-9617-1c1b893bb20f" />
+            <flowNodeTargets>
+              <controlFlow Id="e73a552b-b250-48dd-9748-06f3e4ee2822" isLeaf="false">
+                <activityFinalNodeMoniker Id="31498fe4-e619-4fc9-97e1-02f5cc76dda6" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="3e529ec3-2a9a-48a6-ba09-4b18cd79537d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="31498fe4-e619-4fc9-97e1-02f5cc76dda6" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="866d00a9-8de0-4d1b-813e-55009248dbb8" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="fec1eb11-a81b-412f-aa63-9bc954e9817f" name="MagicBox.Modeling">
+    <elementDefinition Id="c4213236-9aeb-47f7-87a9-76ff86db03ed" />
+    <profileInstances>
+      <packageHasProfileInstances Id="66393a80-9e52-44f6-aa9f-f7908659709f">
+        <profileInstance Id="e32ce067-a0c0-467d-b124-3f81f863f242" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1c7a64fc-b524-4278-b130-c047125ccd8d">
+        <profileInstance Id="9f4f7c4f-94ce-40bc-96d0-a1d08c71621b" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

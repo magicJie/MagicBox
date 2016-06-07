@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,6 +53,11 @@
   <ItemGroup>
     <Compile Include="SeqListTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SingleLinkListTest.cs" />
+    <Compile Include="SequenceStackTest.cs" />
+    <Compile Include="LinkStackTest.cs" />
+    <Compile Include="CSeqQueueTest.cs" />
+    <Compile Include="LinkQueueTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MagicBox\MagicBox.csproj">

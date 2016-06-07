@@ -13,7 +13,7 @@ namespace MagicBox.Common
         /// </summary>
         /// <param name="timeSpan">执行任务的限定时间</param> 
         /// <param name="action">执行任务的委托</param>
-        /// <returns>任务在规定时间内完成返回true，否则为false</returns>6
+        /// <returns>任务在规定时间内完成返回true，否则为false</returns>
         public bool DoWithTimeout(TimeSpan timeSpan, Action action)
         {
             if (action == null)

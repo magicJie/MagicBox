@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Web;
 using MagicBox.Common;
 
 namespace Demo.Web.MagicBox.Common
@@ -8,7 +9,7 @@ namespace Demo.Web.MagicBox.Common
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           var m= HttpRuntime.AppDomainAppPath.ToString();
         }
 
         protected void button1_click(object sender, EventArgs e)

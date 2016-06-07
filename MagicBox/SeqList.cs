@@ -12,7 +12,7 @@ namespace MagicBox
 
         public T this[int index]
         {
-            get { return this.GetElement(index); }
+            get { return GetElement(index); }
             set {
                 if (index<0||index>_last+1)
                 {
@@ -31,9 +31,9 @@ namespace MagicBox
             get { return _last == _maxsize - 1; }
         }
 
-        public int Last
+        public T Last
         {
-            get { return _last; }
+            get { return this[_last]; }
         }
         
         public int Maxsize
@@ -68,9 +68,9 @@ namespace MagicBox
             _last = -1;
         }
 
-        public int Count()
+        public int Count
         {
-            return _last+1;
+            get { return _last + 1; }
         }
 
         public T GetElement(int index)
@@ -134,7 +134,7 @@ namespace MagicBox
                 throw new Exception("List is full");
             }
 
-            if (index < 0 || index > Last + 1)
+            if (index < 0 || index > Count)
             {
                 throw new Exception("Position is error");
             }
@@ -146,7 +146,7 @@ namespace MagicBox
             else
             {
                 //位置index及以后元素后移
-                for (int i = _last; i >=index; i--)
+                for (var i = _last; i >=index; i--)
                 {
                     _data[i + 1] = _data[i];
                 }
@@ -216,7 +216,7 @@ namespace MagicBox
         public override string ToString()
         {
             var sb = new StringBuilder();
-            for (int i = 0; i <=_last; i++)
+            for (var i = 0; i <=_last; i++)
             {
                 sb.Append(_data[i].ToString() + ",");
             }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Demo.WinForm
 {
@@ -9,75 +10,55 @@ namespace Demo.WinForm
         public Form1()
         {
             InitializeComponent();
-            CompareForAndForeach();
         }
 
-        private void CompareForAndForeach()
+        private void button2_Click(object sender, EventArgs e)
         {
-            var table = new DataTable();
-            table.Columns.Add("操作次数", typeof (long));
-            table.Columns.Add("for时间消耗", typeof(string));
-            table.Columns.Add("foreach消耗", typeof(string));
-            table.Columns.Add("时间消耗比(for/foreach）", typeof(string));
-            table.Columns.Add("操作内容", typeof(string));
-            TestRead(table, 1000);
-            TestRead(table, 10000);
-            TestRead(table, 100000);
-            TestRead(table, 150000);
-            TestRead(table, 1000000);
-            TestRead(table, 1500000);
-            TestRead(table, 10000000);
-            TestRead(table, 15000000);
-            TestRead(table, 100000000);
-            TestWrite(table, 1000);
-            TestWrite(table, 10000);
-            TestWrite(table, 100000);
-            TestWrite(table, 150000);
-            TestWrite(table, 1000000);
-            TestWrite(table, 1500000);
-            TestWrite(table, 10000000);
-            TestWrite(table, 15000000);
-            TestWrite(table, 100000000);
-            dataGridView1.DataSource = table;
+            //选择文件
+            var fileDilog = new FolderBrowserDialog
+            {
+                RootFolder = Environment.SpecialFolder.Desktop,
+                ShowNewFolderButton = false
+            };
+            var result=fileDilog.ShowDialog();
+            if (result == DialogResult.OK ||
+                result == DialogResult.Yes)
+            {
+                textBox1.Text = fileDilog.SelectedPath;
+            }
         }
 
-        private void TestWrite(DataTable table, int n)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var array = new string[n];
-            var dateNow = DateTime.Now.Ticks;
-            for (int i = 0; i < n; i++)
+            if (!Directory.Exists(textBox1.Text))
             {
-                array[i]="0";
+                MessageBox.Show("指定目录不存在");
+                return;            
             }
-            var m1 = DateTime.Now.Ticks - dateNow;
-            
-            table.Rows.Add(n, m1, "NA", "NA", "写");
+            //执行删除
+            DeleteDirectory(new DirectoryInfo(textBox1.Text));
+            MessageBox.Show("删除成功！");
         }
 
-        private static void TestRead(DataTable table, int n)
+        private void DeleteDirectory(FileSystemInfo fileSystemInfo)
         {
-            var array = new string[n];
-            var dateNow = DateTime.Now.Ticks;
-            for (int i = 0; i < n; i++)
+            //win8有bug在调用了FileSystemInfo.Exists之后执行Delete方法仍然可能报DirectoryNotFoundException
+            if (!fileSystemInfo.Exists)
+                return;
+            if (fileSystemInfo.Attributes == FileAttributes.Directory)
             {
-                var a =array[i] ;
-            }
-            var m1 = DateTime.Now.Ticks - dateNow;
-
-            dateNow = DateTime.Now.Ticks;
-            foreach (var item in array)
-            {
-                var a = item;
-            }
-            var n1 = DateTime.Now.Ticks - dateNow;
-            if (n1!=0)
-            {
-                table.Rows.Add(n, m1, n1, (double)m1 / (double)n1, "读");
+                foreach (FileSystemInfo child in (fileSystemInfo as DirectoryInfo).GetFileSystemInfos())
+                {
+                    DeleteDirectory(child);
+                }
             }
             else
-            {
-                table.Rows.Add(n, m1, n1, "NA", "读");
-            }
+                fileSystemInfo.Delete();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

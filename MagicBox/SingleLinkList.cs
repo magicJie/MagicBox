@@ -1,78 +1,269 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MagicBox
 {
     public class SingleLinkList<T> : IList<T>
     {
         private Node<T> _head;
-        private int _inedex;
 
-        public int Last
+        public T this[int index] {
+            get {
+                if (IsEmpty||index<0||index>Count-1)
+                {
+                    throw new Exception("SingleLinkedList is empty or Position is error!");
+                }
+                var p = _head;
+                var i = 0;
+                while (p != null && p.Next != null && i < index)
+                {
+                    p = p.Next;
+                    ++i;
+                }
+                return p == null ? default(T) : p.Data;
+            }
+            set
+            {
+                if (index < 0 || index > Count - 1||index!=0&&_head==null)
+                {
+                    throw new Exception("Position is error!");
+                }
+                var p = _head;
+                if (index==0)
+                {
+                    _head = new Node<T>(value) {Next = p.Next};
+                }
+                var i = 0;
+                while (p.Next!=null||i<index)
+                {
+                    p = p.Next;
+                    ++i;
+                }
+                p.Data = value;
+            }
+        }
+
+        public T Last
         {
-            get { throw new NotImplementedException(); }
+            get
+            {
+                var p=_head;
+                while (p!=null&&p.Next!=null)
+                {
+                    p = p.Next;
+                }
+                return p==null ? default(T) : p.Data;
+            }
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            _head = null;
         }
 
-        public int Count()
+        public int Count {
+            get
+            {
+                Node<T> p = _head;
+                int len = 0;
+                while (p != null)
+                {
+                    ++len;
+                    p = p.Next;
+                }
+                return len;
+            }
+        }
+
+        public SingleLinkList(params T[] paramaters)
         {
-            throw new NotImplementedException();
+            _head = new Node<T>(paramaters[0]);
+            var p = _head;
+            var count = paramaters.Length;
+            for (var i = 1; i < count ; i++)
+            {
+                p.Next=new Node<T>(paramaters[i]);
+                p = p.Next;
+            }
         }
 
         public T GetElement(int index)
         {
-            throw new NotImplementedException();
+            return this[index];
         }
 
         public int IndexOf(T element)
         {
-            throw new NotImplementedException();
+            var i = 0;
+            var p = _head;
+            if (p==null||p.Data==null)
+            {
+                return -1;
+            }
+            if (p.Data.Equals(element))
+            {
+                return 0;
+            }
+            while(p.Next!=null)
+            {               
+                if (p.Data.Equals(element))
+                {
+                    break;
+                }
+                p = p.Next;
+                ++i;
+            }
+            return i;
         }
 
         public T PreElement(T element)
         {
-            throw new NotImplementedException();
+            return this[IndexOf(element) - 1];
         }
 
         public T NextElement(T element)
         {
-            throw new NotImplementedException();
+            return this[IndexOf(element) + 1];
         }
 
         public void Insert(int index, T element)
         {
-            throw new NotImplementedException();
+            if (IsEmpty||index<0||index>Count)
+            {
+                throw new Exception("SingleLinkedList is empty or Position is error!");
+            }
+            if (index==0)
+            {
+                var q = new Node<T>(element) {Next = _head};
+                _head = q;
+                return;
+            }
+            var r = new Node<T>(element);
+            var p = _head;
+            var tmp = new Node<T>();
+            var i = 0;
+            while (p.Next!=null&&i<index)
+            {
+                tmp = p;
+                p = p.Next;
+                ++i;
+            }
+            tmp.Next = r;
+            r.Next = p;
         }
 
         public T RemoveAt(int index)
         {
-            throw new NotImplementedException();
+            if (_head==null || index < 0 || index > Count-1)
+            {
+                throw new Exception("SingleLinkList is empty or position is error!");
+            }
+            if (index==0)
+            {
+                var tmp = _head.Data;
+                _head = _head.Next;
+                return tmp;
+            }
+            var p = _head;
+            var q = new Node<T>();
+            var i = 0;
+            while (p.Next!=null&&i<index)
+            {
+                q = p;
+                p = p.Next;
+                ++i;
+            }
+            q.Next = index==Count-1 ? null : p.Next;
+            return p.Data;
         }
 
         public void Traverse(Func<T> operation)
         {
-            throw new NotImplementedException();
+            var p = _head;
+            while (p!=null&&p.Next!=null)
+            {
+                operation(p.Data);
+                p = p.Next;
+            }
         }
 
         public void Append(T element)
         {
-            throw new NotImplementedException();
+            var q = new Node<T>(element);
+            if (_head==null)
+            {
+                _head = q;
+                return;
+            }
+            var p = _head;
+            while (p.Next!=null)
+            {
+                p = p.Next;
+            }
+            p.Next = q;
         }
 
         public void Reverse()
         {
-            throw new NotImplementedException();
+           /*
+            if (_head==null)
+            {
+                return;
+            }
+            var p = _head;
+            Node<Root> y , z;
+            y = z = null;
+            while (p!=null&&p.Next!=null)
+            {
+                var tmp = y;
+                var x = p;
+                y = p.Next;
+                z = y.Next;
+                y.Next = x;
+                p = z;
+                x.Next = tmp;//衔接两次循环
+            }
+            if (p==null)
+            {
+                _head = z;
+            }
+            else
+            {
+                _head = p;
+                _head.Next = y;
+            }
+            */
+           Node<T> r = null;
+           var y = _head;
+           while (y != null)
+           {
+               var t = y.Next;
+               y.Next = r;
+               r = y;
+               y = t;
+           }
+           _head = r;//把head链上最后一个
         }
 
         public bool IsEmpty
         {
-            get { throw new NotImplementedException(); }
+            get { return _head == null; }
+        }
+
+        public override string ToString()
+        {
+            var p = _head;
+            if (p==null)
+            {
+                return "null";
+            }
+            var str = "";
+            while (p.Next!=null)
+            {
+                str += p.Data + ",";
+                p = p.Next;
+            }
+            str += p.Data;
+            return str;
         }
     }
 }
