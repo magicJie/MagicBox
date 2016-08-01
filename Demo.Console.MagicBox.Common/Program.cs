@@ -4,8 +4,7 @@
     {
         static void Main(string[] args)
         {
-
-
+            WebAPIDemo.TestWebAPI();
         }
     }
 }
