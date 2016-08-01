@@ -4,6 +4,9 @@ using System.IO;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using System.Web;
+using System.Text;
+using NPOI.SS.Util;
 
 namespace MagicBox.Common
 {
@@ -119,6 +122,101 @@ namespace MagicBox.Common
             }
 
             return data;
+        }
+
+        /// <summary>
+        /// 替换模板中指定数据项的值
+        /// </summary>
+        /// <param name="sheet">当前活动sheet引用</param>
+        /// <param name="itemName">数据项名</param>
+        /// <param name="itemValue">数据项值</param>
+        public static void ReplaceItemValue(ISheet sheet, string itemName, string itemValue)
+        {
+            //以下是遍历合并单元格
+            int sheetMergeCount = sheet.NumMergedRegions;
+            for (int i = 0; i < sheetMergeCount; i++)
+            {
+                CellRangeAddress caAddress = sheet.GetMergedRegion(i);
+                var fRow = sheet.GetRow(caAddress.FirstRow) as HSSFRow;
+                if (fRow == null)
+                {
+                    throw new Exception("Excel模板数据异常！");
+                }
+                var fCell = fRow.GetCell(caAddress.FirstColumn) as HSSFCell;
+                if (fCell == null)
+                {
+                    throw new Exception("Excel模板数据异常！");
+                }
+                if (itemName.Equals(GetCellValue(fCell)))
+                {
+                    fCell.SetCellValue(itemValue);
+                }
+            }
+            //以下是遍历非合并单元格
+            for (int i = 0; i < sheet.LastRowNum; i++)
+            {
+                foreach (var cell in sheet.GetRow(i).Cells)
+                {
+                    if (itemName.Equals(GetCellValue((HSSFCell)cell)))
+                    {
+                        cell.SetCellValue(itemValue);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// 获取单元格的值
+        /// </summary>
+        /// <param name="fCell"></param>
+        /// <returns></returns>
+        public static object GetCellValue(HSSFCell fCell)
+        {
+            if (fCell == null)
+            {
+                return "";
+            }
+            if (fCell.CellType == CellType.String)
+            {
+                return fCell.StringCellValue;
+            }
+            if (fCell.CellType == CellType.Boolean)
+            {
+                return fCell.BooleanCellValue;
+            }
+            if (fCell.CellType == CellType.Formula)
+            {
+                return fCell.CellFormula;
+            }
+            if (fCell.CellType == CellType.Numeric)
+            {
+                return fCell.BooleanCellValue;
+            }
+            return "";
+        }
+
+        /// <summary>
+        /// 从服务器下载指定文件
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="filePath"></param>
+        public static void DownloadWorkTicket(string fileName, string filePath)
+        {
+            FileInfo info = new FileInfo(filePath);
+            if (info.Exists)
+            {
+                HttpResponse response = HttpContext.Current.Response;
+                response.Clear();
+                response.ClearHeaders();
+                response.Buffer = false;
+                response.ContentType = "application/octet-stream";
+                response.AppendHeader("Content-Disposition",
+                    "attachment;filename=" + HttpUtility.UrlEncode(fileName, Encoding.UTF8));
+                response.AppendHeader("Content-Length", info.Length.ToString());
+                response.TransmitFile(info.FullName);
+                response.Flush();
+                HttpContext.Current.ApplicationInstance.CompleteRequest();
+            }
         }
     }
 }

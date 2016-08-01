@@ -4,6 +4,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MagicBox.Common;
+using NPOI.HSSF.UserModel;
 
 namespace Test.MaigcBox.Common
 {
@@ -31,6 +32,31 @@ namespace Test.MaigcBox.Common
             var fs1=new FileStream(@"C:\Users\Administrator\Desktop\data",FileMode.Open,FileAccess.Read);
             var dt1 = binaryFormater.Deserialize(fs1) as DataTable;
             NPOIExcelHelper.DataTableToExcel(dt1, "物料类型1", true, @"C:\Users\Administrator\Desktop\宏源物料分类整理1.xlsx");
+        }
+
+        [TestMethod]
+        public void ReplaceItemValueTest()
+        {
+            var dir = AppDomain.CurrentDomain.BaseDirectory;
+            var templatePath = dir+@"\zgd.xls";
+            var outputPath = dir + @"\zgd1.xls";
+
+            var fs = new FileStream(templatePath, FileMode.Open, FileAccess.Read);
+            var workbook = new HSSFWorkbook(fs);
+            fs.Close();
+            var worksheetTemp = workbook.GetSheetAt(0) as HSSFSheet;
+            worksheetTemp.CopySheet("整改单1");
+
+            try
+            {
+                fs = new FileStream(outputPath, FileMode.Create, FileAccess.Write);
+                workbook.Write(fs);
+            }
+            finally
+            {
+                fs.Close();
+                fs.Dispose();
+            }
         }
     }
 }

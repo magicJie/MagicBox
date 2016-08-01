@@ -8,7 +8,6 @@ using System.Linq;
 using System.Management;
 using System.Runtime.InteropServices;
 using System.Text;
-using Microsoft.Office.Interop.Excel;
 
 namespace MagicBox.Common
 {
@@ -101,43 +100,6 @@ namespace MagicBox.Common
             }
         }
 
-        /// <summary>
-        /// 将指定excle文件发送到打印机打印
-        /// </summary>
-        /// <param name="filePath">需要打印的文件</param>
-        /// <returns>打印成功返回true，否则为false</returns>
-        public bool SendExcelToPrinter(string filePath)
-        {
-            Application app = new Application();
-            Workbook workbook = new Workbook();
-            Worksheet worksheet =new Worksheet();
-            try
-            {
-                workbook = app.Workbooks.Open(filePath);
-                worksheet = (Worksheet) workbook.Worksheets[1];
-                var defautPrinter = ExcelHelper.GetDefaultPrinter();
-                SetDefaultPrinter("Samsung SCX-4x24 Series PCL6 Class Driver");
-                worksheet.PrintOut();
-                SetDefaultPrinter(defautPrinter);
-
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            finally
-            {
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
-                Marshal.FinalReleaseComObject(worksheet);
-                workbook.Close(false);
-                Marshal.FinalReleaseComObject(workbook);
-                app.Quit();
-                Marshal.FinalReleaseComObject(app);
-            }
-        }
-
         public List<string> GetNetPrinters()
         {
             var printerList = new List<string>();
@@ -209,16 +171,6 @@ namespace MagicBox.Common
 
         [DllImport("User32.dll", CharSet = CharSet.Auto)]
         private static extern int GetWindowThreadProcessId(IntPtr hwnd, out int ID);
-
-        public static void Kill(Application excel)
-        {
-            IntPtr t = new IntPtr(excel.Hwnd);   //得到这个句柄，具体作用是得到这块内存入口   
-
-            int k = 0;
-            GetWindowThreadProcessId(t, out k);   //得到本进程唯一标志k  
-            System.Diagnostics.Process p = System.Diagnostics.Process.GetProcessById(k);   //得到对进程k的引用  
-            p.Kill();     //关闭进程k  
-        }
     }
 
 }
