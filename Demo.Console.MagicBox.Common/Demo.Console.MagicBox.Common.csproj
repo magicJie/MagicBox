@@ -132,6 +132,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">
+      <Project>{4539136e-2f6c-4e72-be3a-9de59e1337ef}</Project>
+      <Name>MagicBox.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MagicBox\MagicBox.csproj">
       <Project>{73e5d8d5-8337-448a-a510-8351e2260b21}</Project>
       <Name>MagicBox</Name>

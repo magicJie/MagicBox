@@ -14,7 +14,7 @@ namespace Demo.Console.MagicBox.Common
         public static void TestWebAPI()
         {
             var client = new HttpClient();
-            client.BaseAddress = new Uri("http://localhost/whmqs/");
+            client.BaseAddress = new Uri("http://10.50.50.2/whmqs/");
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             Uri uri = null;
             var shieldData = new ShieldData
