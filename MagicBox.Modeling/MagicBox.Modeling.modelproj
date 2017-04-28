@@ -70,10 +70,6 @@
       <Name>Demo.Web.MagicBox.Common</Name>
       <Project>{2d5cf1d8-895d-43ad-be22-750b5ea25c39}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\MagicBox.AgileWeb\MagicBox.AgileWeb.csproj">
-      <Name>MagicBox.AgileWeb</Name>
-      <Project>{6e594f63-7238-4878-a600-4dcad1d98b4b}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">
       <Name>MagicBox.Common</Name>
       <Project>{4539136e-2f6c-4e72-be3a-9de59e1337ef}</Project>

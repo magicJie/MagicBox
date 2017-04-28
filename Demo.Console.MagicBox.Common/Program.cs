@@ -1,4 +1,8 @@
-﻿namespace Demo.Console.MagicBox.Common
+﻿using System;
+using System.Linq;
+using MagicBox.Common;
+
+namespace Demo.Console.MagicBox.Common
 {
     class Program
     {

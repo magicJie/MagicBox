@@ -5,7 +5,6 @@ using MagicBox.Common;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using Microsoft.Office.Interop.Excel;
 using Timeout = MagicBox.Common.Timeout;
 
 namespace Test.MaigcBox.Common
@@ -75,7 +74,7 @@ namespace Test.MaigcBox.Common
         {
             ExcelHelper target = new ExcelHelper(); // TODO: 初始化为适当的值
             const string filePath = @"D:\Developing\ddmes\01源码\FppData\Excel\工票批20141029034829413.xls"; // TODO: 初始化为适当的值
-            Assert.IsTrue(target.SendExcelToPrinter(filePath));
+            //Assert.IsTrue(target.SendExcelToPrinter(filePath));
         }
 
         /// <summary>
@@ -123,23 +122,6 @@ namespace Test.MaigcBox.Common
         public void GetDefaultPrinter1Test()
         {
             Assert.IsFalse(string.IsNullOrWhiteSpace(ExcelHelper.GetDefaultPrinter1()));
-        }
-
-        /// <summary>
-        ///Kill 的测试
-        ///</summary>
-        [TestMethod()]
-        public void KillTest()
-        {
-            Application excel = new Application();
-            Workbooks workbooks = excel.Workbooks;
-            Workbook workbook = workbooks.Open(@"D:\Developing\ddmes\01源码\FppData\Excel\工票批20141103012411598.xls");
-            Timeout timeout=new Timeout();
-            timeout.DoWithTimeout(new TimeSpan(0, 0, 0,5), () => workbook.PrintOut());
-            Thread.Sleep(5000);
-            //workbook.PrintOut();
-            ExcelHelper.Kill(excel);
-            Assert.Inconclusive("无法验证不返回值的方法。");
         }
     }
 }
