@@ -51,7 +51,9 @@
   <ItemGroup>
     <Compile Include="CircleLinkList.cs" />
     <Compile Include="CSeqQueue.cs" />
+    <Compile Include="Extension\DateTimeExtension.cs" />
     <Compile Include="Delegate.cs" />
+    <Compile Include="Extension\FileInfoExtension.cs" />
     <Compile Include="ICache.cs" />
     <Compile Include="IList.cs" />
     <Compile Include="IQueue.cs" />
@@ -66,7 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeqList.cs" />
     <Compile Include="SingleLinkNode.cs" />
-    <Compile Include="StringExtension.cs" />
+    <Compile Include="Extension\StringExtension.cs" />
     <Compile Include="TransverType.cs" />
   </ItemGroup>
   <ItemGroup>
