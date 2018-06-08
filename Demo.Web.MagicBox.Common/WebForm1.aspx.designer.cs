@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Demo.Web.MagicBox.Common {
+namespace Demo.Web.MagicBox. {
     
     
     public partial class WebForm1 {

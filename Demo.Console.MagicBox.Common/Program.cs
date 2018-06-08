@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using MagicBox.Common;
+using MagicBox.;
 
-namespace Demo.Console.MagicBox.Common
+namespace Demo.Console.MagicBox.
 {
     class Program
     {

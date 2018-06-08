@@ -7,7 +7,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace Demo.Console.MagicBox.Common
+namespace Demo.Console.MagicBox.
 {
     class WebAPIDemo
     {

@@ -5,7 +5,7 @@
 * ***********************************************/
 using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MagicBox.Common;
+using MagicBox;
 using System.Drawing.Printing;
 
 namespace Test.MaigcBox.Common

@@ -1,6 +1,6 @@
 ﻿using MagicBox;
 
-namespace Demo.Console.MagicBox.Common
+namespace Demo.Console.MagicBox.
 {
     public class JosephRingDemo
     {

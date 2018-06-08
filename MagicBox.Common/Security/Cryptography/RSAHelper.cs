@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MagicBox.Common.Security.Cryptography
+namespace MagicBox.Security.Cryptography
 {
     /// <summary>
     /// 非对称RSA加密类 可以参考

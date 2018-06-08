@@ -3,7 +3,7 @@ using System.Data;
 using System.IO;
 using HGBS.Lib;
 
-namespace MagicBox.Common.Security.Cryptography
+namespace MagicBox.Security.Cryptography
 {
     public class EncryptDataHelper
     {

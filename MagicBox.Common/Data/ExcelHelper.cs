@@ -9,7 +9,7 @@ using System.Management;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace MagicBox.Common
+namespace MagicBox
 {
     /// <summary>
     /// 提供Excel处理的帮助。要求运行此代码的主机上安装了office

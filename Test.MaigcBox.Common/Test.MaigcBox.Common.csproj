@@ -69,6 +69,7 @@
     <Compile Include="TimeoutTest.cs" />
     <Compile Include="Security\Cryptography\EncrypterTest.cs" />
     <Compile Include="NPOIExcelHelperTest.cs" />
+    <Compile Include="EnvironmentHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">

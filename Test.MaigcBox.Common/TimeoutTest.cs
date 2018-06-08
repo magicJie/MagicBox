@@ -2,7 +2,7 @@
 using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Timeout = MagicBox.Common.Timeout;
+using Timeout = MagicBox.Timeout;
 
 namespace Test.MaigcBox.Common
 {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
-using MagicBox.Common.Security.Cryptography;
+using MagicBox.Security.Cryptography;
 
 namespace Test.MaigcBox.Common
 {

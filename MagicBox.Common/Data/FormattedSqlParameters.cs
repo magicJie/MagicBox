@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace MagicBox.Common.Data
+namespace MagicBox.Data
 {
     /// <summary>
     /// FormattedSql 中的参数列表封装

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Demo.Console.MagicBox.Common
+namespace Demo.Console.MagicBox.
 {
 
  /// <summary>
