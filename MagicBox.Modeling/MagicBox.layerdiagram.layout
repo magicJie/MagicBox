@@ -182,7 +182,7 @@
         <layerShapeMoniker Id="6dccfb0a-75a5-4d06-8f57-ebaadd68eb35" />
       </nodes>
     </dependencyConnector>
-    <dependencyConnector edgePoints="[(5.375 : 3.9062525); (5.47916416666667 : 3.9062525 : JumpStart); (5.64583083333333 : 3.9062525 : JumpEnd); (5.875 : 3.9062525)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+    <dependencyConnector edgePoints="[(5.375 : 3.9062525); (5.875 : 3.9062525)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
       <dependencyFromLayerToLayerMoniker Id="6281142a-3a6a-49f3-bd55-c4c7030e7155" />
       <relativeChildShapes />
       <nodes>
@@ -190,5 +190,27 @@
         <layerShapeMoniker Id="6dccfb0a-75a5-4d06-8f57-ebaadd68eb35" />
       </nodes>
     </dependencyConnector>
+    <layerShape Id="8beddea0-c412-46f3-a182-21be2aab6226" absoluteBounds="8.125, 3.625, 1.375, 0.5" customColor="161, 199, 231">
+      <layerMoniker Id="71042b51-f82a-479b-a4af-5d8f0d414511" />
+    </layerShape>
+    <dependencyConnector edgePoints="[(8.125 : 4.125); (6.125 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
+      <dependencyFromLayerToLayerMoniker Id="e9f2fa83-a20f-4d80-b4d4-3819e84072fa" />
+      <relativeChildShapes />
+      <nodes>
+        <layerShapeMoniker Id="8beddea0-c412-46f3-a182-21be2aab6226" />
+        <layerShapeMoniker Id="a6d4d3fa-0031-4483-b9c5-476a4e5166a1" />
+      </nodes>
+    </dependencyConnector>
+    <commentShape Id="3abb9d03-899c-4de7-931e-bf2e485ca6e1" absoluteBounds="8.25, 4.25, 1.25, 0.375" customColor="255, 255, 204">
+      <commentMoniker Id="bcbc026e-566e-46b6-ab77-51ef5a358ef7" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentConnector edgePoints="[(8.875 : 4.25); (8.875 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="b31d9df9-a57a-4264-ac29-ffbdedc9a9e7" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="3abb9d03-899c-4de7-931e-bf2e485ca6e1" />
+        <layerShapeMoniker Id="8beddea0-c412-46f3-a182-21be2aab6226" />
+      </nodes>
+    </commentConnector>
   </nestedChildShapes>
 </layerDiagram>
