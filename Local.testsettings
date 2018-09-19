@@ -2,7 +2,7 @@
 <TestSettings name="本地" id="f25dab76-f70f-4f77-ad90-a510a53cbc4a" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Description>这些设置为本地测试运行的默认测试设置。</Description>
   <Deployment enabled="false" />
-  <Execution>
+  <Execution hostProcessPlatform="MSIL">
     <TestTypeSpecific>
       <UnitTestRunConfig testTypeId="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b">
         <AssemblyResolution>

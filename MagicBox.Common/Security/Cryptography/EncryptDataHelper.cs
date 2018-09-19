@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.IO;
-using HGBS.Lib;
 
 namespace MagicBox.Security.Cryptography
 {

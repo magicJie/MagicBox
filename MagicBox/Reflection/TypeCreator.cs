@@ -18,7 +18,6 @@ namespace MagicBox.Reflection
             FieldBuilder fieldBuilder = null;
             AssemblyBuilder assemblyBuilder = null;
             ILGenerator ilGenerator = null;
-            CustomAttributeBuilder cab = null;
             MethodAttributes methodAttrs;
 
             assemblyBuilder = currentDoamin.DefineDynamicAssembly(new AssemblyName(Guid.NewGuid().ToString()),
