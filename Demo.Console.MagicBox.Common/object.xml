@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://www.springframework.net
         http://www.springframework.net/xsd/spring-objects.xsd">
 
-  <object id="PersonDao" type="Demo.Console.MagicBox.Common.PersonDao, Demo.Console.MagicBox.Common">
+  <object id="PersonDao" type="Demo.Console.MagicBox.PersonDao, Demo.Console.MagicBox.">
     
   </object>
 

@@ -7,7 +7,7 @@ using System.Data.OracleClient;
 using System.Data;
 using System.IO;
 
-namespace Demo.Console.MagicBox.Common
+namespace Demo.Console.MagicBox.
 {
     public class OracleParamterDemo
     {

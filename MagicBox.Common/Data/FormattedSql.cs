@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.IO;
 
-namespace MagicBox.Common.Data
+namespace MagicBox.Data
 {
     /// <summary>
     /// 格式化 Sql 构造器

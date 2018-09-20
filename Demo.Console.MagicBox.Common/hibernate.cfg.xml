@@ -14,6 +14,6 @@
       Data Source=localhost;Database=hibernatedemo;User Id=root;Password=jay123
     </property>
     <property name="show_sql">false</property>
-    <mapping assembly="Demo.Console.MagicBox.Common" />
+    <mapping assembly="Demo.Console.MagicBox." />
   </session-factory>
 </hibernate-configuration>

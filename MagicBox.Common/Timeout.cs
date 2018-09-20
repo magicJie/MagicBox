@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace MagicBox.Common
+namespace MagicBox
 {
     /// <summary>
     /// 提供了方法调度的超时管理

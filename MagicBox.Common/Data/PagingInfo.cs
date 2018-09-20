@@ -2,7 +2,7 @@
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
-namespace MagicBox.Common.Data
+namespace MagicBox.Data
 {
     /// <summary>
     /// this indicates a pager info,

@@ -61,6 +61,12 @@
     <Folder Include="Plugins\EasyChat\bin\" />
     <Folder Include="Plugins\EasyChat\resource\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MagicBox.Plugin\MagicBox.Plugin.csproj">
+      <Project>{e4d31bde-4e71-4de3-923c-e661305ce6cf}</Project>
+      <Name>MagicBox.Plugin</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

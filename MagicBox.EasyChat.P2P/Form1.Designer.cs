@@ -1,4 +1,4 @@
-﻿namespace MagicBox.EasyChat.P2P
+﻿namespace Demo.EasyChat.P2P
 {
     partial class Form1
     {

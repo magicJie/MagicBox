@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MagicBox.CLI.Argument.Switch" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="MagicBox.CLI.Argument.Switch.Messages" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Argument\Switch.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ECoBAQAMAJEkCgBAwQoBAAQiAQAoAEABJAAAAABpBgg=</HashCode>
+      <FileName>Argument\Switch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.CLI.Argument.SwitchCollection" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIKAEAAAAAAABAQCMBABAQAAAQAAYAEGAAAAABQIAA=</HashCode>
+      <FileName>Argument\SwitchCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MagicBox.CLI.Argument.SwitchComparer" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Argument\SwitchComparer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MagicBox.CLI.Help.HelpPrinter" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="MagicBox.CLI.Help.HelpPrinter.ArgumentNameTag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Help\HelpPrinter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="MagicBox.CLI.Help.HelpPrinter.Character" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Help\HelpPrinter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="MagicBox.CLI.Help.HelpPrinter.OptionalSwitchTag" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Help\HelpPrinter.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>BCAABCRAYQKgiQAAAKBIyAAICAEAA0ACAAAAAgCEBEA=</HashCode>
+      <FileName>Help\HelpPrinter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.CLI.Parse.ArgumentParser" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAMCFAAQAAIABAAAAAAAAAAAAQCAAAAAAAAAA=</HashCode>
+      <FileName>Parse\ArgumentParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.CLI.Parse.ParsingException" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parse\ParsingException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

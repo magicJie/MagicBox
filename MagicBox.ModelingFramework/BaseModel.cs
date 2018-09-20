@@ -23,7 +23,7 @@ using System.Runtime.Serialization;
 
 namespace MagicBox.MF.Models
 {
-    public abstract partial class BaseModel : ISerializable
+    public abstract class BaseModel : ISerializable
     {
         /// <summary>
         /// RMC的集合
@@ -43,11 +43,13 @@ namespace MagicBox.MF.Models
         public abstract User Creator { get; }
 
         public abstract User Modifier { get; }
+
         public abstract void Delete();
 
         public abstract void Save();
 
         public abstract void Load();
+
         public abstract void GetObjectData(SerializationInfo info, StreamingContext context);
     }
 }

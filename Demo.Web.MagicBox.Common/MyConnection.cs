@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNet.SignalR;
 
-namespace Demo.Web.MagicBox.Common
+namespace Demo.Web.MagicBox.
 {
     public class MyConnection:PersistentConnection
     {

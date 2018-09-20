@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace MagicBox.EasyChat.P2P
+namespace Demo.EasyChat.P2P
 {
     internal class ClientSocket : BaseSocket
     {

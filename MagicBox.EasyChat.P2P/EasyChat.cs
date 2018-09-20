@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using MagicBox.Plugin;
 
-namespace MagicBox.EasyChat.P2P
+namespace Demo.EasyChat.P2P
 {
     /// <summary>
     /// 主插件调度文件，提供对插件运行的管理

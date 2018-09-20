@@ -5,7 +5,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace MagicBox.Common.Security.Cryptography
+namespace MagicBox.Security.Cryptography
 {
     /// <summary>
     /// 加密、解密
@@ -383,34 +383,70 @@ namespace MagicBox.Common.Security.Cryptography
         /// RSA加密
         /// </summary>
         /// <param name="plaintext">明文</param>
-        /// <param name="publicKey">公钥</param>
+        /// <param name="pubKey">公钥</param>
         /// <returns>密文字符串</returns>
-        public static string EncryptByRSA(string plaintext, string publicKey)
+        public static string EncryptByRSA(string plaintext, string pubKey)
         {
-            UnicodeEncoding ByteConverter = new UnicodeEncoding();
-            byte[] dataToEncrypt = ByteConverter.GetBytes(plaintext);
-            using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+            using (RSACryptoServiceProvider rsaPrivider = new RSACryptoServiceProvider())
             {
-                RSA.FromXmlString(publicKey);
-                byte[] encryptedData = RSA.Encrypt(dataToEncrypt, false);
-                return Convert.ToBase64String(encryptedData);
+                rsaPrivider.FromXmlString(pubKey);
+                var inputs = Encoding.UTF8.GetBytes(plaintext);
+                var bufferSize = (rsaPrivider.KeySize / 8) - 11;
+                var buffer = new byte[bufferSize];
+                using (MemoryStream inputStream = new MemoryStream(inputs),
+                    outputStream = new MemoryStream())
+                {
+                    while (true)
+                    {
+                        var readSize = inputStream.Read(buffer, 0, bufferSize);
+                        if (readSize <= 0)
+                        {
+                            break;
+                        }
+
+                        var temp = new byte[readSize];
+                        Array.Copy(buffer, 0, temp, 0, readSize);
+                        var encryptedBytes = rsaPrivider.Encrypt(temp, false);
+                        outputStream.Write(encryptedBytes, 0, encryptedBytes.Length);
+                    }
+                    return Convert.ToBase64String(outputStream.ToArray());
+                }
             }
         }
         /// <summary>
         /// RSA解密
         /// </summary>
         /// <param name="ciphertext">密文</param>
-        /// <param name="privateKey">私钥</param>
+        /// <param name="priKey">私钥</param>
         /// <returns>明文字符串</returns>
-        public static string DecryptByRSA(string ciphertext, string privateKey)
+        public static string DecryptByRSA(string ciphertext, string priKey)
         {
             UnicodeEncoding byteConverter = new UnicodeEncoding();
-            using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+            using (RSACryptoServiceProvider rsaProvider = new RSACryptoServiceProvider())
             {
-                RSA.FromXmlString(privateKey);
-                byte[] encryptedData = Convert.FromBase64String(ciphertext);
-                byte[] decryptedData = RSA.Decrypt(encryptedData, false);
-                return byteConverter.GetString(decryptedData);
+                rsaProvider.FromXmlString(priKey);
+                var inputBytes = Convert.FromBase64String(ciphertext);
+                rsaProvider.FromXmlString(priKey);
+                int bufferSize = rsaProvider.KeySize / 8;
+                var buffer = new byte[bufferSize];
+                using (MemoryStream inputStream = new MemoryStream(inputBytes),
+                     outputStream = new MemoryStream())
+                {
+                    while (true)
+                    {
+                        int readSize = inputStream.Read(buffer, 0, bufferSize);
+                        if (readSize <= 0)
+                        {
+                            break;
+                        }
+
+                        var temp = new byte[readSize];
+                        Array.Copy(buffer, 0, temp, 0, readSize);
+                        var rawBytes = rsaProvider.Decrypt(temp, false);
+                        outputStream.Write(rawBytes, 0, rawBytes.Length);
+                    }
+                    return Encoding.UTF8.GetString(outputStream.ToArray());
+                }
             }
         }
 

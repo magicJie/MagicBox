@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Demo.Web.MagicBox.Common {
+namespace Demo.Web.MagicBox. {
     
     
     public partial class SignalRTest {

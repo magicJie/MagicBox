@@ -62,15 +62,14 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DateTimeExtensionTest.cs" />
     <Compile Include="ExcelHelperTest.cs" />
-    <Compile Include="HtmlHelperTest.cs" />
     <Compile Include="PrinterTest.cs" />
+    <Compile Include="EncrypterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimeoutTest.cs" />
     <Compile Include="Security\Cryptography\EncrypterTest.cs" />
-    <Compile Include="LoggerTest.cs" />
     <Compile Include="NPOIExcelHelperTest.cs" />
+    <Compile Include="EnvironmentHelperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MagicBox.Common\MagicBox.Common.csproj">

@@ -5,7 +5,7 @@ using Spring.Context.Support;
 using Spring.Core.IO;
 using Spring.Objects.Factory.Xml;
 
-namespace Demo.Console.MagicBox.Common
+namespace Demo.Console.MagicBox.
 {
     public class NhibernateDemo
     {

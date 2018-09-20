@@ -2,7 +2,7 @@
 using System.Net.Sockets;
 using System.Text;
 
-namespace MagicBox.EasyChat.P2P
+namespace Demo.EasyChat.P2P
 {
     public abstract class BaseSocket
     {

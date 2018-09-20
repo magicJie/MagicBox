@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using MagicBox.Common;
+using MagicBox;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using Timeout = MagicBox.Common.Timeout;
+using Timeout = MagicBox.Timeout;
 
 namespace Test.MaigcBox.Common
 {

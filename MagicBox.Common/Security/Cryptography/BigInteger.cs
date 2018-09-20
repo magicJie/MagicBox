@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MagicBox.Common.Security.Cryptography
+namespace MagicBox.Security.Cryptography
 {
     public class BigInteger
     {

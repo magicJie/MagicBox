@@ -49,6 +49,14 @@
         </linkFromCommentToLayerElement>
       </layerElements>
     </comment>
+    <comment Id="bcbc026e-566e-46b6-ab77-51ef5a358ef7" name="Comment7">
+      <body>AOP支持</body>
+      <layerElements>
+        <linkFromCommentToLayerElement>
+          <layerMoniker Id="71042b51-f82a-479b-a4af-5d8f0d414511" />
+        </linkFromCommentToLayerElement>
+      </layerElements>
+    </comment>
   </comments>
   <layers>
     <layer Id="af19e960-9092-42c9-adb7-edf6b5fbf3be" name="MagicBox.Plugin">
@@ -177,6 +185,24 @@
           </ArtifactNode>
           <ExpandedNode Id="(Assembly=MagicBox.Extension)" Label="MagicBox.Extension.dll" Category="CodeSchema_Assembly">
             <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="71042b51-f82a-479b-a4af-5d8f0d414511" name="MagicBox.AOP">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="e9f2fa83-a20f-4d80-b4d4-3819e84072fa" direction="Forward">
+          <layerMoniker Id="e260c1da-3b1c-43d3-a107-dc52ed60856e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="87f391fd-b41c-4d7e-b955-11411a1cf81f" name="MagicBox.AOP">
+          <ArtifactNode Label="MagicBox.AOP" Category="CodeSchema_Project" Id="(Assembly=../MagicBox.AOP/MagicBox.AOP.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MagicBox.AOP)" Label="MagicBox.AOP.dll" Category="CodeSchema_Assembly">
             <LinkCategory Ref="Produces" />
             <LinkCategory Ref="Represents" />
           </ExpandedNode>

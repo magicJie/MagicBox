@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Demo.Web.MagicBox.Common.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="Demo.Web.MagicBox.WebForm2" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -7,7 +7,7 @@
         //打印工作薄
         var idTmr = "";
         function xlPrint() {
-            var filepath = "http://localhost/Demo.Web.MagicBox.Common/resource/工票批20141119045605496.xls"; //文件路径
+            var filepath = "http://localhost/Demo.Web.MagicBox./resource/工票批20141119045605496.xls"; //文件路径
             var xlApp; //存放Excel对象
             var XlBook; //存放Excel工作薄文件
             var xlSheet; //存放Excel活动工作表

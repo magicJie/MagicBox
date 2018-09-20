@@ -3,7 +3,7 @@ using System.Data;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MagicBox.Common;
+using MagicBox;
 using NPOI.HSSF.UserModel;
 
 namespace Test.MaigcBox.Common

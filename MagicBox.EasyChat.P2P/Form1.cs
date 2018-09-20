@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace MagicBox.EasyChat.P2P
+namespace Demo.EasyChat.P2P
 {
     public partial class Form1 : Form
     {

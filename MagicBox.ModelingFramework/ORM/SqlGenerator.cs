@@ -2,7 +2,7 @@
 using System.CodeDom.Compiler;
 using System.Collections;
 using System.Text.RegularExpressions;
-using MagicBox.Common.Data;
+using MagicBox.Data;
 using MagicBox.MF.ORM.SqlTree;
 
 namespace MagicBox.MF.ORM

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web;
-using MagicBox.Common;
+using MagicBox.;
 
-namespace Demo.Web.MagicBox.Common
+namespace Demo.Web.MagicBox.
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
