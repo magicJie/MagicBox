@@ -58,7 +58,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicBox.DesignPattern", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetMachineInfo", "GetMachineInfo\GetMachineInfo.csproj", "{65E12673-DCAE-4EC3-B38E-F665C5A02CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterConsole", "RegisterConsole\RegisterConsole.csproj", "{5432E5AF-FA9B-4DDE-A3A1-42D41989AC48}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Register", "RegisterConsole\Register.csproj", "{5432E5AF-FA9B-4DDE-A3A1-42D41989AC48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

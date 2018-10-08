@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RegisterConsole
+namespace Register
 {
     public partial class Form1 : Form
     {
@@ -33,7 +33,7 @@ namespace RegisterConsole
                 var time = dateTimePicker1.Value;
                 Guard.HoldString(time.ToString(), "有效截止日期");
                 var licenseKey = MagicBox.License.Genarate(machineCode, registerName, time, key);
-                File.WriteAllText("license.txt", licenseKey, Encoding.UTF8);
+                File.WriteAllText("license.txt", $"{licenseKey}\r\n注册用户：{registerName}\r\n有效截止日期：{time.ToString("yyyy-MM-dd")}", Encoding.UTF8);
                 MessageBox.Show("生成License成功！");
             }
             catch (Exception ex)

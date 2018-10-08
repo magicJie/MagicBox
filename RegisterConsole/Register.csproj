@@ -7,7 +7,7 @@
     <ProjectGuid>{5432E5AF-FA9B-4DDE-A3A1-42D41989AC48}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>RegisterConsole</RootNamespace>
-    <AssemblyName>RegisterConsole</AssemblyName>
+    <AssemblyName>Register</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
