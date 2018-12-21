@@ -1,4 +1,4 @@
-﻿namespace RegisterConsole
+﻿namespace Register
 {
     partial class Form1
     {

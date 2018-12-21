@@ -3,7 +3,7 @@
 * 邮箱：wangjie.magic@gmail.com 
 * QQ ：2354557520
 * ***********************************************/
-using MagicBox.MagicBox.DesignPattern.Strategy;
+using MagicBox.DesignPattern.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;

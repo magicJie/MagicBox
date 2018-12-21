@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicBox.MagicBox.DesignPattern.Composite
+namespace MagicBox.DesignPattern.Composite
 {
     public class Tree
     {
