@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagicBox.MagicBox.DesignPattern.Strategy
+namespace MagicBox.DesignPattern.Strategy
 {
     public abstract class Duck
     {
