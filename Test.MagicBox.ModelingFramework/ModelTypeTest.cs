@@ -1,9 +1,9 @@
 ﻿using System;
 using MagicBox.MF;
-using MagicBox.MF.Model;
+using MagicBox.MF.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test.MagicBox.ModelingFramework
+namespace Test.MagicBox.MF
 {
     /// <summary>
     /// 模型元数据相关功能单元测试
@@ -70,7 +70,7 @@ namespace Test.MagicBox.ModelingFramework
                 {
                     AncestorType = null,
                     Assembly = "MagicBox.ModelingFramework",
-                    FullName = "MagicBox.MF.ModelType",
+                    FullName = "MagicBox.MF.ModelsType",
                     IsAbstract = false,
                     IsSealed = true,
                     Parent = ModelFactory.Current.GetModel("", "")

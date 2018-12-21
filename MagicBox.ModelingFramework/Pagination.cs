@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MagicBox.ItemCore
+namespace MagicBox.MF
 {
     [Serializable]
     public class Pagination

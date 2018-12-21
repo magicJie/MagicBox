@@ -3,7 +3,7 @@ using MagicBox.MF;
 using MagicBox.MF.Id;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Test.MagicBox.ModelingFramework
+namespace Test.MagicBox.MF
 {
     [TestClass]
     public class ModelTest

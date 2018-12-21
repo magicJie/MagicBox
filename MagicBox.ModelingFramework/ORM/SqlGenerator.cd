@@ -1,42 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="MagicBox.MF.ORM.SqlTree.SqlNodeVisitor" Collapsed="true">
-    <Position X="4.25" Y="0.75" Width="1.5" />
+    <Position X="3.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAECqQABAAAAAAAIYAAgAAAIACAAAAAACA=</HashCode>
       <FileName>ORM\SqlTree\SqlNodeVisitor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.ORM.SqlGenerator" Collapsed="true">
-    <Position X="4.25" Y="2.25" Width="1.5" />
+    <Position X="3.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ACARAAAAAJAECqAkRAAAAAAAIYAEgAAAIACAAEAAACA=</HashCode>
       <FileName>ORM\SqlGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.ORM.MySqlSqlGenerator" Collapsed="true">
-    <Position X="1.25" Y="3.5" Width="1.5" />
+    <Position X="0.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ORM\MySqlSqlGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.OracleSqlGenerator" Collapsed="true">
-    <Position X="4.25" Y="3.5" Width="1.5" />
+    <Position X="3.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OracleSqlGenerator.cs</FileName>
+      <FileName>ORM\OracleSqlGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.ORM.SqlServerSqlGenerator" Collapsed="true">
-    <Position X="7" Y="3.5" Width="1.5" />
+    <Position X="6.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ORM\SqlServerSqlGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.ORM.SqlTree.SqlNode" Collapsed="true">
-    <Position X="7.5" Y="0.75" Width="1.5" />
+    <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ORM\SqlTree\SqlNode.cs</FileName>

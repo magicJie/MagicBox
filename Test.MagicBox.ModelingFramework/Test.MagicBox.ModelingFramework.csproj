@@ -6,7 +6,7 @@
     <ProjectGuid>{92A9A788-B9D8-44E0-AD05-1A6E27249874}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test.MagicBox.ModelingFramework</RootNamespace>
+    <RootNamespace>Test.MagicBox.MF</RootNamespace>
     <AssemblyName>Test.MagicBox.ModelingFramework</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ModelFactoryTests.cs" />
     <Compile Include="ModelTest.cs" />
     <Compile Include="ModelTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -61,7 +61,6 @@
     <Compile Include="Security\Cryptography\EncryptDataHelper.cs" />
     <Compile Include="Security\Cryptography\Encrypter.cs" />
     <Compile Include="Data\ExcelHelper.cs" />
-    <Compile Include="Data\OleDBHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Cryptography\RSAHelper.cs" />
     <Compile Include="Timeout.cs" />
