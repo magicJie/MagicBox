@@ -11,10 +11,16 @@ namespace MagicBox.MF.Tests
     [TestClass()]
     public class ModelFactoryTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void CreateTableTest()
         {
             Assert.Fail();
+        }
+
+        [TestMethod]
+        public void InitTest()
+        {
+            ModelFactory.Init()
         }
     }
 }

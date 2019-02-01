@@ -38,7 +38,7 @@ namespace MagicBox.MF
         private static ModelFactory _current;
         private ModelFactoryState _state;
         private IMFConfiguration _configuration;
-        private RuntimeContext _runtimeContext;
+        private SessionFactory _runtimeContext;
         #endregion Field
 
         #region Propertity
@@ -135,7 +135,12 @@ namespace MagicBox.MF
 
         #region static Method
         /// <summary>
-        /// 初始化MF。触发配置载入，检查代码和数据库是否同步
+        /// 使用默认配置初始化MF
+        /// </summary>
+        public static void Init() { }
+
+        /// <summary>
+        /// 使用指定配置初始化MF
         /// </summary>
         /// <param name="configuration">初始化MF时使用的配置</param>
         public static void Init(IMFConfiguration configuration)
@@ -145,7 +150,7 @@ namespace MagicBox.MF
             try
             {
                 Current=new ModelFactory(configuration);
-                RuntimeContext.Current=new RuntimeContext();
+                SessionFactory.Current=new SessionFactory();
                 try
                 {
                     new ModelCollectionByType(ModelType.TypeId).Load();
@@ -164,19 +169,31 @@ namespace MagicBox.MF
                 throw;
             }
         }
-        /// <summary>
-        /// 对空白数据库执行初始化，使其符合MF要求
-        /// </summary>
-        private static void InitDataBase()
-        {            
-            //将对象描述的表结构转换到DataTable中
-            var dt=new DataTable();
-
-            Current.CreateTable(dt);
-        }
 
         #endregion
 
+        private void CheckBasicMetadata()
+        {
+            //定义元数据范围
+            
+            bool isComplete= true;
+            //执行查询判断元数据是否完备
+            if (!isComplete)
+            {
+                InitDataBase();
+            }
+        }
+
+        /// <summary>
+        /// 对数据库进行修正，使其符合MF要求
+        /// </summary>
+        private void InitDataBase()
+        {
+            //将对象描述的表结构转换到DataTable中
+            var dt = new DataTable();
+
+            Current.CreateTable(dt);
+        }
         public void CreateTable(DataTable dt)
         {
             throw new NotImplementedException();

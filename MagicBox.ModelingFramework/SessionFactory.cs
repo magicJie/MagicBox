@@ -25,10 +25,14 @@ using MagicBox.MF.Models;
 
 namespace MagicBox.MF
 {
-    public class RuntimeContext
+    /// <summary>
+    /// MF核心类，管理会话的全过程，创建和销毁，跟踪每个Session行为。
+    /// <para>线程安全</para>
+    /// </summary>
+    public class SessionFactory
     {
         #region Field
-        private static RuntimeContext _current;
+        private static SessionFactory _current;
         private readonly IDictionary<string, object> _data;
         private User _user;
         private bool _isBeingTranscation;
@@ -58,7 +62,7 @@ namespace MagicBox.MF
             internal set { _data.Add(new KeyValuePair<string, object>(key,value));}            
         }
 
-        public static RuntimeContext Current
+        public static SessionFactory Current
         {
             get
             {
@@ -75,6 +79,11 @@ namespace MagicBox.MF
         #endregion Propertity
 
         #region Method
+        public Session CreateSession()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// 接受当前上下文事务
         /// </summary>
@@ -102,12 +111,16 @@ namespace MagicBox.MF
 
         #region Constructor
 
-        internal RuntimeContext()
+        internal SessionFactory()
         {
             _data=new Dictionary<string, object>();
             _isBeingTranscation = false;
         }
 
         #endregion Constructor
+
+        #region StaticMethod
+
+        #endregion
     }
 }

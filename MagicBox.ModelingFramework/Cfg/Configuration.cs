@@ -108,7 +108,7 @@ namespace MagicBox.MF.Cfg
             var s = "";
             foreach (var result in results)
             {
-                s = result.Attribute("value").Value; //这里写法有待确认
+                s = result.Attribute("value").Value; //TODO 这里写法有待确认
             }
             configSetting.Add("connectingStr", s);
         }

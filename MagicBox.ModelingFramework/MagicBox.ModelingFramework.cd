@@ -24,7 +24,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MagicBox.MF.DbNativeQuery" Collapsed="true">
-    <Position X="12.5" Y="2" Width="1.5" />
+    <Position X="11.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABAEAAAEAAAAAAACAAAAAAQAAIAAAAAAAAA=</HashCode>
       <FileName>DbNativeQuery.cs</FileName>
@@ -33,7 +33,7 @@
   <Class Name="MagicBox.MF.ModelFactory" Collapsed="true">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAABACACAQAECAAAAAAgEESBAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAACAAAAABACACAQAECAAAAAAgEESBAAACAA=</HashCode>
       <FileName>ModelFactory.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -64,12 +64,13 @@
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EAAClIAAAAAEFAAAAABADQAgAAEAAAAAEUAABAAAAAE=</HashCode>
+      <HashCode>EAAClIAAAEAEFAAAAABADQAgAAEAAAAAEUAABAAAAAE=</HashCode>
       <FileName>Models\Generated\Model.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="RMCC" />
       <Property Name="ModelType" />
+      <Property Name="LifeCycle" />
     </ShowAsAssociation>
   </Class>
   <Class Name="MagicBox.MF.Models.Relationship" Collapsed="true">
@@ -87,7 +88,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.Models.User" Collapsed="true">
-    <Position X="5" Y="6.5" Width="1.5" />
+    <Position X="5.5" Y="6.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
@@ -109,14 +110,14 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MagicBox.MF.Models.LifeCycle" Collapsed="true">
-    <Position X="1" Y="8" Width="1.5" />
+    <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAACAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>Models\Generated\LifeCycle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.Models.LifeCycleState" Collapsed="true">
-    <Position X="3.75" Y="8" Width="1.5" />
+    <Position X="3" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\Generated\LifeCycleState.cs</FileName>
@@ -126,7 +127,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="MagicBox.MF.Models.LifeCycleTransition" Collapsed="true">
-    <Position X="3" Y="9.5" Width="1.5" />
+    <Position X="3" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAAAAAABAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Models\Generated\LifeCycleTransition.cs</FileName>
@@ -143,10 +144,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MagicBox.MF.ModelRef" Collapsed="true">
-    <Position X="1" Y="10.25" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelRef.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.SessionFactory" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAEAABAAAARAACACAAIAAAAAAAIAAEAAABAAAAAA=</HashCode>
+      <FileName>SessionFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MagicBox.MF.Session" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Session.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

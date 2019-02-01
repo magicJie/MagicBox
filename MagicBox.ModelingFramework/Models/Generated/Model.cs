@@ -126,5 +126,13 @@ namespace MagicBox.MF.Models
             {
             }
         }
+
+        public LifeCycle LifeCycle
+        {
+            get => default(LifeCycle);
+            set
+            {
+            }
+        }
     }
 }

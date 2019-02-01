@@ -64,8 +64,8 @@ namespace Test.MagicBox.MF
             var id = Model.NewId();
             try
             {
-                if (!RuntimeContext.Current.IsBeingTranscation)
-                    RuntimeContext.Current.BeginWithTranscation();
+                if (!SessionFactory.Current.IsBeingTranscation)
+                    SessionFactory.Current.BeginWithTranscation();
                 var modelType = new ModelType(id, id)
                 {
                     AncestorType = null,
@@ -76,11 +76,11 @@ namespace Test.MagicBox.MF
                     Parent = ModelFactory.Current.GetModel("", "")
                 };
                 modelType.CreateTableModelType();
-                RuntimeContext.Current.Accept();
+                SessionFactory.Current.Accept();
             }
             catch (Exception)
             {
-                RuntimeContext.Current.Discard();
+                SessionFactory.Current.Discard();
                 throw;
             }
         }

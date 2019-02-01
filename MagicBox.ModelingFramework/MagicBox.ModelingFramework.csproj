@@ -140,7 +140,6 @@
     </None>
     <None Include="ORM\SqlGenerator.cd" />
     <None Include="ORM\SqlTree\SqlTree.cd" />
-    <None Include="packages.config" />
     <None Include="MF.config.xsd">
       <SubType>Designer</SubType>
     </None>
