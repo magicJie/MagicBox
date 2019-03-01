@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace MagicBox.DesignPattern.Observer
 {
-    public interface IObserverable
+    public interface IObserver
     {
-        void AddObserver(IObserver observer);
-        void RemoveObserver(IObserver observer);
-        void NotifyObserver();
+        void Update(Object observerable);
     }
 }
