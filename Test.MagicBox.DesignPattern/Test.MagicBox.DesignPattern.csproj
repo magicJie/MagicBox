@@ -50,7 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Decorator\DecortorTest.cs" />
+    <Compile Include="Factory\AbstractFactory\Chicago\ChicagoPizzaStoreTests.cs" />
     <Compile Include="Observer\WeatherDataTests.cs" />
+    <Compile Include="Singleton\SingletonTests.cs" />
     <Compile Include="Strategy\DuckTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +62,10 @@
       <Project>{b551fe6f-6d70-4c9a-b6f1-8f8791fb16c1}</Project>
       <Name>MagicBox.DesignPattern</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factory\FactoryMethod\" />
+    <Folder Include="Factory\SimpleFactory\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

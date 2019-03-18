@@ -16,7 +16,9 @@ namespace MagicBox.DesignPattern.Observer.Tests
         {
             var weatherData = new WeatherData();
             var display = new CurrentConditionsDisplay();
+            var display1 = new ThirdPartyDispay();
             weatherData.AddObserver(display);
+            weatherData.AddObserver(display1);
             weatherData.SetMeasurements(15, 100, 1235);
         }
     }
