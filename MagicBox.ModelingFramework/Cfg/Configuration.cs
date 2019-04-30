@@ -112,6 +112,7 @@ namespace MagicBox.MF.Cfg
             }
             configSetting.Add("connectingStr", s);
         }
+        
         #region Static Method
 
         #endregion

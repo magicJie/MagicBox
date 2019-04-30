@@ -54,6 +54,7 @@
     <Compile Include="ModelTest.cs" />
     <Compile Include="ModelTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionFactoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MagicBox.ModelingFramework\MagicBox.ModelingFramework.csproj">

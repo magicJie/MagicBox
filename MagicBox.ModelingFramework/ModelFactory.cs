@@ -30,7 +30,7 @@ using MagicBox.MF.ORM;
 namespace MagicBox.MF
 {
     /// <summary>
-    /// MF核心类型。提供对模型实例的创建、获取。单例、线程安全
+    /// MF核心类型。提供对模型实例的创建、获取。单例、线程安全。IOC容器。
     /// </summary>
     public class ModelFactory:IObjectOperationSet
     {
@@ -161,7 +161,7 @@ namespace MagicBox.MF
                     InitDataBase();
                     throw;
                 }
-                new ScriptExecutor().AutoExecute();
+                new ScriptActuator().AutoExecute();
             }
             catch (Exception ex)
             {
@@ -194,6 +194,7 @@ namespace MagicBox.MF
 
             Current.CreateTable(dt);
         }
+
         public void CreateTable(DataTable dt)
         {
             throw new NotImplementedException();

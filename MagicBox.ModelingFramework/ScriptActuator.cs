@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace MagicBox.MF
 {
-    public class ScriptExecutor
+    public class ScriptActuator
     {
         /// <summary>
         /// 自动执行升级脚本

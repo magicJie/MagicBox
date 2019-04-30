@@ -20,7 +20,7 @@ namespace MagicBox.MF.Tests
         [TestMethod]
         public void InitTest()
         {
-            ModelFactory.Init()
+            ModelFactory.Init();
         }
     }
 }

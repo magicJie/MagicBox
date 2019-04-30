@@ -39,6 +39,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\Duck.cs" />
+    <Compile Include="Adapter\MallardDuck.cs" />
+    <Compile Include="Adapter\Turkey.cs" />
+    <Compile Include="Adapter\TurkeyAdapter.cs" />
+    <Compile Include="Adapter\WildTurkey.cs" />
+    <Compile Include="Command\Command.cs" />
+    <Compile Include="Command\Light.cs" />
+    <Compile Include="Command\LightOffCommand.cs" />
+    <Compile Include="Command\LightOnCommand.cs" />
+    <Compile Include="Command\MacroCommand.cs" />
+    <Compile Include="Command\NoCommand.cs" />
+    <Compile Include="Command\RemoteControl.cs" />
     <Compile Include="Composite\Tree.cs" />
     <Compile Include="Composite\TreeNode.cs" />
     <Compile Include="Decorator\Beverage.cs" />
@@ -87,7 +99,8 @@
     <Compile Include="Strategy\RedHeadDuck.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Command\" />
+    <Folder Include="Facade\" />
+    <Folder Include="TemplateMethod\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

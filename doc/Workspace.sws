@@ -4,7 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{FE5079DA-1A45-4BA9-854F-290BDD8FF006}" Name="BusinessProcessModel_1" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" URL="MF使用流程呢过.bpm"/>
+		<Model Expanded="Yes" ID="{FE5079DA-1A45-4BA9-854F-290BDD8FF006}" Loaded="No" Name="BusinessProcessModel_1" Type="{3D3C409C-B60D-430E-A1C4-B880653AC634}" URL="MF使用流程呢过.bpm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
